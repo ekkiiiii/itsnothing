@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on It&#39;s Nothing</title>
+    <link>https://www.itsnothing.de/post/</link>
+    <description>Recent content in Posts on It&#39;s Nothing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Visitor</title>
+      <link>https://www.itsnothing.de/post/hello/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/hello/</guid>
+      <description>Hey, it&amp;rsquo;s a blog again. This is where it all starts.</description>
+    </item>
+    
+  </channel>
+</rss>

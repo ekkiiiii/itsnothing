@@ -8,7 +8,7 @@ author: "Ekki"
 I have worked as a front-end developer with Angular/Typescript for Web and also Nativescript for Mobile platforms for one year. Before that I did a couple of uni projects that included a focus on front-end development, mostly in Unity.
 
 ### Games
-The important ones can be found at [mildlyentertaining.games](https://www.mildlyentertaining.games).
+The important ones can be found at [mildlyentertaining.games](https://mildlyentertaining.games).
 If you are looking for game design or development work for game projects contact me on social media or write an email to games@itsnothing.de.
 
 ### Escape Rooms

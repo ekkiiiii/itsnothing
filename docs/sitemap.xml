@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.itsnothing.de/post/moar-info/</loc>
+    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/post/</loc>
+    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.itsnothing.de/about/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
@@ -14,16 +24,6 @@
   
   <url>
     <loc>https://www.itsnothing.de/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.itsnothing.de/post/moar-info/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.itsnothing.de/post/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   

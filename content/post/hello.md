@@ -1,7 +1,7 @@
 +++
 title = "Hello Visitor"
 date = "2020-07-30"
-author = "Lorem Ipsum"
+author = "Ekki"
 cover = "/img/no-image.png"
 description = "You have arrived at the origin."
 +++

@@ -18,6 +18,7 @@
       
       <guid>https://www.itsnothing.de/about/</guid>
       <description>Hi there, I&amp;rsquo;m Ekki! I like to make and play games, build software and follow various other interests. You can find more info on what I did professionally in the Showcase.
+For CV info please refer to my LinkedIn-Profile.
 Varrious other interests? I enjoy anything horror-themed, whatever the medium. I also like watching american football and discussing infrastructure politics.</description>
     </item>
     
@@ -28,6 +29,15 @@ Varrious other interests? I enjoy anything horror-themed, whatever the medium. I
       
       <guid>https://www.itsnothing.de/post/hello/</guid>
       <description>Hey, it&amp;rsquo;s a blog again. This is where it all starts.</description>
+    </item>
+    
+    <item>
+      <title>More Info added</title>
+      <link>https://www.itsnothing.de/post/moar-info/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/moar-info/</guid>
+      <description>I updated the about me and added a small showcase with information about what I did.</description>
     </item>
     
     <item>

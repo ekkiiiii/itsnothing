@@ -33,6 +33,16 @@
   </url>
   
   <url>
+    <loc>https://www.itsnothing.de/impressum/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/imprint/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.itsnothing.de/categories/</loc>
   </url>
   

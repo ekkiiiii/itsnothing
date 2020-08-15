@@ -50,5 +50,26 @@ Varrious other interests? I enjoy anything horror-themed, whatever the medium. I
 Games The important ones can be found at mildlyentertaining.games. If you are looking for game design or development work for game projects contact me on social media or write an email to games@itsnothing.</description>
     </item>
     
+    <item>
+      <title>Impressum</title>
+      <link>https://www.itsnothing.de/impressum/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/impressum/</guid>
+      <description>Impressum Jan-Erik Baehr Blombachweg 8a 40625 Duesseldorf E-Mail: admin@itsnothing.de
+Verantwortlich für den Inhalt (gem. § 55 Abs. 2 RStV): Jan-Erik Bähr Blombachweg 8a 40625 Düsseldorf
+How is this made? Made with Hugo
+Theme made by panr</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.itsnothing.de/imprint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/imprint/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

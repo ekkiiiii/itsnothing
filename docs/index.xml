@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Creating websites with hugo</title>
+      <link>https://www.itsnothing.de/post/creating-websites-with-hugo/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/creating-websites-with-hugo/</guid>
+      <description>For the longest time, I used to build websites with Wordpress. It&amp;rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&amp;rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time.</description>
+    </item>
+    
+    <item>
       <title>More Info added</title>
       <link>https://www.itsnothing.de/post/moar-info/</link>
       <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>

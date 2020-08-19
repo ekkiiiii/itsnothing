@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on It&#39;s Nothing</title>
-    <link>https://www.itsnothing.de/post/</link>
-    <description>Recent content in Posts on It&#39;s Nothing</description>
+    <title>Static Site Generator on It&#39;s Nothing</title>
+    <link>https://www.itsnothing.de/tags/static-site-generator/</link>
+    <description>Recent content in Static Site Generator on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.itsnothing.de/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,24 +18,6 @@
       
       <guid>https://www.itsnothing.de/post/creating-websites-with-hugo/</guid>
       <description>For the longest time, I used to build websites with Wordpress. It&amp;rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&amp;rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time.</description>
-    </item>
-    
-    <item>
-      <title>More Info added</title>
-      <link>https://www.itsnothing.de/post/moar-info/</link>
-      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.itsnothing.de/post/moar-info/</guid>
-      <description>I updated the about me and added a small showcase with information about what I did.</description>
-    </item>
-    
-    <item>
-      <title>Hello Visitor</title>
-      <link>https://www.itsnothing.de/post/hello/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.itsnothing.de/post/hello/</guid>
-      <description>Hey, it&amp;rsquo;s a blog again. This is where it all starts.</description>
     </item>
     
   </channel>

@@ -6,9 +6,28 @@
     <description>Recent content in Tags on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.itsnothing.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.itsnothing.de/tags/hugo/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static Site Generator</title>
+      <link>https://www.itsnothing.de/tags/static-site-generator/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

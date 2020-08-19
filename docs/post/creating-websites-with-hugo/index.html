@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Creating websites with hugo :: It&#39;s Nothing — Ekkis Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="For the longest time, I used to build websites with Wordpress. It&amp;rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&amp;rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.itsnothing.de/post/creating-websites-with-hugo/" />
+
+
+
+
+<link rel="stylesheet" href="https://www.itsnothing.de/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="https://www.itsnothing.de/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:creator" content="Ekki" />
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Creating websites with hugo :: It&#39;s Nothing">
+<meta property="og:description" content="It&#39;s fun, fast and you don&#39;t have to worry about updating stuff all the time." />
+<meta property="og:url" content="https://www.itsnothing.de/post/creating-websites-with-hugo/" />
+<meta property="og:site_name" content="Creating websites with hugo" />
+
+  <meta property="og:image" content="https://www.itsnothing.de/img/hugo-ssg.png">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-08-19 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    It&#39;s Nothing
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://www.itsnothing.de/post/creating-websites-with-hugo/">Creating websites with hugo</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-08-19 
+      </span>
+    
+    
+    <span class="post-author">::
+      Ekki
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://www.itsnothing.de/tags/hugo/">Hugo</a>&nbsp;
+    
+    #<a href="https://www.itsnothing.de/tags/static-site-generator/">Static Site Generator</a>&nbsp;
+    
+  </span>
+  
+
+  
+    <img src="https://www.itsnothing.de/img/hugo-ssg.png" class="post-cover" alt="Creating websites with hugo" />
+  
+
+  
+
+  <div class="post-content"><div>
+        <p>For the longest time, I used to build websites with Wordpress. It&rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time. Even more problematic: if updates fail you are left with security issues and every month it&rsquo;ll become more likely that someone exploits your Wordpress install to distribute spam e-mails.</p>
+<h2 id="static-site-generators">Static site generators<a href="#static-site-generators" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>I like new paradigms! A few years ago I did a project in <a href="https://docpad.bevry.me/">Docpad</a>, a now discontinued, early static site generator. I immediately fell in love with the idea of leaving dynamic stuff (TM) offline, and just pushing HTML/CSS to the server. Plain HTML on a server is as robust as it get&rsquo;s in the web, hard to argue with that. So if you don&rsquo;t want to tinker with your projects every few weeks or months anyway, your requirements don&rsquo;t go too overboard (there is probably a Wordpress plugin for any given use case) and you value speed, security and reliability give static site generators a try.</p>
+<h2 id="why-hugo">Why Hugo<a href="#why-hugo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>To be honest I just stumbled upon it by chance and gave it a try. There is a bunch of different SSGs: <a href="https://www.staticgen.com/">A nice overview of JAMStack SSGs</a>. You will likely find something that fits your own favourite flavour of templating (based on React,Vue,Angular,Svelte,&hellip;), or programming language if you want to write your own plugins. 
+Back to Hugo: I like to check out new languages too, I saw it&rsquo;s written in Go, which I have filed somewhere under &ldquo;one of the programming languages the cool kids who are really into languages seemed to like&rdquo;. So I was mildly interested because of that, found themes I liked (I had two projects in mind, this page and <a href="https://mildlyentertaining.games">Mildly Entertaining Games</a>) and tried building the pages.</p>
+<h2 id="actually-making-and-deploying-the-pages">Actually making and deploying the pages<a href="#actually-making-and-deploying-the-pages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Since the post has gotten way longer than I initially anticipated and I&rsquo;m too lazy too redact it as a whole (Sorry :P), I&rsquo;ll save the actual building experience for another post. If you are already intrigued there is no need to wait, the <a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick Start Guide</a> is pretty straight-forward and you can have a simple page running in fifteen minutes.</p>
+<h2 id="the-advantages">The advantages<a href="#the-advantages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>You know what&rsquo;s faster than querying a database for your content to dynamically generate HTML based on a layouting engine on your server? Not querying the database and just having everything pre-generated. As mentioned before, static HTML on your webserver is an advantage in itself. I also mentioned the security advantages. Obviously the security of your deployment environment remains an issue, but if you are not by principal against using any of the big corporate cloud-hosting services this is not as big of an issue. And if you are I&rsquo;d assume you have your own setup under control.
+These two things are the core arguments for SSGs as a whole and I am definetly not capable of performing a complete comparison of different SSGs, so if you like the paradigm check out which one might be a good fit for you.</p>
+<h2 id="open-issues">Open issues<a href="#open-issues" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Formatting using markdown and commiting files to GitHub is a big hurdle for non-technical users. I am still thinking about ways to adress this issue. Obviously, a WYSIWYG markdown editor would solve the the first issue, but the way of updating the website still remains a bit complicated. I found a full-fledged solution in <a href="https://forestry.io/">Forestry</a>, but unfortunately it&rsquo;s proprietary, paid and can&rsquo;t be self-hosted. I&rsquo;ll keep a look out for other solutions and write an update once I have a working solutions. I&rsquo;m also open to suggestions, just contact me on Twitter (@ekkiiiii) or send me an e-mail.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://www.itsnothing.de/post/moar-info/">
+                <span class="button__text">More Info added</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        
+        <span> <a href="/impressum">Impressum</a></span>
+      </div>
+    </div>
+</footer>
+
+<script src="https://www.itsnothing.de/assets/main.js"></script>
+<script src="https://www.itsnothing.de/assets/prism.js"></script>
+
+
+
+
+  
+</div>
+
+</body>
+</html>

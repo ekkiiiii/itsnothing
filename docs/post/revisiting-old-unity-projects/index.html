@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Revisiting old unity projects :: It&#39;s Nothing — Ekkis Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016 Ludum Dare Game &amp;ldquo;Potion Shift&amp;rdquo;: Don&amp;rsquo;t be too ambitious with announcing features/content, especially don&amp;rsquo;t put them in your main menu:
+Coming, Coming Soon&amp;hellip; I don&amp;rsquo;t think so :P
+From now on I&amp;rsquo;ll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.itsnothing.de/post/revisiting-old-unity-projects/" />
+
+
+
+
+<link rel="stylesheet" href="https://www.itsnothing.de/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="https://www.itsnothing.de/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:creator" content="Ekki" />
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Revisiting old unity projects :: It&#39;s Nothing">
+<meta property="og:description" content="Time to check out some old projects and see what it takes to get them to build." />
+<meta property="og:url" content="https://www.itsnothing.de/post/revisiting-old-unity-projects/" />
+<meta property="og:site_name" content="Revisiting old unity projects" />
+
+  <meta property="og:image" content="https://www.itsnothing.de/img/revisiting-old-unity-projects.png">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-08-20 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    It&#39;s Nothing
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about-me">About Me</a></li>
+        
+      
+        
+          <li><a href="/about-this-site">About this site</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about-me">About Me</a></li>
+      
+    
+      
+        <li><a href="/about-this-site">About this site</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://www.itsnothing.de/post/revisiting-old-unity-projects/">Revisiting old unity projects</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-08-20 
+      </span>
+    
+    
+    <span class="post-author">::
+      Ekki
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://www.itsnothing.de/tags/unity/">Unity</a>&nbsp;
+    
+    #<a href="https://www.itsnothing.de/tags/game-dev/">Game Dev</a>&nbsp;
+    
+  </span>
+  
+
+  
+    <img src="https://www.itsnothing.de/img/revisiting-old-unity-projects.png" class="post-cover" alt="Revisiting old unity projects" />
+  
+
+  
+
+  <div class="post-content"><div>
+        <p>I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016
+Ludum Dare Game &ldquo;Potion Shift&rdquo;: Don&rsquo;t be too ambitious with announcing features/content, especially don&rsquo;t put them in your main menu:</p>
+<p><img src="/img/potionshift_unity_game.PNG" alt="Potion Shift Menu Screenshot">
+Coming, Coming Soon&hellip; I don&rsquo;t think so :P</p>
+<p>From now on I&rsquo;ll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)</p>
+<p>I initally got the idea of revisiting this project because I got an e-mail from Google telling me that they&rsquo;d remove non 64-bit compliant apps for 64-bit devices, and apparently I only built a 32-bit-version. I should have known better even back then, I know, but I&rsquo;ll file it under game jam specific problems. So, here I am trying to get a build running and my to-do-list seems to automatically grow while delving deeper into the scenes since I graciously abandoned the project in the midst of a bunch of things.</p>
+<h2 id="about-the-game">About the game<a href="#about-the-game" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>So it&rsquo;s time to also embed my new policy of building the game, as small/broken/weird as it may be. No promises of further development since I know I have ten other projects I&rsquo;d rather get to work on before I spent more time with this one.
+No complaints please, it&rsquo;s only a match-three-game. The game jam goals for this one was to just make a match-three-game, to cross that of the bucket list of touching any genre eventually. It was also about making something with touch-screen support and eventually getting it on the play store. That all worked out in the end, so no need to hang onto this one for too long.</p>
+<p>The Ludum Dare ratings weren&rsquo;t too bad:</p>
+<p>#171	Humor(Jam)  	3.35<br>
+#362	Graphics(Jam)	3.66<br>
+#396	Audio(Jam)	    3.15<br>
+#451	Theme(Jam)	    3.46<br>
+#474	Fun(Jam)	    3.21<br>
+#496	Mood(Jam)	    3.16<br>
+#524	Overall(Jam)	3.26<br>
+#972	Innovation(Jam)	2.44</p>
+<p><a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&amp;uid=50154">Here is the link to our Ludum Dare entry from April 2016</a><br>
+<a href="http://ludumdare.com/compo/2016/04/21/post-mortem-potion-shift/">Here is a short post mortem I wrote after the jam</a></p>
+<p>Since I already wrote a post mortem I should actually call this reviving instead of revisiting&hellip;</p>
+<h2 id="getting-it-to-work">Getting it to work<a href="#getting-it-to-work" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Turns out I just had to revert a few commits with the beforementioned half-finished changes and remove some non-crucial lines related to the now discontinued Web Player. They have had the opportunity to create WebGL-based builds for deploying games directly on websites which worked pretty well for quite a while. It does not matter anyway since I want an Android build. I had to change the scripting backend from Mono to IL2CPP to get the ability to create a 64-bit build. Reading about that relieved me from the guilt of not having built with 64-bit, it has just not been possible before the 2017 LTS version of Unity.<br>
+Am I lucky*, is 4 years just not old enough for stuff to have changed to break things or is the game simple enough that the project can be worked on in future unity versions forever? Well, I might find out next time when I revisit another, even older Unity project.</p>
+<p>*I feel super relieved that I started used a password manager before 2016 and have all the passphrases for the signing keys backed up! <em>phew</em></p>
+<h2 id="plot-twist-hint-properly-back-up-your-keystores">Plot twist (HINT: PROPERLY BACK UP YOUR KEYSTORES)<a href="#plot-twist-hint-properly-back-up-your-keystores" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>I got a little ahead of myself and forgot that I needed the keystore file. I already thought it was lost, I checked my backup locations and it seemed to be gone, that would have meant that I can&rsquo;t update the play store entry. I had to dig a little bit and found a stack of old hard drives, searched through them and and the last one (ultimate suspense) had the keystore file on it. Far from a proper backup, but at least it is not lost and I have since made sure this won&rsquo;t happen again. Overhead for backing up stuff is always worth it, if you have not yet done it for crucial files like keystores DO IT NOW, RIGHT NOW, NO EXCUSES! You will thank yourself later.</p>
+<h2 id="oooh-play-console-has-changed">Oooh Play Console has changed<a href="#oooh-play-console-has-changed" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><em>Obviously</em> lots of things in the Google Play backend that I don&rsquo;t recall, but that is another story. I was able to upload the app bundle and it is being reviewed, if it succeeds the whole endeavour has been successful (yay!) and Potion Shift will be available on 64-bit devices after August 2021. I have gotten a few pointers about how build processes and deployment for Android changed during this one-day-project. It was worth it, even if the game has no installations at all. This way I could gain the knowledge without having to read or watch videos about it, learning-by-doing at it&rsquo;s best.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://www.itsnothing.de/post/creating-websites-with-hugo/">
+                <span class="button__text">Creating websites with hugo</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        
+        <span> <a href="/impressum">Impressum</a></span>
+      </div>
+    </div>
+</footer>
+
+<script src="https://www.itsnothing.de/assets/main.js"></script>
+<script src="https://www.itsnothing.de/assets/prism.js"></script>
+
+
+
+
+  
+</div>
+
+</body>
+</html>

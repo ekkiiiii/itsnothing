@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.itsnothing.de/tags/game-dev/</loc>
+    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/post/</loc>
+    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/post/revisiting-old-unity-projects/</loc>
+    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/tags/</loc>
+    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/tags/unity/</loc>
+    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.itsnothing.de/post/creating-websites-with-hugo/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
@@ -13,17 +38,7 @@
   </url>
   
   <url>
-    <loc>https://www.itsnothing.de/post/</loc>
-    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.itsnothing.de/tags/static-site-generator/</loc>
-    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.itsnothing.de/tags/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,7 +48,12 @@
   </url>
   
   <url>
-    <loc>https://www.itsnothing.de/about/</loc>
+    <loc>https://www.itsnothing.de/about-me/</loc>
+    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.itsnothing.de/about-this-site/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   

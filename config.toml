@@ -1,15 +1,15 @@
 baseurl = "https://www.itsnothing.de/"
 languageCode = "en-US"
 theme = "terminal"
-paginate = 5
+paginate = 3
 publishDir = "docs"
 
 [params]
   contentTypeName = "post"
   themeColor = "orange"
-  showMenuItems = 2
+  showMenuItems = 3
   fullWidthTheme = false
-  centerTheme = false
+  centerTheme = true
 
 [languages]
   [languages.en]
@@ -27,10 +27,14 @@ publishDir = "docs"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+      [[languages.en.menu.main]]
+        identifier = "about-me"
+        name = "About Me"
+        url = "/about-me"
+      [[languages.en.menu.main]]
+        identifier = "about-this-site"
+        name = "About this site"
+        url = "/about-this-site"

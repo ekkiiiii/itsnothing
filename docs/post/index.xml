@@ -6,10 +6,19 @@
     <description>Recent content in Posts on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Revisiting old unity projects - Part 2</title>
+      <link>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</guid>
+      <description>Last time I revisited Potion Shift from April 2016 to make a 64-bit-version for Android. That went pretty well, so this time I&amp;rsquo;ll go back to the first jam game I did. It is called Affectionate Armament, made for Ludum Dare 32 with the theme &amp;ldquo;An Unconventional Weapon&amp;rdquo;. The idea we went with was to have a weapon with feelings. It&amp;rsquo;s a two player action game with one weapon, and once a player grabs it they can start shooting the other player.</description>
+    </item>
     
     <item>
       <title>Revisiting old unity projects</title>

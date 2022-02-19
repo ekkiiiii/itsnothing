@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>February 22 Update :: It&#39;s Nothing — Ekkis Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Oh, hey, the first update in checks notes years. I am currently working on a project with some motion controls, if it works out I will write a post about it.
+Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Unity:
+ Your browser does not support video.  Since the last update I started working at https://www.gentleforge.com/ and updated the page info accordingly." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.itsnothing.de/post/february-22-update/" />
+
+
+
+
+<link rel="stylesheet" href="https://www.itsnothing.de/assets/style.css">
+
+
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="https://www.itsnothing.de/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:creator" content="Ekki" />
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="February 22 Update :: It&#39;s Nothing">
+<meta property="og:description" content="Just a quick update" />
+<meta property="og:url" content="https://www.itsnothing.de/post/february-22-update/" />
+<meta property="og:site_name" content="February 22 Update" />
+
+  
+    <meta property="og:image" content="https://www.itsnothing.de/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2022-02-19 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    It&#39;s Nothing
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/stuff-i-built">Stuff I Built</a></li>
+        
+      
+        
+          <li><a href="/about-me">About Me</a></li>
+        
+      
+        
+          <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/stuff-i-built">Stuff I Built</a></li>
+      
+    
+      
+        <li><a href="/about-me">About Me</a></li>
+      
+    
+      
+        <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
+      
+    
+      
+        <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://www.itsnothing.de/post/february-22-update/">February 22 Update</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2022-02-19 
+      </span>
+    
+    
+    <span class="post-author">::
+      Ekki
+    </span>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <p>Oh, hey, the first update in <em>checks notes</em> years. I am currently working on a project with some motion controls, if it works out I will write a post about it.</p>
+<p>Here is a sneak peak using the <a href="https://nuitrack.com/">Nuitrack SDK</a> to get some live skeleton data in Unity:</p>
+<video autoplay loop muted playsinline aria-label='virtual skeleton moving in unity' style="width: 100%; height: auto;">
+    <source src="/video/updown.mp4" type="video/mp4">
+    
+    <p> Your browser does not support video. </p>
+</video>
+<p>Since the last update I started working at <a href="Gentleforge">https://www.gentleforge.com/</a> and updated the page info accordingly. I already mentioned what I am currently working on, most of the time last year I spent helping to ship <a href="https://fairyfailgame.com/">Fairyfail</a>. The game launch could have gone better but it was a great learning experience and I am looking forward to improving with the next title.</p>
+<p>Also some technical info about the page:</p>
+<p>To scale the image of my face on the about me page I tinkered for a minute and got custom CSS working for the pages here, so that I can create a custom stylesheet file per page, almost like in angular. It really is just this line in the template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .Params.customcss }}&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ . }}&#34;</span> /&gt;{{ end }}
+</code></pre></div><p>and then setting the custom css file in the header of the page/post:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">customCss = &#34;/css/aboutme.css&#34;
+</code></pre></div><p>The video above is working thanks to the <a href="https://sunbro.dev/posts/2020-05-20-adding-video-support-to-hugo-terminal/">tutorial found here</a> about adding video support to the terminal theme for hugo. Thanks for that!</p>
+<p>That&rsquo;s it for now, until next time!</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/">
+                <span class="button__text">Revisiting old unity projects - Part 2</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        
+        <span> <a href="/impressum">Impressum</a></span>
+      </div>
+    </div>
+</footer>
+<script src="https://www.itsnothing.de/assets/main.js"></script>
+<script src="https://www.itsnothing.de/assets/prism.js"></script>
+
+
+  
+<nav class="menu">
+    <ul>
+        
+        
+            
+                <li>
+                    <a href="/about-this-site">
+                        
+                        <span>About this site</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+
+
+
+  
+  
+</div>
+
+</body>
+</html>

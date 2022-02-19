@@ -6,10 +6,17 @@
     <description>Recent content on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.itsnothing.de/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.itsnothing.de/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>February 22 Update</title>
+      <link>https://www.itsnothing.de/post/february-22-update/</link>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/february-22-update/</guid>
+      <description>Oh, hey, the first update in checks notes years. I am currently working on a project with some motion controls, if it works out I will write a post about it.
+Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Unity:
+ Your browser does not support video.  Since the last update I started working at https://www.gentleforge.com/ and updated the page info accordingly.</description>
+    </item>
     
     <item>
       <title>Revisiting old unity projects - Part 2</title>
@@ -55,9 +62,9 @@ From now on I&amp;rsquo;ll just put things in blogposts that I can silently dele
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.itsnothing.de/about-me/</guid>
-      <description>Hi there, I&amp;rsquo;m Ekki! I like to make and play games, build software and follow various other interests. You can find more info on what I did professionally in the Showcase.
+      <description>Hi, I&amp;rsquo;m Ekki! I like to make and play games, build software and follow various other interests. I currently work as a Game Developer at Gentleforge, where I helped ship the first title &amp;ldquo;Fairyfail&amp;rdquo;. You can find more info on what I did professionally on the Stuff I Built page.
 For CV info please refer to my LinkedIn-Profile.
-Various other interests? I enjoy anything horror-themed, whatever the medium. I also like watching american football and discussing infrastructure politics.</description>
+Various other interests? Check Twitter</description>
     </item>
     
     <item>
@@ -82,13 +89,13 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
     </item>
     
     <item>
-      <title>Showcase</title>
-      <link>https://www.itsnothing.de/showcase/</link>
+      <title>Stuff I built</title>
+      <link>https://www.itsnothing.de/stuff-i-built/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.itsnothing.de/showcase/</guid>
-      <description>Games The important ones can be found at mildlyentertaining.games. If you are looking for game design or development work for game projects contact me on social media or write an email to games@itsnothing.de.
-Escape Rooms I co-created an escape room that we ran for a while and then sold. You can still look up player reviews if you are interested in what people had to say about it: Portalstation Reviews It&amp;rsquo;s currently in storage and due to be built up in a new location later.</description>
+      <guid>https://www.itsnothing.de/stuff-i-built/</guid>
+      <description>I like to build things, this page is a collection of some of the things I helped to build.
+I really like the practical aspect of building (virtual) things: writing code, creating prototypes, my fascination there is about testing and failing with new ideas. But since I always worked in small teams that require a large amount of self-organization I am used to spending just as much as time with the theoretical side of it: working on game design and technical architectures, figuring out how to make something that is fun to interact with.</description>
     </item>
     
     <item>

@@ -10,9 +10,12 @@
       </div>
     </div>
 </footer>
-
 <script src="{{ "assets/main.js" | absURL }}"></script>
 <script src="{{ "assets/prism.js" | absURL }}"></script>
 
+{{ if len $.Site.Menus.about }}
+  {{ partial "aboutmenu.html" . }}
+{{ end }}
+
 <!-- Extended footer section-->
-{{ partial "extended_footer.html" . }}
+{{ partial "extended_footer.html" . }}  

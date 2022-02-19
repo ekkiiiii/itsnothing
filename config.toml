@@ -27,14 +27,27 @@ publishDir = "docs"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+        identifier = "stuff-i-built"
+        name = "Stuff I Built"
+        url = "/stuff-i-built"
+        weight = "80"
+      [[languages.en.menu.main]]
+        identifier = "twitter"
+        name = "Twitter"
+        url = "https://www.twitter.com/ekkiiiii"
+        weight = "100"
+      [[languages.en.menu.main]]
+        identifier = "Letterboxd"
+        name = "Letterboxd"
+        url = "https://letterboxd.com/ekkiiiii/"
+        weight = "100"
       [[languages.en.menu.main]]
         identifier = "about-me"
         name = "About Me"
         url = "/about-me"
-      [[languages.en.menu.main]]
+        weight = "90"
+      [[languages.en.menu.about]]
         identifier = "about-this-site"
         name = "About this site"
         url = "/about-this-site"
+        weight = "90"

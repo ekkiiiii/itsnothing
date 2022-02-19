@@ -6,10 +6,17 @@
     <description>Recent content in Posts on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>February 22 Update</title>
+      <link>https://www.itsnothing.de/post/february-22-update/</link>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/february-22-update/</guid>
+      <description>Oh, hey, the first update in checks notes years. I am currently working on a project with some motion controls, if it works out I will write a post about it.
+Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Unity:
+ Your browser does not support video.  Since the last update I started working at https://www.gentleforge.com/ and updated the page info accordingly.</description>
+    </item>
     
     <item>
       <title>Revisiting old unity projects - Part 2</title>

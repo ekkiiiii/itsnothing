@@ -18,4 +18,4 @@ personal blog
   
 4. Edit, then: deploy
 
-  hugo build and push docs
+  'hugo' to build, then push docs

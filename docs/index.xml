@@ -6,7 +6,18 @@
     <description>Recent content on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.itsnothing.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.itsnothing.de/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>July 22 Update</title>
+      <link>https://www.itsnothing.de/post/april-22-update/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/april-22-update/</guid>
+      <description>Another update! Since we could not secure funding for further projects with Gentleforge I am currently looking for work again. Great opportunity to update the portfolio/website here.
+I already updated the &amp;ldquo;Stuff I built&amp;rdquo; page with some new details and am going to write an update on what I am doing on the side at the moment next.
+In the last few months I started playing around with Yahaha, a software platform for creating real-time 3D content.</description>
+    </item>
+    
     <item>
       <title>February 22 Update</title>
       <link>https://www.itsnothing.de/post/february-22-update/</link>
@@ -94,8 +105,8 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.itsnothing.de/stuff-i-built/</guid>
-      <description>I like to build things, this page is a collection of some of the things I helped to build.
-I really like the practical aspect of building (virtual) things: writing code, creating prototypes, my fascination there is about testing and failing with new ideas. But since I always worked in small teams that require a large amount of self-organization I am used to spending just as much as time with the theoretical side of it: working on game design and technical architectures, figuring out how to make something that is fun to interact with.</description>
+      <description>I like to build things! This page shows some of the things I helped to build. For a CV-like overview visit my LinkedIn-page.
+What I like most is the practical aspect of building (virtual) things: writing code, creating prototypes, taking an idea into the real world and then seeing what works and - behold - what does not work as intended. But since I always worked in small teams that require a large amount of self-organization I am used to spending just as much as time with the theoretical side of it: working on game design and technical architectures, figuring out how to make something that is fun to interact with.</description>
     </item>
     
     <item>

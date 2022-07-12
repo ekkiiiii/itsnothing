@@ -73,7 +73,9 @@ From now on I&amp;rsquo;ll just put things in blogposts that I can silently dele
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.itsnothing.de/about-me/</guid>
-      <description>Hi, I&amp;rsquo;m Ekki! I like to make and play games, build software and follow various other interests. I currently work as a Game Developer at Gentleforge, where I helped ship the first title &amp;ldquo;Fairyfail&amp;rdquo;. You can find more info on what I did professionally on the Stuff I Built page.
+      <description>Hi, I&amp;rsquo;m Ekki! I like to make and play games, build software and talking for hours about infrastructure.
+I am currently looking for work as a game developer (design and or programming), preferably in an indie team.
+You can find more info on what I did professionally on the Portfolio page.
 For CV info please refer to my LinkedIn-Profile.
 Various other interests? Check Twitter</description>
     </item>
@@ -101,10 +103,10 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
     
     <item>
       <title>Portfolio</title>
-      <link>https://www.itsnothing.de/stuff-i-built/</link>
+      <link>https://www.itsnothing.de/portfolio/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.itsnothing.de/stuff-i-built/</guid>
+      <guid>https://www.itsnothing.de/portfolio/</guid>
       <description>I like to build things! This page shows some of the things I helped to build. For a CV-like overview visit my LinkedIn-page.
 What I like most is the practical aspect of building (virtual) things: writing code, creating prototypes, taking an idea into the real world and then seeing what works and - behold - what does not work as intended. But since I always worked in small teams that require a large amount of self-organization I am used to spending just as much as time with the theoretical side of it: working on game design and technical architectures and figuring out how to make something that is fun to interact with.</description>
     </item>

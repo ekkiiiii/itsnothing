@@ -8,8 +8,11 @@ customCss = "/css/aboutme.css"
 
 
 # Hi, I'm Ekki!
-![Ekki Face](/img/newface.jpg)  I like to make and play games, build software and follow various other interests. I currently work as a Game Developer at [Gentleforge](https://gentleforge.business.site), where I helped ship the first title "Fairyfail".
-You can find more info on what I did professionally on the [Stuff I Built]({{< ref "/stuff-i-built" >}} "Stuff I Built") page.  
+![Ekki Face](/img/newface_very_small.png)  
+
+I like to make and play games, build software and talking for hours about infrastructure.  
+I am currently looking for work as a game developer (design and or programming), preferably in an indie team.  
+You can find more info on what I did professionally on the [Portfolio]({{< ref "/portfolio" >}} "Portfolio") page.  
 For CV info please refer to my [LinkedIn-Profile](https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/).
 
 ## Various other interests?

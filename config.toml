@@ -27,9 +27,9 @@ publishDir = "docs"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "stuff-i-built"
+        identifier = "portfolio"
         name = "Portfolio"
-        url = "/stuff-i-built"
+        url = "/portfolio"
         weight = "80"
       [[languages.en.menu.main]]
         identifier = "twitter"

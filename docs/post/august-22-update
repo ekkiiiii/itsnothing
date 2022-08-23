@@ -1,0 +1,15 @@
++++
+title = "Project Update: Shiba Rush"
+date = "2022-10-15"
+author = "Ekki"
+description = "Working on a game with cute dogs"
++++
+
+Yo, quick update about what I am currently working on with [@VeFroh](https://mobile.twitter.com/ArtVefroh)
+
+Bit of background on the project first: we had two attempts of building something under the title SHIBA RUSH at Gentleforge earlier this year with a few external people. Long story short, the company had to let everyone go but we wanted to keep in touch by working on a common project. That led to Vero and me starting to work on a concept Vero had already started to develop. We spent a couple of days during the past two months fleshing out the design documentation, with a big focus on finding out what the core vision for this game actually should entail. We prototyped several ideas while doing that and came up with a (still rather barebone) game loop that we want to try and iterate on.
+
+show gameplay
+Introduce/explain game loop
+
+Our next steps are adding a couple more features to make the core loop more interesting. We are planning on enabling players to move Shibas around by interacting with different objects inside the house. More dogs are obviously planned, too. :)

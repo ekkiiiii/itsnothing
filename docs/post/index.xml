@@ -6,7 +6,17 @@
     <description>Recent content in Posts on It&#39;s Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 12 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.itsnothing.de/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(Mini) Post Mortem: Shiba Rush</title>
+      <link>https://www.itsnothing.de/post/shiba-rush-post-mortem/</link>
+      <pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.itsnothing.de/post/shiba-rush-post-mortem/</guid>
+      <description>Yo, quick update about what I am currently working on with @VeFroh!
+A bit of background on the project first: we had two attempts of building something under the title SHIBA RUSH at Gentleforge earlier this year with a few external people. Long story short, the company had to let everyone go. Two of us wanted to keep in touch by working on a common project, so we started to work on a concept Vero had been working on before.</description>
+    </item>
+    
     <item>
       <title>Portfolio updated</title>
       <link>https://www.itsnothing.de/post/july-22-update-2/</link>

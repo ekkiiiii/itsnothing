@@ -5,20 +5,24 @@ author: "Ekki"
 customCss: "/css/stuff-i-built.css"
 ---
 
+
 I like to build things! This page shows some of the things I helped to build. For a CV-like overview visit my [LinkedIn](https://www.linkedin.com/in/janerikbaehr/)-page.
   
 What I like most is the practical aspect of building (virtual) things: writing code, creating prototypes, taking an idea into the real world and then seeing what works and - behold - what does not work as intended.
 But since I always worked in small teams that require a large amount of self-organization I am used to spending just as much as time with the theoretical side of it: working on game design and technical architectures and figuring out how to make something that is fun to interact with.
-
-## Front-End Development
-I worked on several web and mobile projects, mostly using Angular. Things I built include interactive quiz applications for use in trainings, components for cross-platform applications (iOS,Android,Web) using Nativescript and some prototypes for Twitch extension development.
 
 ## Games
 
 #### Fairyfail
 {{< youtube TKAHszC510Q >}}
 
-Since January 2021 I have been working at [Gentleforge](https://gentleforge.com/) where I worked on programming and game design for [Fairyfail](https://store.steampowered.com/app/1194670/Fairyfail) until we shipped the game in July 2021 and for the 'Bewitched' Update in October 2021.
+From January 2021 to July 2022 I was working at [Gentleforge](https://gentleforge.com/) where I did programming and game design for [Fairyfail](https://store.steampowered.com/app/1194670/Fairyfail) until we shipped the game in July 2021 and for the 'Bewitched' Update in October 2021.
+
+#### Shiba Rush
+{{< youtube GOiULWwWgfg >}}
+
+A personal side project I started together with [@VeFroh](https://mobile.twitter.com/artvefroh). We did the design together based on a cancelled project that we worked on together at Gentleforge before. Vero contributed the art and I did the coding. We have stopped working after this first prototype and changed the game concept a lot, but stuck with the Shiba theme and overall mood. [I have written a small post mortem about that prototype here](http://www.itsnothing.de/post/shiba-rush-post-mortem/). An update about the new project will follow in a few weeks.
+
 
 ## Jam Games
 
@@ -47,6 +51,9 @@ We had some fun here creating a small simulation of villagers and then adding, w
 #### The Side Effects Of Life In Space
 ![TSEOL Image](/img/tseoldemoimage.PNG#center)  
 I have been working with a small team on a very long-term project with the catchy title "The Side Effects of Life in Space". Been on hold for a while, but we might continue this someday. :)
+
+## Front-End Development
+I worked on several web and mobile projects, mostly using Angular. Things I built include interactive quiz applications for use in trainings, components for cross-platform applications (iOS,Android,Web) using Nativescript and some prototypes for Twitch extension development.
 
 ## Escape Rooms
 

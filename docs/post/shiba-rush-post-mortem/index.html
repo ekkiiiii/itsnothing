@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>(Mini) Post Mortem: Shiba Rush :: It&#39;s Nothing — Ekkis Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Yo, quick update about what I am currently working on with @VeFroh!
+A bit of background on the project first: we had two attempts of building something under the title SHIBA RUSH at Gentleforge earlier this year with a few external people. Long story short, the company had to let everyone go. Two of us wanted to keep in touch by working on a common project, so we started to work on a concept Vero had been working on before." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.itsnothing.de/post/shiba-rush-post-mortem/" />
+
+
+
+
+<link rel="stylesheet" href="https://www.itsnothing.de/assets/style.css">
+
+
+
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="https://www.itsnothing.de/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:creator" content="Ekki" />
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="(Mini) Post Mortem: Shiba Rush :: It&#39;s Nothing">
+<meta property="og:description" content="We were working on a game with cute dogs. Then we stopped working on that prototype, to start working on another game with cute dogs." />
+<meta property="og:url" content="https://www.itsnothing.de/post/shiba-rush-post-mortem/" />
+<meta property="og:site_name" content="(Mini) Post Mortem: Shiba Rush" />
+
+  <meta property="og:image" content="https://www.itsnothing.de/img/shiba-rush-screenshot-august-small.png">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2022-10-27 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    It&#39;s Nothing
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/portfolio">Portfolio</a></li>
+        
+      
+        
+          <li><a href="/about-me">About Me</a></li>
+        
+      
+        
+          <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/portfolio">Portfolio</a></li>
+      
+    
+      
+        <li><a href="/about-me">About Me</a></li>
+      
+    
+      
+        <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
+      
+    
+      
+        <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://www.itsnothing.de/post/shiba-rush-post-mortem/">(Mini) Post Mortem: Shiba Rush</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2022-10-27 
+      </span>
+    
+    
+    <span class="post-author">::
+      Ekki
+    </span>
+    
+  </div>
+
+  
+
+  
+    <img src="https://www.itsnothing.de/img/shiba-rush-screenshot-august-small.png" class="post-cover" alt="(Mini) Post Mortem: Shiba Rush" />
+  
+
+  
+
+  <div class="post-content"><div>
+        <p>Yo, quick update about what I am currently working on with <a href="https://mobile.twitter.com/ArtVefroh">@VeFroh</a>!</p>
+<p>A bit of background on the project first: we had two attempts of building something under the title SHIBA RUSH at Gentleforge earlier this year with a few external people. Long story short, the company had to let everyone go. Two of us wanted to keep in touch by working on a common project, so we started to work on a concept Vero had been working on before. We spent a couple of days in total during the past two months fleshing out the design documentation, with a big focus on finding out what the core vision for this game actually should entail. We discussed a couple of ideas while doing that and came up with a (still rather barebone) game loop that we wanted to try and iterate on. We since moved on to build another prototype from scratch, which created this perfect opportunity for a quick post mortem for the first version.</p>
+<p>But first let&rsquo;s get you in on the project by showing you what we built:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/GOiULWwWgfg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>So, it&rsquo;s a casual action/puzzle game for mobile with a cute shiba theme, colorful graphics and a kind of housesitting backstory.<br>
+Personally not really my cup of tea gameplay-wise but a very nice challenge. Since our main goals were to stay in contact and to develop some ways of working together this should be a good opportunity and those goals were definetely achieved.</p>
+<p>Production for me was a lot of working with 2D features in Unity that I either got deeper in on than before (tilemaps) or started working with for the first time (2D lighting). Collaboratively we achieved a lot of improvements communicating requirements in the design/art/tech-loop, especially how to iterate things. I am very happy with how the characters and interactive objects turned out as a result of these processes. :)</p>
+<p>Building the mechanics was not that hard of a challenge since I was able to find a lot of pre-built solutions, so for every issue I had a lot of sources to cherrypick from. Obviously some of the things are not &ldquo;production-ready&rdquo; like that but building them this way also produces a big chunk of research material to use when re-designing features for that purpose.</p>
+<p>But obviously we were also not really happy with a few things about this concept:</p>
+<ul>
+<li>unclear in which direction we want to go gameplay wise (we had ideas for action/evasion concepts and puzzle/thinking gameplay and it would likely have been very challenging balancing those out since in my experience they often end up working against each other)</li>
+<li>hard to integrate any narrative elements (which we had at least some ideas for, and would have been so nice for the theme)</li>
+<li>kind of boring, stated bluntly, not that bad of course but there were concerns about how far the gameplay would carry (also connected to the first point) and also some doubts about distinguishing the &ldquo;cute dog game&rdquo; from other &ldquo;cute dog games&rdquo; which are unsurprisingly not a rare occurence</li>
+<li>we showed it to some people and nobody got that excited (that would not be so important if the other aspects were not already an issue)</li>
+</ul>
+<p>While trying to adress these things we figured it would be easier to just decide which things to keep and which should be completely re-thought from the ground up. With the learnings from that protoype we developed a design that aims to adress the issues and cater more to what the feel are the strengths of the theme. It should also allow us to profit from the technical learnings and give us an opportunity to re-use or at least build upon pre-existing assets. But more about that in a bit when we actually have built something that we can show based on that new concept.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://www.itsnothing.de/post/july-22-update-2/">
+                <span class="button__text">Portfolio updated</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        
+        <span> <a href="/impressum">Impressum</a></span>
+      </div>
+    </div>
+</footer>
+<script src="https://www.itsnothing.de/assets/main.js"></script>
+<script src="https://www.itsnothing.de/assets/prism.js"></script>
+
+
+  
+<nav class="menu">
+    <ul>
+        
+        
+            
+                <li>
+                    <a href="/about-this-site">
+                        
+                        <span>About this site</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+
+
+
+  
+  
+</div>
+
+</body>
+</html>

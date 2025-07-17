@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.itsnothing.de/post/shiba-rush-post-mortem/</loc>
-    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.itsnothing.de/</loc>
-    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.itsnothing.de/post/update-25/</loc>
+    <lastmod>2025-02-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.itsnothing.de/post/</loc>
+    <lastmod>2025-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.itsnothing.de/post/shiba-rush-post-mortem/</loc>
     <lastmod>2022-10-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.itsnothing.de/shibarush-datenschutz/</loc>

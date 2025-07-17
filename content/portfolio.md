@@ -11,18 +11,21 @@ I like to build things! This page shows some of the things I helped to build. Fo
 What I like most is the practical aspect of building (virtual) things: writing code, creating prototypes, taking an idea into the real world and then seeing what works and - behold - what does not work as intended.
 But since I always worked in small teams that require a large amount of self-organization I am used to spending just as much as time with the theoretical side of it: working on game design and technical architectures and figuring out how to make something that is fun to interact with.
 
+## Mixed Reality Development
+
+In 2023 and 2024 I was employed to work on a mixed reality platform and several projects based on that. I still worked in the same Unity/C# environment I used for game development, only with more serious use cases. There were many overlapping design issues coming from game development, but the technical requirements were more narrow which resulted in a different development focus than the previous game projects I worked on.
+
 ## Games
 
 #### Fairyfail
-{{< youtube TKAHszC510Q >}}
+{{< youtube 1cjGxvTlWjE >}}
 
 From January 2021 to July 2022 I was working at [Gentleforge](https://gentleforge.com/) where I did programming and game design for [Fairyfail](https://store.steampowered.com/app/1194670/Fairyfail) until we shipped the game in July 2021 and for the 'Bewitched' Update in October 2021.
 
 #### Shiba Rush
 {{< youtube GOiULWwWgfg >}}
 
-A personal side project I started together with [@VeFroh](https://mobile.twitter.com/artvefroh). We did the design together based on a cancelled project that we worked on together at Gentleforge before. Vero contributed the art and I did the coding. We have stopped working after this first prototype and changed the game concept a lot, but stuck with the Shiba theme and overall mood. [I have written a small post mortem about that prototype here](http://www.itsnothing.de/post/shiba-rush-post-mortem/). An update about the new project will follow in a few weeks.
-
+A personal side project I built together with [@VeFroh](https://mobile.twitter.com/artvefroh). We created the design based on a cancelled project that we worked on together at Gentleforge before. Vero contributed the art and I did the coding. We have stopped working after this first prototype and changed the game concept a lot, but stuck with the Shiba theme and overall mood. [I have written a small post mortem about that prototype here](http://www.itsnothing.de/post/shiba-rush-post-mortem/). An update about the new project will follow in a few weeks.
 
 ## Jam Games
 
@@ -36,7 +39,7 @@ A collectible book game built for Ludum Dare in three days. We set out with a mi
 ![Was War Es Einmal Gif](/img/waswareseinmal.gif#center)  
 ![Was War Es Einmal Gif](/img/waswareseinmal2.gif#center)  
 
-This was done for Manasoup Game Jam, a gamejam from a german speaking community for game developers. It was only a two day gamejam and we had a pretty big team to manage. I like how small we kept the scope, and even added the repeat functionality a few weeeks after the jam. 
+This was done for Manasoup Game Jam, a gamejam from a german speaking community for game developers. It was only a two day gamejam and we had a pretty big team to manage. I like how small we kept the scope, and even added the repeat functionality a few weeeks after the jam.
 
 [Download Was War Es Einmal (Play Store/Android)](https://play.google.com/store/apps/details?id=com.Gentleforge.Waswareseinmal) | [Play/Download Was War Es Einmal (itch.io/PC)](https://gentleforge.itch.io/was-war-es-einmal)  
 

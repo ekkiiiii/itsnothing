@@ -22,7 +22,7 @@ Eine datengetriebene Wirtschafts‑Simulation im Pixel‑Look. Die größte Hera
 Ich setze Service‑Patterns ein, um Sub‑Systeme zu entkoppeln. Die Logik läuft unabhängig von der Visualisierung und wird über ein automatisiertes, headless Test‑Setup validiert. So kann ich komplexe ökonomische Abläufe prüfen, ohne jedes Mal das komplette Spiel durchspielen zu müssen.
 {{< /tech-insight >}}
 
-![Simulation Preview](/img/sim-preview.gif#center)
+![Simulation Preview](img/sim-preview.gif#center)
 
 ### matchpicks.de (React / TypeScript)
 Eine komplette Web‑Plattform. Sie deckt alles ab – von der initialen Systemarchitektur über State‑Management bis hin zum Deployment.
@@ -78,17 +78,17 @@ Programmierung der Software für mikrocontrollerbasierte Rätsel‑Komponenten (
 Persönliches Projekt mit Fokus auf Code und Design. [Den Post‑Mortem findest du hier.](http://www.itsnothing.de/post/shiba-rush-post-mortem/)
 
 ### Deeper Learning (Ludum Dare 2021)  
-![Deeper Learning Gif](/img/deeperlearning.gif#center)  
+![Deeper Learning Gif](img/deeperlearning.gif#center)  
 Ein Sammel‑Spiel rund um Bücher, entstanden in drei Tagen. Ein Experiment in Scope‑Management und komplexer Logik unter Zeitdruck.
 
 ### Was War Es Einmal (2021)  
-![Was War Es Einmal Gif](/img/waswareseinmal.gif#center)  
+![Was War Es Einmal Gif](img/waswareseinmal.gif#center)  
 Entstanden für die Manasoup Game Jam (2 Tage) – mit Fokus auf schlanken Scope und Mobile‑Kompatibilität.
 
 ### Mildly Entertaining Games & Archiv  
 Eine Sammlung älterer Game‑Jam‑Experimente und Langzeit‑Projekte wie *The Side Effects of Life in Space* findest du auf [mildlyentertaining.games](https://mildlyentertaining.games).
 
-![Mildly Entertaining Games Collage](/img/mildlyentertaininggames_collage_bg_color.png#center)
+![Mildly Entertaining Games Collage](img/mildlyentertaininggames_collage_bg_color.png#center)
 
 ---
 

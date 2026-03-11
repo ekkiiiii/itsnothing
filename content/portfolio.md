@@ -21,7 +21,7 @@ A data-driven economic simulation in a pixel-art style. The main challenge here 
 I'm using Service Patterns to decouple sub-systems. The logic runs independently and is validated via an automated headless test suite. This allows me to verify complex economic data without having to play through the game manually.
 {{< /tech-insight >}}
 
-![Simulation Preview](/img/sim-preview.gif#center)
+![Simulation Preview](img/sim-preview.gif#center)
 
 ### matchpicks.de (React / TypeScript)
 A full-stack web platform built from the ground up—covering everything from the initial system architecture and state management to deployment.
@@ -77,17 +77,17 @@ Programmed the software for microcontroller-based puzzle components (Arduino). D
 Personal project focused on coding and design. [Read the post-mortem here.](http://www.itsnothing.de/post/shiba-rush-post-mortem/)
 
 ### Deeper Learning (Ludum Dare 2021)
-![Deeper Learning Gif](/img/deeperlearning.gif#center)
+![Deeper Learning Gif](img/deeperlearning.gif#center)
 A collectible book game built in three days. An experiment in scope management and complex logic under time pressure. 
 
 ### Was War Es Einmal (2021)
-![Was War Es Einmal Gif](/img/waswareseinmal.gif#center)
+![Was War Es Einmal Gif](img/waswareseinmal.gif#center)
 Developed for Manasoup Game Jam (2 days). Focused on a tight scope and mobile compatibility.
 
 ### Mildly Entertaining Games & Archive
 A collection of earlier game jam experiments and long-term projects like *The Side Effects of Life in Space* can be found at [mildlyentertaining.games](https://mildlyentertaining.games).
 
-![Mildly Entertaining Games Collage](/img/mildlyentertaininggames_collage_bg_color.png#center)
+![Mildly Entertaining Games Collage](img/mildlyentertaininggames_collage_bg_color.png#center)
 
 ---
 

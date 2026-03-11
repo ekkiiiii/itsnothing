@@ -10,7 +10,7 @@ tags = ['Unity','Game Dev']
 I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016
 Ludum Dare Game "Potion Shift": Don't be too ambitious with announcing features/content, especially don't put them in your main menu:
 
-![Potion Shift Menu Screenshot](/img/potionshift_unity_game.PNG)
+![Potion Shift Menu Screenshot](img/potionshift_unity_game.PNG)
 Coming, Coming Soon... I don't think so :P
 
 From now on I'll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)

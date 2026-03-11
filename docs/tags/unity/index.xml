@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unity on It&#39;s Nothing</title>
-    <link>http://localhost:1313/tags/unity/</link>
+    <link>https://www.itsnothing.de/tags/unity/</link>
     <description>Recent content in Unity on It&#39;s Nothing</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 29 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.itsnothing.de/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Revisiting old unity projects - Part 2</title>
-      <link>http://localhost:1313/post/revisiting-old-unity-projects-part-2/</link>
+      <link>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/revisiting-old-unity-projects-part-2/</guid>
+      <guid>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</guid>
       <description>&lt;p&gt;Last time I revisited Potion Shift from April 2016 to make a 64-bit-version for Android. That went pretty well, so this time I&amp;rsquo;ll go back to the first jam game I did. It is called Affectionate Armament, made for Ludum Dare 32 with the theme &amp;ldquo;An Unconventional Weapon&amp;rdquo;. The idea we went with was to have a weapon with feelings. It&amp;rsquo;s a two player action game with one weapon, and once a player grabs it they can start shooting the other player. The second player tries to avoid the bullets, while attempting to use their &amp;ldquo;sweettalking&amp;rdquo; ability to persuade the weapon to switch players. I hope you get the gist of it. While the gameplay has some major design flaws, it is still one of the most interesting design ideas we ever came up with during game jams. If I ever continued to really sink some work into one of them it would probably be this one.&lt;br&gt;&#xA;That was reason number one to revisit it. But wait, there is more! This game is from April 2015, and we only have a Unity Web Player build of it online. That is largely not supported anymore and Unity now has a technically superior way of building for the Web based on WebGL.&#xA;So, enough reasons to see what it takes to get a 6 year old Unity game running again.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Revisiting old unity projects</title>
-      <link>http://localhost:1313/post/revisiting-old-unity-projects/</link>
+      <link>https://www.itsnothing.de/post/revisiting-old-unity-projects/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/revisiting-old-unity-projects/</guid>
-      <description>&lt;p&gt;I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016&#xA;Ludum Dare Game &amp;ldquo;Potion Shift&amp;rdquo;: Don&amp;rsquo;t be too ambitious with announcing features/content, especially don&amp;rsquo;t put them in your main menu:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/potionshift_unity_game.PNG&#34; alt=&#34;Potion Shift Menu Screenshot&#34;&gt;&#xA;Coming, Coming Soon&amp;hellip; I don&amp;rsquo;t think so :P&lt;/p&gt;&#xA;&lt;p&gt;From now on I&amp;rsquo;ll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)&lt;/p&gt;</description>
+      <guid>https://www.itsnothing.de/post/revisiting-old-unity-projects/</guid>
+      <description>&lt;p&gt;I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016&#xA;Ludum Dare Game &amp;ldquo;Potion Shift&amp;rdquo;: Don&amp;rsquo;t be too ambitious with announcing features/content, especially don&amp;rsquo;t put them in your main menu:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.itsnothing.de/img/potionshift_unity_game.PNG&#34; alt=&#34;Potion Shift Menu Screenshot&#34;&gt;&#xA;Coming, Coming Soon&amp;hellip; I don&amp;rsquo;t think so :P&lt;/p&gt;&#xA;&lt;p&gt;From now on I&amp;rsquo;ll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

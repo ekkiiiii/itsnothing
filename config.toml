@@ -53,3 +53,20 @@ publishDir = "docs"
     subtitle = "Ekkis Blog"
     keywords = ""
     copyright = ""
+
+    [languages.de.menu]
+      [[languages.de.menu.main]]
+        identifier = "portfolio"
+        name = "Portfolio"
+        url = "/de/portfolio"
+        weight = "80"
+      [[languages.de.menu.main]]
+        identifier = "about-me"
+        name = "Über mich"
+        url = "/de/about-me"
+        weight = "90"
+      [[languages.de.menu.about]]
+        identifier = "about-this-site"
+        name = "Über diese Seite"
+        url = "/de/about-this-site"
+        weight = "90"

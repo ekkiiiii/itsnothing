@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on It&#39;s Nothing</title>
-    <link>https://www.itsnothing.de/tags/hugo/</link>
+    <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on It&#39;s Nothing</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.itsnothing.de/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating websites with hugo</title>
-      <link>https://www.itsnothing.de/post/creating-websites-with-hugo/</link>
+      <link>http://localhost:1313/post/creating-websites-with-hugo/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/creating-websites-with-hugo/</guid>
+      <guid>http://localhost:1313/post/creating-websites-with-hugo/</guid>
       <description>&lt;p&gt;For the longest time, I used to build websites with Wordpress. It&amp;rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&amp;rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time. Even more problematic: if updates fail you are left with security issues and every month it&amp;rsquo;ll become more likely that someone exploits your Wordpress install to distribute spam e-mails.&lt;/p&gt;</description>
     </item>
   </channel>

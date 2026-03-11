@@ -2,122 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>It&#39;s Nothing</title>
-    <link>https://www.itsnothing.de/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on It&#39;s Nothing</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.itsnothing.de/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Portfolio</title>
-      <link>https://www.itsnothing.de/portfolio/</link>
+      <link>http://localhost:1313/portfolio/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/portfolio/</guid>
+      <guid>http://localhost:1313/portfolio/</guid>
       <description>&lt;p&gt;I like to build things. What I enjoy most is the practical side of development: writing code, building prototypes, and taking an idea into the real world to see what works (and what doesn&amp;rsquo;t).&lt;/p&gt;&#xA;&lt;p&gt;Having spent over 8 years in small, self-organized teams, I&amp;rsquo;m used to handling the structural side as well. I like thinking about how systems are wired together and how teams can work with them day to day. My current focus lies in C# (Unity/Desktop) and the modern web stack (React/TypeScript).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Matchpicks: Sports Picking Platform</title>
-      <link>https://www.itsnothing.de/post/matchpicks-platform-overview/</link>
+      <link>http://localhost:1313/post/matchpicks-platform-overview/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/matchpicks-platform-overview/</guid>
+      <guid>http://localhost:1313/post/matchpicks-platform-overview/</guid>
       <description>&lt;p&gt;Over the last months I&amp;rsquo;ve been working on &lt;strong&gt;Matchpicks&lt;/strong&gt;, a web platform for creating and joining picking leagues around sports games.&lt;/p&gt;&#xA;&lt;p&gt;The core idea is simple: instead of being tied to a single big league or a single sport, Matchpicks is built to &lt;strong&gt;support many small, custom leagues&lt;/strong&gt; – perfect for niche sports and tight‑knit communities.&lt;/p&gt;&#xA;&lt;p&gt;Some key points:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tech stack&lt;/strong&gt;: React on the frontend, backed by a modern web stack.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Leagues &amp;amp; picks&lt;/strong&gt;: Users can create their own leagues, invite friends, and submit picks for upcoming matches.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Multiple sports&lt;/strong&gt;: The system is designed to handle different leagues and competition formats, so it can be reused for a variety of sports.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Origin story&lt;/strong&gt;: The first real‑world use case was European (semi‑professional and amateur) American Football, where there are lots of smaller leagues but very few tools to run structured prediction games around them.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;There’s still plenty to refine (both in terms of UX and feature depth), but the current version already supports the main loop: create a league, join as a player, and submit your weekly picks.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Portfolio update</title>
+      <link>http://localhost:1313/post/update-25/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/update-25/</guid>
+      <description>&lt;p&gt;Portfolio section received a small update!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>(Mini) Post Mortem: Shiba Rush</title>
-      <link>https://www.itsnothing.de/post/shiba-rush-post-mortem/</link>
+      <link>http://localhost:1313/post/shiba-rush-post-mortem/</link>
       <pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/shiba-rush-post-mortem/</guid>
+      <guid>http://localhost:1313/post/shiba-rush-post-mortem/</guid>
       <description>&lt;p&gt;Yo, quick update about what I am currently working on with &lt;a href=&#34;https://mobile.twitter.com/ArtVefroh&#34;&gt;@VeFroh&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;A bit of background on the project first: we had two attempts of building something under the title SHIBA RUSH at Gentleforge earlier this year with a few external people. Long story short, the company had to let everyone go. Two of us wanted to keep in touch by working on a common project, so we started to work on a concept Vero had been working on before. We spent a couple of days in total during the past two months fleshing out the design documentation, with a big focus on finding out what the core vision for this game actually should entail. We discussed a couple of ideas while doing that and came up with a (still rather barebone) game loop that we wanted to try and iterate on. We since moved on to build another prototype from scratch, which created this perfect opportunity for a quick post mortem for the first version.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SHIBA RUSH Datenschutzerklärung</title>
-      <link>https://www.itsnothing.de/shibarush-datenschutz/</link>
+      <link>http://localhost:1313/shibarush-datenschutz/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/shibarush-datenschutz/</guid>
+      <guid>http://localhost:1313/shibarush-datenschutz/</guid>
       <description>&lt;h1&gt;Datenschutzerklärung&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;m14&#34;&gt;Einleitung&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als &#34;Daten“ bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als &#34;Onlineangebot“).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Portfolio updated</title>
-      <link>https://www.itsnothing.de/post/july-22-update-2/</link>
+      <link>http://localhost:1313/post/july-22-update-2/</link>
       <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/july-22-update-2/</guid>
+      <guid>http://localhost:1313/post/july-22-update-2/</guid>
       <description>&lt;p&gt;Took the time to update the portfolio page to include some preview images/animations to showcase more of the projects I have been working on in the past years.&#xA;Check it out, it is linked in the bar above ;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>July 22 Update</title>
-      <link>https://www.itsnothing.de/post/july-22-update/</link>
+      <link>http://localhost:1313/post/july-22-update/</link>
       <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/july-22-update/</guid>
+      <guid>http://localhost:1313/post/july-22-update/</guid>
       <description>&lt;p&gt;Another update! Since we could not secure funding for further projects with Gentleforge I am currently looking for work again. Great opportunity to update the portfolio/website here.&lt;/p&gt;&#xA;&lt;p&gt;I already updated the &amp;ldquo;Stuff I built&amp;rdquo; page with some new details and am going to write an update on what I am doing on the side at the moment next.&lt;/p&gt;&#xA;&lt;p&gt;In the last few months I started playing around with Yahaha, a software platform for creating real-time 3D content. It feels very much like a light version of Unity. It is still in an early stage of development so I am trying to focus on providing basic documentation so people can figure out how to build cool stuff.&#xA;One thing I did was generating documentation for the yahaha lua scripting backend. It is currently available here on my old companies page, but since I don&amp;rsquo;t have access to that anymore I&amp;rsquo;ll upload new versions here:&#xA;&lt;a href=&#34;https://www.gentleforge.com/yahaha-lua-api-generated-docs&#34;&gt;https://www.gentleforge.com/yahaha-lua-api-generated-docs&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>February 22 Update</title>
-      <link>https://www.itsnothing.de/post/february-22-update/</link>
+      <link>http://localhost:1313/post/february-22-update/</link>
       <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/february-22-update/</guid>
-      <description>&lt;p&gt;Oh, hey, the first update in &lt;em&gt;checks notes&lt;/em&gt; years. I am currently working on a project with some motion controls, if it works out I will write a post about it.&lt;/p&gt;&#xA;&lt;p&gt;Here is a sneak peak using the &lt;a href=&#34;https://nuitrack.com/&#34;&gt;Nuitrack SDK&lt;/a&gt; to get some live skeleton data in Unity:&lt;/p&gt;&#xA;&lt;video autoplay loop muted playsinline aria-label=&#39;virtual skeleton moving in unity&#39; style=&#34;width: 100%; height: auto;&#34;&gt;&#xD;&#xA;    &lt;source src=&#34;https://www.itsnothing.de/video/updown.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;p&gt; Your browser does not support video. &lt;/p&gt;&#xD;&#xA;&lt;/video&gt;&#xA;&lt;p&gt;Since the last update I started working at &lt;a href=&#34;Gentleforge&#34;&gt;https://www.gentleforge.com/&lt;/a&gt; and updated the page info accordingly. I already mentioned what I am currently working on, most of the time last year I spent helping to ship &lt;a href=&#34;https://fairyfailgame.com/&#34;&gt;Fairyfail&lt;/a&gt;. The game launch could have gone better but it was a great learning experience and I am looking forward to improving with the next title.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/february-22-update/</guid>
+      <description>&lt;p&gt;Oh, hey, the first update in &lt;em&gt;checks notes&lt;/em&gt; years. I am currently working on a project with some motion controls, if it works out I will write a post about it.&lt;/p&gt;&#xA;&lt;p&gt;Here is a sneak peak using the &lt;a href=&#34;https://nuitrack.com/&#34;&gt;Nuitrack SDK&lt;/a&gt; to get some live skeleton data in Unity:&lt;/p&gt;&#xA;&lt;video autoplay loop muted playsinline aria-label=&#39;virtual skeleton moving in unity&#39; style=&#34;width: 100%; height: auto;&#34;&gt;&#xD;&#xA;    &lt;source src=&#34;http://localhost:1313/video/updown.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;p&gt; Your browser does not support video. &lt;/p&gt;&#xD;&#xA;&lt;/video&gt;&#xA;&lt;p&gt;Since the last update I started working at &lt;a href=&#34;Gentleforge&#34;&gt;https://www.gentleforge.com/&lt;/a&gt; and updated the page info accordingly. I already mentioned what I am currently working on, most of the time last year I spent helping to ship &lt;a href=&#34;https://fairyfailgame.com/&#34;&gt;Fairyfail&lt;/a&gt;. The game launch could have gone better but it was a great learning experience and I am looking forward to improving with the next title.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Revisiting old unity projects - Part 2</title>
-      <link>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</link>
+      <link>http://localhost:1313/post/revisiting-old-unity-projects-part-2/</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</guid>
+      <guid>http://localhost:1313/post/revisiting-old-unity-projects-part-2/</guid>
       <description>&lt;p&gt;Last time I revisited Potion Shift from April 2016 to make a 64-bit-version for Android. That went pretty well, so this time I&amp;rsquo;ll go back to the first jam game I did. It is called Affectionate Armament, made for Ludum Dare 32 with the theme &amp;ldquo;An Unconventional Weapon&amp;rdquo;. The idea we went with was to have a weapon with feelings. It&amp;rsquo;s a two player action game with one weapon, and once a player grabs it they can start shooting the other player. The second player tries to avoid the bullets, while attempting to use their &amp;ldquo;sweettalking&amp;rdquo; ability to persuade the weapon to switch players. I hope you get the gist of it. While the gameplay has some major design flaws, it is still one of the most interesting design ideas we ever came up with during game jams. If I ever continued to really sink some work into one of them it would probably be this one.&lt;br&gt;&#xA;That was reason number one to revisit it. But wait, there is more! This game is from April 2015, and we only have a Unity Web Player build of it online. That is largely not supported anymore and Unity now has a technically superior way of building for the Web based on WebGL.&#xA;So, enough reasons to see what it takes to get a 6 year old Unity game running again.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Revisiting old unity projects</title>
-      <link>https://www.itsnothing.de/post/revisiting-old-unity-projects/</link>
+      <link>http://localhost:1313/post/revisiting-old-unity-projects/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/revisiting-old-unity-projects/</guid>
-      <description>&lt;p&gt;I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016&#xA;Ludum Dare Game &amp;ldquo;Potion Shift&amp;rdquo;: Don&amp;rsquo;t be too ambitious with announcing features/content, especially don&amp;rsquo;t put them in your main menu:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.itsnothing.de/img/potionshift_unity_game.PNG&#34; alt=&#34;Potion Shift Menu Screenshot&#34;&gt;&#xA;Coming, Coming Soon&amp;hellip; I don&amp;rsquo;t think so :P&lt;/p&gt;&#xA;&lt;p&gt;From now on I&amp;rsquo;ll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/revisiting-old-unity-projects/</guid>
+      <description>&lt;p&gt;I have a bunch of old Unity projects lying around, mostly from gamejams. Instant learning, just looking at the menu for our 2016&#xA;Ludum Dare Game &amp;ldquo;Potion Shift&amp;rdquo;: Don&amp;rsquo;t be too ambitious with announcing features/content, especially don&amp;rsquo;t put them in your main menu:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/potionshift_unity_game.PNG&#34; alt=&#34;Potion Shift Menu Screenshot&#34;&gt;&#xA;Coming, Coming Soon&amp;hellip; I don&amp;rsquo;t think so :P&lt;/p&gt;&#xA;&lt;p&gt;From now on I&amp;rsquo;ll just put things in blogposts that I can silently delete later to undo any unfulfilled announcements ;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creating websites with hugo</title>
-      <link>https://www.itsnothing.de/post/creating-websites-with-hugo/</link>
+      <link>http://localhost:1313/post/creating-websites-with-hugo/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/creating-websites-with-hugo/</guid>
+      <guid>http://localhost:1313/post/creating-websites-with-hugo/</guid>
       <description>&lt;p&gt;For the longest time, I used to build websites with Wordpress. It&amp;rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&amp;rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time. Even more problematic: if updates fail you are left with security issues and every month it&amp;rsquo;ll become more likely that someone exploits your Wordpress install to distribute spam e-mails.&lt;/p&gt;</description>
     </item>
     <item>
       <title>More Info added</title>
-      <link>https://www.itsnothing.de/post/moar-info/</link>
+      <link>http://localhost:1313/post/moar-info/</link>
       <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/moar-info/</guid>
+      <guid>http://localhost:1313/post/moar-info/</guid>
       <description>&lt;p&gt;I updated the about me and added a small showcase with information about what I did.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>https://www.itsnothing.de/about-me/</link>
+      <link>http://localhost:1313/about-me/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/about-me/</guid>
-      <description>&lt;h2 id=&#34;hi-im-ekki&#34;&gt;Hi, I&amp;rsquo;m Ekki&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.itsnothing.de/img/newface_very_small.png&#34; alt=&#34;Ekki Face&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I like to make and play games, build software and a bunch of other things.&lt;br&gt;&#xA;I am currently looking for work as a game and/or software developer.&#xA;You can find more info on what I did professionally on the &lt;a href=&#34;https://www.itsnothing.de/portfolio/&#34; title=&#34;Portfolio&#34;&gt;Portfolio&lt;/a&gt; page.&lt;br&gt;&#xA;For CV info please refer to my &lt;a href=&#34;https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/&#34;&gt;LinkedIn-Profile&lt;/a&gt;.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/about-me/</guid>
+      <description>&lt;h2 id=&#34;hi-im-ekki&#34;&gt;Hi, I&amp;rsquo;m Ekki&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/newface_very_small.png&#34; alt=&#34;Ekki Face&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I like to make and play games, build software and a bunch of other things.&lt;br&gt;&#xA;I am currently looking for work as a game and/or software developer.&#xA;You can find more info on what I did professionally on the &lt;a href=&#34;http://localhost:1313/portfolio/&#34; title=&#34;Portfolio&#34;&gt;Portfolio&lt;/a&gt; page.&lt;br&gt;&#xA;For CV info please refer to my &lt;a href=&#34;https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/&#34;&gt;LinkedIn-Profile&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About This Site</title>
-      <link>https://www.itsnothing.de/about-this-site/</link>
+      <link>http://localhost:1313/about-this-site/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/about-this-site/</guid>
-      <description>&lt;h2 id=&#34;how-is-this-site-made&#34;&gt;How is this site made?&lt;/h2&gt;&#xA;&lt;p&gt;The page is built with Hugo, I have already written about it &lt;a href=&#34;https://www.itsnothing.de/post/creating-websites-with-hugo/&#34;&gt;here&lt;/a&gt;.&lt;br&gt;&#xA;The theme is called &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;terminal&lt;/a&gt; and it is made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;.&lt;br&gt;&#xA;You can retrace all the customizations I made and will make on the &lt;a href=&#34;https://github.com/ekkiiiii/itsnothing&#34;&gt;blog&amp;rsquo;s GitHub repository&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-about-those-neat-graphics&#34;&gt;What about those neat graphics?&lt;/h2&gt;&#xA;&lt;p&gt;The images are virtuosly made with Microsoft Paint, with the help of a graphics tablet or directly on a touchscreen, so you&amp;rsquo;ll only find hand-made, artisanal blog graphics here.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/about-this-site/</guid>
+      <description>&lt;h2 id=&#34;how-is-this-site-made&#34;&gt;How is this site made?&lt;/h2&gt;&#xA;&lt;p&gt;The page is built with Hugo, I have already written about it &lt;a href=&#34;http://localhost:1313/post/creating-websites-with-hugo/&#34;&gt;here&lt;/a&gt;.&lt;br&gt;&#xA;The theme is called &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;terminal&lt;/a&gt; and it is made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;.&lt;br&gt;&#xA;You can retrace all the customizations I made and will make on the &lt;a href=&#34;https://github.com/ekkiiiii/itsnothing&#34;&gt;blog&amp;rsquo;s GitHub repository&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-about-those-neat-graphics&#34;&gt;What about those neat graphics?&lt;/h2&gt;&#xA;&lt;p&gt;The images are virtuosly made with Microsoft Paint, with the help of a graphics tablet or directly on a touchscreen, so you&amp;rsquo;ll only find hand-made, artisanal blog graphics here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello Visitor</title>
-      <link>https://www.itsnothing.de/post/hello/</link>
+      <link>http://localhost:1313/post/hello/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/post/hello/</guid>
+      <guid>http://localhost:1313/post/hello/</guid>
       <description>&lt;p&gt;Hey, it&amp;rsquo;s a blog again. This is where it all starts.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Imprint</title>
-      <link>https://www.itsnothing.de/impressum/</link>
+      <link>http://localhost:1313/impressum/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/impressum/</guid>
+      <guid>http://localhost:1313/impressum/</guid>
       <description>&lt;h1 id=&#34;imprint&#34;&gt;Imprint&lt;/h1&gt;&#xA;&lt;p&gt;Jan-Erik Baehr&lt;br&gt;&#xA;Blombachweg 8a&lt;br&gt;&#xA;40625 Duesseldorf&lt;br&gt;&#xA;E-Mail: &lt;a href=&#34;mailto:admin@itsnothing.de&#34;&gt;admin@itsnothing.de&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;responsible-for-content--55-abs-2-rstv&#34;&gt;Responsible for content (§ 55 Abs. 2 RStV)&lt;/h2&gt;&#xA;&lt;p&gt;Jan-Erik Bähr&lt;br&gt;&#xA;Blombachweg 8a&lt;br&gt;&#xA;40625 Düsseldorf&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-is-this-made&#34;&gt;How is this made?&lt;/h2&gt;&#xA;&lt;p&gt;Made with &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;br&gt;&#xA;Theme made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://www.itsnothing.de/imprint/</link>
+      <link>http://localhost:1313/imprint/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/imprint/</guid>
+      <guid>http://localhost:1313/imprint/</guid>
       <description></description>
     </item>
   </channel>

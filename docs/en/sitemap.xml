@@ -2,144 +2,147 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.itsnothing.de/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/"
+                href="http://localhost:1313/de/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>https://www.itsnothing.de/portfolio/</loc>
+    <loc>http://localhost:1313/portfolio/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/portfolio/"
+                href="http://localhost:1313/de/portfolio/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/portfolio/"
+                href="http://localhost:1313/portfolio/"
                 />
   </url><url>
-    <loc>https://www.itsnothing.de/post/matchpicks-platform-overview/</loc>
+    <loc>http://localhost:1313/post/matchpicks-platform-overview/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/shiba-rush-post-mortem/</loc>
+    <loc>http://localhost:1313/post/update-25/</loc>
+    <lastmod>2025-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/shiba-rush-post-mortem/</loc>
     <lastmod>2022-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/shibarush-datenschutz/</loc>
+    <loc>http://localhost:1313/shibarush-datenschutz/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/july-22-update-2/</loc>
+    <loc>http://localhost:1313/post/july-22-update-2/</loc>
     <lastmod>2022-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/july-22-update/</loc>
+    <loc>http://localhost:1313/post/july-22-update/</loc>
     <lastmod>2022-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/february-22-update/</loc>
+    <loc>http://localhost:1313/post/february-22-update/</loc>
     <lastmod>2022-02-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/tags/game-dev/</loc>
+    <loc>http://localhost:1313/tags/game-dev/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/</loc>
+    <loc>http://localhost:1313/post/revisiting-old-unity-projects-part-2/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/tags/"
+                href="http://localhost:1313/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/tags/"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
-    <loc>https://www.itsnothing.de/tags/unity/</loc>
+    <loc>http://localhost:1313/tags/unity/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/revisiting-old-unity-projects/</loc>
+    <loc>http://localhost:1313/post/revisiting-old-unity-projects/</loc>
     <lastmod>2020-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/creating-websites-with-hugo/</loc>
+    <loc>http://localhost:1313/post/creating-websites-with-hugo/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/tags/static-site-generator/</loc>
+    <loc>http://localhost:1313/tags/static-site-generator/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/post/moar-info/</loc>
+    <loc>http://localhost:1313/post/moar-info/</loc>
     <lastmod>2020-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/about-me/</loc>
+    <loc>http://localhost:1313/about-me/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/about-me/"
+                href="http://localhost:1313/de/about-me/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/about-me/"
+                href="http://localhost:1313/about-me/"
                 />
   </url><url>
-    <loc>https://www.itsnothing.de/about-this-site/</loc>
+    <loc>http://localhost:1313/about-this-site/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/about-this-site/"
+                href="http://localhost:1313/de/about-this-site/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/about-this-site/"
+                href="http://localhost:1313/about-this-site/"
                 />
   </url><url>
-    <loc>https://www.itsnothing.de/post/hello/</loc>
+    <loc>http://localhost:1313/post/hello/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/impressum/</loc>
+    <loc>http://localhost:1313/impressum/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/impressum/"
+                href="http://localhost:1313/de/impressum/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/impressum/"
+                href="http://localhost:1313/impressum/"
                 />
   </url><url>
-    <loc>https://www.itsnothing.de/imprint/</loc>
+    <loc>http://localhost:1313/imprint/</loc>
   </url><url>
-    <loc>https://www.itsnothing.de/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://www.itsnothing.de/de/categories/"
+                href="http://localhost:1313/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.itsnothing.de/categories/"
+                href="http://localhost:1313/categories/"
                 />
   </url>
 </urlset>

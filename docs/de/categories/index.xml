@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on It&#39;s Nothing</title>
-    <link>https://www.itsnothing.de/de/categories/</link>
+    <link>https://ekkiiiii.github.io/itsnothing/de/categories/</link>
     <description>Recent content in Categories on It&#39;s Nothing</description>
     <generator>Hugo</generator>
     <language>de</language>
-    <atom:link href="https://www.itsnothing.de/de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ekkiiiii.github.io/itsnothing/de/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>It&#39;s Nothing</title>
-    <link>https://ekkiiiii.github.io/itsnothing/de/</link>
+    <link>https://www.itsnothing.de/de/</link>
     <description>Recent content on It&#39;s Nothing</description>
     <generator>Hugo</generator>
     <language>de</language>
     <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ekkiiiii.github.io/itsnothing/de/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.itsnothing.de/de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Portfolio</title>
-      <link>https://ekkiiiii.github.io/itsnothing/de/portfolio/</link>
+      <link>https://www.itsnothing.de/de/portfolio/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://ekkiiiii.github.io/itsnothing/de/portfolio/</guid>
+      <guid>https://www.itsnothing.de/de/portfolio/</guid>
       <description>&lt;p&gt;Ich baue gerne Dinge. Am meisten Spaß macht mir dabei der praktische Teil der Entwicklung: Code schreiben, Prototypen bauen und eine Idee so lange in die Realität schieben, bis klar wird, was funktioniert (und was nicht).&lt;/p&gt;&#xA;&lt;p&gt;Weil ich die letzten 8+ Jahre überwiegend in kleinen, selbstorganisierten Teams gearbeitet habe, kümmere ich mich nicht nur um „den Code“, sondern genauso um Struktur, Architektur und die Rahmenbedingungen dahinter. &lt;br&gt;&#xA;Aktuell liegt mein Fokus vor allem auf C# (Unity/Desktop) und dem modernen Web‑Stack (React/TypeScript).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Über diese Seite</title>
-      <link>https://ekkiiiii.github.io/itsnothing/de/about-this-site/</link>
+      <link>https://www.itsnothing.de/de/about-this-site/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://ekkiiiii.github.io/itsnothing/de/about-this-site/</guid>
-      <description>&lt;h2 id=&#34;wie-ist-diese-seite-gebaut&#34;&gt;Wie ist diese Seite gebaut?&lt;/h2&gt;&#xA;&lt;p&gt;Die Seite wird mit Hugo generiert – mehr Details dazu habe ich bereits &lt;a href=&#34;https://ekkiiiii.github.io/itsnothing/post/creating-websites-with-hugo&#34;&gt;hier&lt;/a&gt; aufgeschrieben.&lt;br&gt;&#xA;Das Theme heißt &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;terminal&lt;/a&gt; und wurde von &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt; erstellt.&lt;br&gt;&#xA;Alle Anpassungen, die ich vorgenommen habe und in Zukunft noch vornehme, kannst du im &lt;a href=&#34;https://github.com/ekkiiiii/itsnothing&#34;&gt;GitHub‑Repository des Blogs&lt;/a&gt; nachverfolgen.&lt;/p&gt;&#xA;&lt;h2 id=&#34;und-die-grafiken&#34;&gt;Und die Grafiken?&lt;/h2&gt;&#xA;&lt;p&gt;Die Bilder sind liebevoll mit Microsoft Paint erstellt – entweder mit Grafiktablet oder direkt auf einem Touchscreen. Hier findest du also nur handgemachte, „artisanal“ Blog-Grafiken.&lt;/p&gt;</description>
+      <guid>https://www.itsnothing.de/de/about-this-site/</guid>
+      <description>&lt;h2 id=&#34;wie-ist-diese-seite-gebaut&#34;&gt;Wie ist diese Seite gebaut?&lt;/h2&gt;&#xA;&lt;p&gt;Die Seite wird mit Hugo generiert – mehr Details dazu habe ich bereits &lt;a href=&#34;https://www.itsnothing.de/post/creating-websites-with-hugo&#34;&gt;hier&lt;/a&gt; aufgeschrieben.&lt;br&gt;&#xA;Das Theme heißt &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;terminal&lt;/a&gt; und wurde von &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt; erstellt.&lt;br&gt;&#xA;Alle Anpassungen, die ich vorgenommen habe und in Zukunft noch vornehme, kannst du im &lt;a href=&#34;https://github.com/ekkiiiii/itsnothing&#34;&gt;GitHub‑Repository des Blogs&lt;/a&gt; nachverfolgen.&lt;/p&gt;&#xA;&lt;h2 id=&#34;und-die-grafiken&#34;&gt;Und die Grafiken?&lt;/h2&gt;&#xA;&lt;p&gt;Die Bilder sind liebevoll mit Microsoft Paint erstellt – entweder mit Grafiktablet oder direkt auf einem Touchscreen. Hier findest du also nur handgemachte, „artisanal“ Blog-Grafiken.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Über mich</title>
-      <link>https://ekkiiiii.github.io/itsnothing/de/about-me/</link>
+      <link>https://www.itsnothing.de/de/about-me/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://ekkiiiii.github.io/itsnothing/de/about-me/</guid>
-      <description>&lt;h2 id=&#34;hi-ich-bin-ekki&#34;&gt;Hi, ich bin Ekki&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;img/newface_very_small.png&#34; alt=&#34;Ekki Face&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.&lt;br&gt;&#xA;Aktuell suche ich eine Stelle als Spiele und/oder Softwareentwickler.&#xA;Mehr Infos zu meinem beruflichen Werdegang findest du auf der &lt;a href=&#34;https://ekkiiiii.github.io/itsnothing/de/portfolio/&#34; title=&#34;Portfolio&#34;&gt;Portfolio&lt;/a&gt;‑Seite.&lt;br&gt;&#xA;Für klassische Lebenslauf-Infos schau gerne auf meinem &lt;a href=&#34;https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/&#34;&gt;LinkedIn‑Profil&lt;/a&gt; vorbei.&lt;/p&gt;</description>
+      <guid>https://www.itsnothing.de/de/about-me/</guid>
+      <description>&lt;h2 id=&#34;hi-ich-bin-ekki&#34;&gt;Hi, ich bin Ekki&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.itsnothing.de/img/newface_very_small.png&#34; alt=&#34;Ekki Face&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.&lt;br&gt;&#xA;Aktuell suche ich eine Stelle als Spiele und/oder Softwareentwickler.&#xA;Mehr Infos zu meinem beruflichen Werdegang findest du auf der &lt;a href=&#34;https://www.itsnothing.de/de/portfolio/&#34; title=&#34;Portfolio&#34;&gt;Portfolio&lt;/a&gt;‑Seite.&lt;br&gt;&#xA;Für klassische Lebenslauf-Infos schau gerne auf meinem &lt;a href=&#34;https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/&#34;&gt;LinkedIn‑Profil&lt;/a&gt; vorbei.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Impressum</title>
-      <link>https://ekkiiiii.github.io/itsnothing/de/impressum/</link>
+      <link>https://www.itsnothing.de/de/impressum/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://ekkiiiii.github.io/itsnothing/de/impressum/</guid>
+      <guid>https://www.itsnothing.de/de/impressum/</guid>
       <description>&lt;h1 id=&#34;impressum&#34;&gt;Impressum&lt;/h1&gt;&#xA;&lt;p&gt;Jan-Erik Baehr&lt;br&gt;&#xA;Blombachweg 8a&lt;br&gt;&#xA;40625 Düsseldorf&lt;br&gt;&#xA;E-Mail: &lt;a href=&#34;mailto:admin@itsnothing.de&#34;&gt;admin@itsnothing.de&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;verantwortlich-für-den-inhalt-gem--55-abs-2-rstv&#34;&gt;Verantwortlich für den Inhalt (gem. § 55 Abs. 2 RStV):&lt;/h2&gt;&#xA;&lt;p&gt;Jan-Erik Bähr&lt;br&gt;&#xA;Blombachweg 8a&lt;br&gt;&#xA;40625 Düsseldorf&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-is-this-made&#34;&gt;How is this made?&lt;/h2&gt;&#xA;&lt;p&gt;Made with &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;br&gt;&#xA;Theme made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

@@ -15,13 +15,13 @@ So, enough reasons to see what it takes to get a 6 year old Unity game running a
 Okay, first I have to update Assets to Asset database V2. The same as the last project since the breaking changes there come from version 2019.3. Next up is reimporting assets again because the project was built 
 This time things did not go as smoothly. I got greeted by a large list of errors, basically Unity could not find any of the scripts referenced on my gameobjects.  
   
-![Unity broken UI references](img/unity-broken-UI-references.PNG)
+![Unity broken UI references](/img/unity-broken-UI-references.PNG)
   
 This was a nasty type of error to google for, because it can appear in a large variety of different contexts. I clicked through a bunch of forum threads until I saw something that looked like it would help with [this post](https://forum.unity.com/threads/missing-unityengine-ui.735755/#post-6092235). And voilá, that's the solution. Either the .csproj files did not exist before or changed over time (enlighten me if you know it I am too lazy to research that after I got it working :P), either way we need to (re-?)generate them.  
 
 ## Resolving the issues with broken script references in old Unity projects
 
-![Unity Regenerate Project Files Menu](img/Unity-regenerate-project-files.PNG)
+![Unity Regenerate Project Files Menu](/img/Unity-regenerate-project-files.PNG)
 
 So, if you run into this type of error on a old Unity project that you try to revive:  
 

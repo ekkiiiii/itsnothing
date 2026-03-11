@@ -7,7 +7,7 @@ customCss = "/css/aboutme.css"
 
 ## Hi, I'm Ekki
 
-![Ekki Face](img/newface_very_small.png)  
+![Ekki Face](/img/newface_very_small.png)  
 
 I like to make and play games, build software and a bunch of other things.  
 I am currently looking for work as a game and/or software developer.

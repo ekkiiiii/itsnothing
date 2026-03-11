@@ -11,24 +11,24 @@ That was reason number one to revisit it. But wait, there is more! This game is 
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://ekkiiiii.github.io/itsnothing/post/revisiting-old-unity-projects-part-2/" />
+<link rel="canonical" href="https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/" />
 
 
 
 
-<link rel="stylesheet" href="https://ekkiiiii.github.io/itsnothing/assets/style.css">
+<link rel="stylesheet" href="https://www.itsnothing.de/assets/style.css">
 
 
 
-<link rel="stylesheet" href="https://ekkiiiii.github.io/itsnothing/style.css">
+<link rel="stylesheet" href="https://www.itsnothing.de/style.css">
 
 
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ekkiiiii.github.io/itsnothing/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png">
 
-  <link rel="shortcut icon" href="https://ekkiiiii.github.io/itsnothing/img/favicon/orange.png">
+  <link rel="shortcut icon" href="https://www.itsnothing.de/img/favicon/orange.png">
 
 
 
@@ -41,10 +41,10 @@ That was reason number one to revisit it. But wait, there is more! This game is 
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Revisiting old unity projects - Part 2 :: It&#39;s Nothing">
 <meta property="og:description" content="Time to take a look at an even older project." />
-<meta property="og:url" content="https://ekkiiiii.github.io/itsnothing/post/revisiting-old-unity-projects-part-2/" />
+<meta property="og:url" content="https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/" />
 <meta property="og:site_name" content="Revisiting old unity projects - Part 2" />
 
-  <meta property="og:image" content="https://ekkiiiii.github.io/img/revisiting-old-unity-projects.png">
+  <meta property="og:image" content="https://www.itsnothing.de/img/revisiting-old-unity-projects.png">
 
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -87,11 +87,11 @@ That was reason number one to revisit it. But wait, there is more! This game is 
     
       
         
-          <li><a href="/itsnothing/portfolio">Portfolio</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
         
       
         
-          <li><a href="/itsnothing/about-me">About Me</a></li>
+          <li><a href="/about-me">About Me</a></li>
         
       
       
@@ -103,11 +103,11 @@ That was reason number one to revisit it. But wait, there is more! This game is 
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/itsnothing/portfolio">Portfolio</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
       
     
       
-        <li><a href="/itsnothing/about-me">About Me</a></li>
+        <li><a href="/about-me">About Me</a></li>
       
     
     
@@ -124,7 +124,7 @@ That was reason number one to revisit it. But wait, there is more! This game is 
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://ekkiiiii.github.io/itsnothing/post/revisiting-old-unity-projects-part-2/">Revisiting old unity projects - Part 2</a></h1>
+    <a href="https://www.itsnothing.de/post/revisiting-old-unity-projects-part-2/">Revisiting old unity projects - Part 2</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -141,16 +141,16 @@ That was reason number one to revisit it. But wait, there is more! This game is 
   
   <span class="post-tags">
     
-    #<a href="https://ekkiiiii.github.io/itsnothing/tags/unity/">Unity</a>&nbsp;
+    #<a href="https://www.itsnothing.de/tags/unity/">Unity</a>&nbsp;
     
-    #<a href="https://ekkiiiii.github.io/itsnothing/tags/game-dev/">Game Dev</a>&nbsp;
+    #<a href="https://www.itsnothing.de/tags/game-dev/">Game Dev</a>&nbsp;
     
   </span>
   
 
   
   
-    <img src="https://ekkiiiii.github.io/img/revisiting-old-unity-projects.png" class="post-cover" alt="Revisiting old unity projects - Part 2" />
+    <img src="https://www.itsnothing.de/img/revisiting-old-unity-projects.png" class="post-cover" alt="Revisiting old unity projects - Part 2" />
   
 
   
@@ -162,10 +162,10 @@ So, enough reasons to see what it takes to get a 6 year old Unity game running a
 <h2 id="finally-some-issues">Finally, some issues!<a href="#finally-some-issues" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Okay, first I have to update Assets to Asset database V2. The same as the last project since the breaking changes there come from version 2019.3. Next up is reimporting assets again because the project was built
 This time things did not go as smoothly. I got greeted by a large list of errors, basically Unity could not find any of the scripts referenced on my gameobjects.</p>
-<p><img src="img/unity-broken-UI-references.PNG" alt="Unity broken UI references"></p>
+<p><img src="/img/unity-broken-UI-references.PNG" alt="Unity broken UI references"></p>
 <p>This was a nasty type of error to google for, because it can appear in a large variety of different contexts. I clicked through a bunch of forum threads until I saw something that looked like it would help with <a href="https://forum.unity.com/threads/missing-unityengine-ui.735755/#post-6092235">this post</a>. And voilá, that&rsquo;s the solution. Either the .csproj files did not exist before or changed over time (enlighten me if you know it I am too lazy to research that after I got it working :P), either way we need to (re-?)generate them.</p>
 <h2 id="resolving-the-issues-with-broken-script-references-in-old-unity-projects">Resolving the issues with broken script references in old Unity projects<a href="#resolving-the-issues-with-broken-script-references-in-old-unity-projects" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p><img src="img/Unity-regenerate-project-files.PNG" alt="Unity Regenerate Project Files Menu"></p>
+<p><img src="/img/Unity-regenerate-project-files.PNG" alt="Unity Regenerate Project Files Menu"></p>
 <p>So, if you run into this type of error on a old Unity project that you try to revive:</p>
 <ol>
 <li>Go to Edit&gt;Preferences&gt;External Tools</li>
@@ -190,7 +190,7 @@ Thanks for reading, until next time.</p>
     <div class="pagination__buttons">
         
         <span class="button previous">
-            <a href="https://ekkiiiii.github.io/itsnothing/post/february-22-update/">
+            <a href="https://www.itsnothing.de/post/february-22-update/">
                 <span class="button__icon">←</span>
                 <span class="button__text">February 22 Update</span>
             </a>
@@ -198,7 +198,7 @@ Thanks for reading, until next time.</p>
         
         
         <span class="button next">
-            <a href="https://ekkiiiii.github.io/itsnothing/post/revisiting-old-unity-projects/">
+            <a href="https://www.itsnothing.de/post/revisiting-old-unity-projects/">
                 <span class="button__text">Revisiting old unity projects</span>
                 <span class="button__icon">→</span>
             </a>
@@ -225,8 +225,8 @@ Thanks for reading, until next time.</p>
       </div>
     </div>
 </footer>
-<script src="https://ekkiiiii.github.io/itsnothing/assets/main.js"></script>
-<script src="https://ekkiiiii.github.io/itsnothing/assets/prism.js"></script>
+<script src="https://www.itsnothing.de/assets/main.js"></script>
+<script src="https://www.itsnothing.de/assets/prism.js"></script>
 
 
   
@@ -237,7 +237,7 @@ Thanks for reading, until next time.</p>
         
             
                 <li>
-                    <a href="/itsnothing/about-this-site">
+                    <a href="/about-this-site">
                         
                         <span>About this site</span>
                     </a>
@@ -250,7 +250,7 @@ Thanks for reading, until next time.</p>
 
 
 
-<script src="https://ekkiiiii.github.io/itsnothing/js/post-gallery.js"></script>
+<script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
   
   

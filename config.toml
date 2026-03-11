@@ -1,5 +1,6 @@
 baseurl = "https://www.itsnothing.de/"
 languageCode = "en-US"
+defaultContentLanguage = "en"
 theme = "terminal"
 paginate = 3
 publishDir = "docs"
@@ -10,9 +11,12 @@ publishDir = "docs"
   showMenuItems = 3
   fullWidthTheme = false
   centerTheme = true
+  showLanguageSelector = true
 
 [languages]
   [languages.en]
+    languageName = "English"
+    weight = 1
     title = "It's Nothing"
     subtitle = "Ekkis Blog"
     keywords = ""
@@ -32,16 +36,6 @@ publishDir = "docs"
         url = "/portfolio"
         weight = "80"
       [[languages.en.menu.main]]
-        identifier = "twitter"
-        name = "Twitter"
-        url = "https://www.twitter.com/ekkiiiii"
-        weight = "100"
-      [[languages.en.menu.main]]
-        identifier = "Letterboxd"
-        name = "Letterboxd"
-        url = "https://letterboxd.com/ekkiiiii/"
-        weight = "100"
-      [[languages.en.menu.main]]
         identifier = "about-me"
         name = "About Me"
         url = "/about-me"
@@ -51,3 +45,11 @@ publishDir = "docs"
         name = "About this site"
         url = "/about-this-site"
         weight = "90"
+
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 2
+    title = "It's Nothing"
+    subtitle = "Ekkis Blog"
+    keywords = ""
+    copyright = ""

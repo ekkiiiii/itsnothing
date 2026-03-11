@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   
-    <title>Creating websites with hugo :: It&#39;s Nothing — Ekkis Blog</title>
+    <title>Creating websites with hugo :: It&#39;s Nothing</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="For the longest time, I used to build websites with Wordpress. It&amp;rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&amp;rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time." />
+<meta name="description" content="For the longest time, I used to build websites with Wordpress. It&rsquo;s easy, performance was never that much of an issue for me and it enabled me to give non-technical users the opportunity to create content. But if you ever had a wordpress blog with a handful of plugins running unattended for a while you know that, well you can&rsquo;t leave it unattended actually. Even though wordpress has an automatic updating mechanism by now, keeping up interoperability of plugins/theme and the base wordpress install requires attention from time to time. Even more problematic: if updates fail you are left with security issues and every month it&rsquo;ll become more likely that someone exploits your Wordpress install to distribute spam e-mails.
+" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.itsnothing.de/post/creating-websites-with-hugo/" />
@@ -18,7 +19,7 @@
 
 
 
-
+<link rel="stylesheet" href="https://www.itsnothing.de/style.css">
 
 
 
@@ -92,22 +93,6 @@
           <li><a href="/about-me">About Me</a></li>
         
       
-        
-          <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
-        
-      
-      
-        <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
-
-          <ul class="menu__sub-inner-more hidden">
-            
-              
-                <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
-              
-            
-          </ul>
-        </ul>
       
     
 
@@ -124,17 +109,10 @@
         <li><a href="/about-me">About Me</a></li>
       
     
-      
-        <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
-      
-    
-      
-        <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
-      
-    
     
   </ul>
 </nav>
+
 
   
 
@@ -170,6 +148,7 @@
   
 
   
+  
     <img src="https://www.itsnothing.de/img/hugo-ssg.png" class="post-cover" alt="Creating websites with hugo" />
   
 
@@ -180,7 +159,7 @@
 <h2 id="static-site-generators">Static site generators<a href="#static-site-generators" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>I like new paradigms! A few years ago I did a project in <a href="https://docpad.bevry.me/">Docpad</a>, a now discontinued, early static site generator. I immediately fell in love with the idea of leaving dynamic stuff (TM) offline, and just pushing HTML/CSS to the server. Plain HTML on a server is as robust as it get&rsquo;s in the web, hard to argue with that. So if you don&rsquo;t want to tinker with your projects every few weeks or months anyway, your requirements don&rsquo;t go too overboard (there is probably a Wordpress plugin for any given use case) and you value speed, security and reliability give static site generators a try.</p>
 <h2 id="why-hugo">Why Hugo<a href="#why-hugo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>To be honest I just stumbled upon it by chance and gave it a try. There is a bunch of different SSGs: <a href="https://www.staticgen.com/">A nice overview of JAMStack SSGs</a>. You will likely find something that fits your own favourite flavour of templating (based on React,Vue,Angular,Svelte,&hellip;), or programming language if you want to write your own plugins. 
+<p>To be honest I just stumbled upon it by chance and gave it a try. There is a bunch of different SSGs: <a href="https://www.staticgen.com/">A nice overview of JAMStack SSGs</a>. You will likely find something that fits your own favourite flavour of templating (based on React,Vue,Angular,Svelte,&hellip;), or programming language if you want to write your own plugins.
 Back to Hugo: I like to check out new languages too, I saw it&rsquo;s written in Go, which I have filed somewhere under &ldquo;one of the programming languages the cool kids who are really into languages seemed to like&rdquo;. So I was mildly interested because of that, found themes I liked (I had two projects in mind, this page and <a href="https://mildlyentertaining.games">Mildly Entertaining Games</a>) and tried building the pages.</p>
 <h2 id="actually-making-and-deploying-the-pages">Actually making and deploying the pages<a href="#actually-making-and-deploying-the-pages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Since the post has gotten way longer than I initially anticipated and I&rsquo;m too lazy too redact it as a whole (Sorry :P), I&rsquo;ll save the actual building experience for another post. If you are already intrigued there is no need to wait, the <a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick Start Guide</a> is pretty straight-forward and you can have a simple page running in fifteen minutes.</p>
@@ -196,7 +175,7 @@ These two things are the core arguments for SSGs as a whole and I am definetly n
   
 <div class="pagination">
     <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
+        <span class="pagination__title-h"></span>
         <hr />
     </div>
     <div class="pagination__buttons">
@@ -242,6 +221,7 @@ These two things are the core arguments for SSGs as a whole and I am definetly n
 
 
   
+    
 <nav class="menu">
     <ul>
         
@@ -257,9 +237,11 @@ These two things are the core arguments for SSGs as a whole and I am definetly n
         
     </ul>
 </nav>
+  
 
 
 
+<script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
   
   

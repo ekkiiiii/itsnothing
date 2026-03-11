@@ -1,0 +1,24 @@
+<style>
+    .tech-insight {
+      background: rgba(255, 255, 255, 0.05); /* Dezenter grauer Schimmer */
+      border-left: 3px solid #1D76E2;
+      padding: 15px 20px;
+      margin: 25px 0;
+      font-size: 0.95em;
+      color: #e0e0e0; /* Hellgrauer Text für Dark Mode */
+      line-height: 1.6;
+      border-radius: 0 4px 4px 0;
+    }
+    .tech-insight strong {
+      color: #1D76E2;
+      display: block;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  
+  <div class="tech-insight">
+      {{ .Inner | markdownify }}
+  </div>

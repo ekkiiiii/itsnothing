@@ -13,8 +13,10 @@
 <script src="{{ "assets/main.js" | absURL }}"></script>
 <script src="{{ "assets/prism.js" | absURL }}"></script>
 
-{{ if len $.Site.Menus.about }}
-  {{ partial "aboutmenu.html" . }}
+{{ with $.Site.Menus.about }}
+  {{ if len . }}
+    {{ partial "aboutmenu.html" $ }}
+  {{ end }}
 {{ end }}
 
 <!-- Extended footer section-->

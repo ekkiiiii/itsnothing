@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   
-    <title>February 22 Update :: It&#39;s Nothing — Ekkis Blog</title>
+    <title>February 22 Update :: It&#39;s Nothing</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Oh, hey, the first update in checks notes years. I am currently working on a project with some motion controls, if it works out I will write a post about it.
 Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Unity:
- Your browser does not support video.  Since the last update I started working at https://www.gentleforge.com/ and updated the page info accordingly." />
+Your browser does not support video. Since the last update I started working at https://www.gentleforge.com/ and updated the page info accordingly. I already mentioned what I am currently working on, most of the time last year I spent helping to ship Fairyfail. The game launch could have gone better but it was a great learning experience and I am looking forward to improving with the next title.
+" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.itsnothing.de/post/february-22-update/" />
@@ -20,7 +21,7 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
 
 
 
-
+<link rel="stylesheet" href="https://www.itsnothing.de/style.css">
 
 
 
@@ -96,22 +97,6 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
           <li><a href="/about-me">About Me</a></li>
         
       
-        
-          <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
-        
-      
-      
-        <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
-
-          <ul class="menu__sub-inner-more hidden">
-            
-              
-                <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
-              
-            
-          </ul>
-        </ul>
       
     
 
@@ -128,17 +113,10 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
         <li><a href="/about-me">About Me</a></li>
       
     
-      
-        <li><a href="https://letterboxd.com/ekkiiiii/">Letterboxd</a></li>
-      
-    
-      
-        <li><a href="https://www.twitter.com/ekkiiiii">Twitter</a></li>
-      
-    
     
   </ul>
 </nav>
+
 
   
 
@@ -166,6 +144,7 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
   
 
   
+  
 
   
 
@@ -180,10 +159,10 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
 <p>Since the last update I started working at <a href="Gentleforge">https://www.gentleforge.com/</a> and updated the page info accordingly. I already mentioned what I am currently working on, most of the time last year I spent helping to ship <a href="https://fairyfailgame.com/">Fairyfail</a>. The game launch could have gone better but it was a great learning experience and I am looking forward to improving with the next title.</p>
 <p>Also some technical info about the page:</p>
 <p>To scale the image of my face on the about me page I tinkered for a minute and got custom CSS working for the pages here, so that I can create a custom stylesheet file per page, almost like in angular. It really is just this line in the template:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .Params.customcss }}&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ . }}&#34;</span> /&gt;{{ end }}
-</code></pre></div><p>and then setting the custom css file in the header of the page/post:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">customCss = &#34;/css/aboutme.css&#34;
-</code></pre></div><p>The video above is working thanks to the <a href="https://sunbro.dev/posts/2020-05-20-adding-video-support-to-hugo-terminal/">tutorial found here</a> about adding video support to the terminal theme for hugo. Thanks for that!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ with .Params.customcss }}&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ . }}&#34;</span> /&gt;{{ end }}
+</span></span></code></pre></div><p>and then setting the custom css file in the header of the page/post:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>customCss = &#34;/css/aboutme.css&#34;
+</span></span></code></pre></div><p>The video above is working thanks to the <a href="https://sunbro.dev/posts/2020-05-20-adding-video-support-to-hugo-terminal/">tutorial found here</a> about adding video support to the terminal theme for hugo. Thanks for that!</p>
 <p>That&rsquo;s it for now, until next time!</p>
 
       </div></div>
@@ -192,7 +171,7 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
   
 <div class="pagination">
     <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
+        <span class="pagination__title-h"></span>
         <hr />
     </div>
     <div class="pagination__buttons">
@@ -238,6 +217,7 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
 
 
   
+    
 <nav class="menu">
     <ul>
         
@@ -253,9 +233,11 @@ Here is a sneak peak using the Nuitrack SDK to get some live skeleton data in Un
         
     </ul>
 </nav>
+  
 
 
 
+<script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
   
   

@@ -1,0 +1,84 @@
+/* Reduce vertical gap between header and page/post titles */
+.header .menu {
+  margin: 4px 0 0;
+}
+
+.post {
+  margin-top: 0;
+  padding-top: 6px;
+}
+
+/* Post image gallery */
+.post-gallery {
+  position: relative;
+  margin: 20px 0 30px;
+}
+
+.post-gallery__track {
+  width: 100%;
+  position: relative;
+}
+
+.post-gallery__item {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.post-gallery__item--active {
+  display: block;
+}
+
+.post-gallery__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.post-gallery__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.post-gallery__nav--prev {
+  left: 10px;
+}
+
+.post-gallery__nav--next {
+  right: 10px;
+}
+
+/* Make main column wider */
+.container {
+  max-width: 1040px;
+}
+
+/* Make post preview cover images smaller */
+.post-cover {
+  max-width: 70%;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid var(--accent) !important;
+}
+
+/* Limit size of inline post images */
+.post .post-content img {
+  display: block;
+  max-height: 400px !important;
+  height: auto !important;
+  width: auto;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}

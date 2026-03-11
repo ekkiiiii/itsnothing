@@ -1,0 +1,48 @@
+<style>
+    .lang-switcher {
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .lang-switcher summary {
+      padding: 10px 15px;
+      list-style: none;
+      cursor: pointer;
+      font-size: 0.9em;
+      color: #1D76E2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .lang-switcher summary:hover {
+      background: rgba(29, 118, 226, 0.1);
+    }
+    .lang-switcher summary::-webkit-details-marker {
+      display: none;
+    }
+    .lang-switcher .content {
+      padding: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .lang-hint {
+      font-size: 0.8em;
+      opacity: 0.6;
+      color: #fff;
+    }
+  </style>
+  
+  <details class="lang-switcher">
+    <summary>
+      <span>🌐 Read in German / Auf Deutsch lesen</span>
+      <span class="lang-hint">Click to expand</span>
+    </summary>
+    <div class="content">
+      {{ .Inner | markdownify }}
+    </div>
+  </details>

@@ -31,3 +31,16 @@ h4 {
     font-size: medium;
     text-align: center;
 }
+
+details {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.02);
+}
+summary {
+    cursor: pointer;
+    color: #1D76E2;
+    font-weight: bold;
+}

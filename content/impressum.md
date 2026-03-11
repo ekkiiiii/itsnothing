@@ -1,18 +1,18 @@
 +++
-title = "Impressum"
+title = "Imprint"
 date = "2020-01-01"
 author = "Ekki"
 +++
 
-# Impressum
-Jan-Erik Baehr
-Blombachweg 8a
-40625 Duesseldorf
+# Imprint
+Jan-Erik Baehr  
+Blombachweg 8a  
+40625 Duesseldorf  
 E-Mail: admin@itsnothing.de
 
-## Verantwortlich für den Inhalt (gem. § 55 Abs. 2 RStV):
-Jan-Erik Bähr
-Blombachweg 8a
+## Responsible for content (§ 55 Abs. 2 RStV)
+Jan-Erik Bähr  
+Blombachweg 8a  
 40625 Düsseldorf
 
 ## How is this made?

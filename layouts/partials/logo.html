@@ -1,0 +1,6 @@
+<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}" 
+   class="logo-link custom-logo {{ if or (eq .RelPermalink "/") (eq .RelPermalink "/de/") (eq .RelPermalink "/en/") }}active{{ end }}">
+  <div class="logo">
+    {{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}It's Nothing{{ end }}
+  </div>
+</a>

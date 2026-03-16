@@ -5,8 +5,64 @@
     </div>
     <div class="menu-trigger">menu</div>
   </div>
-  {{ if len $.Site.Menus }}
-    {{ partial "menu.html" . }}
-  {{ end }}
+  <div class="header__sub-row">
+    {{ if len $.Site.Menus }}
+      {{ partial "menu.html" . }}
+    {{ end }}
 
+    {{ if and $.Site.Params.showLanguageSelector .IsTranslated (not .IsHome) (ne .Section "post") (ne .Type "post") (gt (len .AllTranslations) 0) }}
+      <div class="header__language-container" id="header-language-container">
+        <ul class="language-selector header-language-selector" id="header-language-selector">
+          <li class="custom-lang-trigger" id="language-selector-trigger">
+            {{ .Language.LanguageName }} ▾
+            <ul class="custom-lang-options hidden" id="language-options">
+              {{ range .AllTranslations }}
+                <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+              {{ end }}
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+        (function() {
+          function initLanguageSelector() {
+            var langTrigger = document.getElementById('language-selector-trigger');
+            var langOptions = document.getElementById('language-options');
+            var langContainer = document.getElementById('header-language-container');
+            var menuTrigger = document.querySelector('.menu-trigger');
+            var menu = document.querySelector('.header .menu');
+
+            if (langTrigger && langOptions) {
+              langTrigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langOptions.classList.toggle('hidden');
+              });
+            }
+
+            if (menuTrigger && langContainer) {
+              menuTrigger.addEventListener('click', function() {
+                setTimeout(function() {
+                  if (menu && !menu.classList.contains('hidden')) {
+                    langContainer.classList.add('mobile-hidden');
+                  } else {
+                    langContainer.classList.remove('mobile-hidden');
+                  }
+                }, 10);
+              });
+            }
+
+            document.addEventListener('click', function() {
+              if (langOptions) langOptions.classList.add('hidden');
+            });
+          }
+
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initLanguageSelector();
+          } else {
+            document.addEventListener('DOMContentLoaded', initLanguageSelector);
+          }
+        })();
+      </script>
+    {{ end }}
+  </div>
 </header>

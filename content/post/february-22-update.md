@@ -1,7 +1,7 @@
 +++
 title = "February 22 Update"
 date = "2022-02-19"
-author = "Ekki"
+author = "Jan-Erik"
 description = "Just a quick update"
 +++
 
@@ -30,3 +30,4 @@ customCss = "/css/aboutme.css"
 The video above is working thanks to the [tutorial found here](https://sunbro.dev/posts/2020-05-20-adding-video-support-to-hugo-terminal/) about adding video support to the terminal theme for hugo. Thanks for that!
 
 That's it for now, until next time!
+

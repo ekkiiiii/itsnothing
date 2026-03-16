@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Portfolio :: It&#39;s Nothing</title>
+    <title>Portfolio :: It&#39;s Nothing — Jan-Erik&#39;s Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@ Having spent over 8 years in small, self-organized teams, I&rsquo;m used to hand
 
 <meta name="twitter:card" content="summary" />
 
-<meta name="twitter:creator" content="Ekki" />
+<meta name="twitter:creator" content="Jan-Erik" />
 
 
 <meta property="og:locale" content="en" />
@@ -76,7 +76,8 @@ Having spent over 8 years in small, self-organized teams, I&rsquo;m used to hand
   <header class="header">
   <div class="header__inner">
     <div class="header__logo">
-      <a href="/">
+      <a href="/" 
+   class="logo-link custom-logo ">
   <div class="logo">
     It&#39;s Nothing
   </div>
@@ -85,61 +86,86 @@ Having spent over 8 years in small, self-organized teams, I&rsquo;m used to hand
     </div>
     <div class="menu-trigger">menu</div>
   </div>
-  
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
+  <div class="header__sub-row">
+    
+      <nav class="menu">
+  <ul class="menu__inner">
     
       
         
-          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/portfolio/" class="custom-menu-link active">Portfolio</a></li>
         
       
         
-          <li><a href="/about-me">About Me</a></li>
+          <li><a href="/about-me/" class="custom-menu-link ">About Me</a></li>
         
       
       
     
 
-    
-    <div class="spacer"></div>
-    <ul class="language-selector">
-      <ul class="language-selector-current">
-          <li>English ▾</li>
-      </ul>
-      <ul class="language-selector__more hidden">
-        
-          <li><a href="https://www.itsnothing.de/de/portfolio/">Deutsch</a></li>
-        
-      </ul>
-    </ul>
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/portfolio">Portfolio</a></li>
-      
-    
-      
-        <li><a href="/about-me">About Me</a></li>
-      
-    
-    
-    <hr />
-        
-          <li>
-            <a href="https://www.itsnothing.de/de/portfolio/">Deutsch</a>
-          </li>
-        
-    
   </ul>
 </nav>
 
 
-  
+    
 
+    
+      <div class="header__language-container" id="header-language-container">
+        <ul class="language-selector header-language-selector" id="header-language-selector">
+          <li class="custom-lang-trigger" id="language-selector-trigger">
+            English ▾
+            <ul class="custom-lang-options hidden" id="language-options">
+              
+                <li><a href="https://www.itsnothing.de/portfolio/">English</a></li>
+              
+                <li><a href="https://www.itsnothing.de/de/portfolio/">Deutsch</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+        (function() {
+          function initLanguageSelector() {
+            var langTrigger = document.getElementById('language-selector-trigger');
+            var langOptions = document.getElementById('language-options');
+            var langContainer = document.getElementById('header-language-container');
+            var menuTrigger = document.querySelector('.menu-trigger');
+            var menu = document.querySelector('.header .menu');
+
+            if (langTrigger && langOptions) {
+              langTrigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langOptions.classList.toggle('hidden');
+              });
+            }
+
+            if (menuTrigger && langContainer) {
+              menuTrigger.addEventListener('click', function() {
+                setTimeout(function() {
+                  if (menu && !menu.classList.contains('hidden')) {
+                    langContainer.classList.add('mobile-hidden');
+                  } else {
+                    langContainer.classList.remove('mobile-hidden');
+                  }
+                }, 10);
+              });
+            }
+
+            document.addEventListener('click', function() {
+              if (langOptions) langOptions.classList.add('hidden');
+            });
+          }
+
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initLanguageSelector();
+          } else {
+            document.addEventListener('DOMContentLoaded', initLanguageSelector);
+          }
+        })();
+      </script>
+    
+  </div>
 </header>
 
 
@@ -153,11 +179,6 @@ Having spent over 8 years in small, self-organized teams, I&rsquo;m used to hand
       <span class="post-date">
         2026-03-09 
       </span>
-    
-    
-    <span class="post-author">::
-      Ekki
-    </span>
     
   </div>
 
@@ -341,32 +362,18 @@ Developed for Manasoup Game Jam (2 days). Focused on a tight scope and mobile co
     
       <div class="copyright">
         
-        <span> <a href="/impressum">Impressum</a></span>
+        <span>
+          <a href="/impressum">Impressum</a>
+          
+            | <a href="/about-this-site/">About this site</a>
+          
+        </span>
       </div>
     </div>
 </footer>
 <script src="https://www.itsnothing.de/assets/main.js"></script>
 <script src="https://www.itsnothing.de/assets/prism.js"></script>
 
-
-  
-    
-<nav class="menu">
-    <ul>
-        
-        
-            
-                <li>
-                    <a href="/about-this-site">
-                        
-                        <span>About this site</span>
-                    </a>
-                </li>
-            
-        
-    </ul>
-</nav>
-  
 
 
 

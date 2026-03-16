@@ -2,11 +2,11 @@
 <html lang="de">
 <head>
   
-    <title>Über mich :: It&#39;s Nothing</title>
+    <title>Über mich :: It&#39;s Nothing — Jan-Erik&#39;s Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hi, ich bin Ekki Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.
+<meta name="description" content="Hi, ich bin Jan-Erik Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.
 Aktuell suche ich eine Stelle als Spiele und/oder Softwareentwickler. Mehr Infos zu meinem beruflichen Werdegang findest du auf der Portfolio‑Seite.
 Für klassische Lebenslauf-Infos schau gerne auf meinem LinkedIn‑Profil vorbei.
 " />
@@ -35,13 +35,13 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem LinkedIn‑Profil vorbei
 
 <meta name="twitter:card" content="summary" />
 
-<meta name="twitter:creator" content="Ekki" />
+<meta name="twitter:creator" content="Jan-Erik" />
 
 
 <meta property="og:locale" content="de" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Über mich :: It&#39;s Nothing">
-<meta property="og:description" content="Hi, ich bin Ekki Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.
+<meta property="og:description" content="Hi, ich bin Jan-Erik Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.
 Aktuell suche ich eine Stelle als Spiele und/oder Softwareentwickler. Mehr Infos zu meinem beruflichen Werdegang findest du auf der Portfolio‑Seite.
 Für klassische Lebenslauf-Infos schau gerne auf meinem LinkedIn‑Profil vorbei.
 " />
@@ -78,70 +78,96 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem LinkedIn‑Profil vorbei
   <header class="header">
   <div class="header__inner">
     <div class="header__logo">
-      <a href="https://www.itsnothing.de/">
+      <a href="/" 
+   class="logo-link custom-logo ">
   <div class="logo">
-    Terminal
+    It&#39;s Nothing
   </div>
 </a>
 
     </div>
     <div class="menu-trigger">menu</div>
   </div>
-  
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
+  <div class="header__sub-row">
+    
+      <nav class="menu">
+  <ul class="menu__inner">
     
       
         
-          <li><a href="/de/portfolio">Portfolio</a></li>
+          <li><a href="/de/portfolio/" class="custom-menu-link ">Portfolio</a></li>
         
       
         
-          <li><a href="/de/about-me">Über mich</a></li>
+          <li><a href="/de/about-me/" class="custom-menu-link active">Über mich</a></li>
         
       
       
     
 
-    
-    <div class="spacer"></div>
-    <ul class="language-selector">
-      <ul class="language-selector-current">
-          <li>Deutsch ▾</li>
-      </ul>
-      <ul class="language-selector__more hidden">
-        
-          <li><a href="https://www.itsnothing.de/about-me/">English</a></li>
-        
-      </ul>
-    </ul>
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/de/portfolio">Portfolio</a></li>
-      
-    
-      
-        <li><a href="/de/about-me">Über mich</a></li>
-      
-    
-    
-    <hr />
-        
-          <li>
-            <a href="https://www.itsnothing.de/about-me/">English</a>
-          </li>
-        
-    
   </ul>
 </nav>
 
 
-  
+    
 
+    
+      <div class="header__language-container" id="header-language-container">
+        <ul class="language-selector header-language-selector" id="header-language-selector">
+          <li class="custom-lang-trigger" id="language-selector-trigger">
+            Deutsch ▾
+            <ul class="custom-lang-options hidden" id="language-options">
+              
+                <li><a href="https://www.itsnothing.de/about-me/">English</a></li>
+              
+                <li><a href="https://www.itsnothing.de/de/about-me/">Deutsch</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+        (function() {
+          function initLanguageSelector() {
+            var langTrigger = document.getElementById('language-selector-trigger');
+            var langOptions = document.getElementById('language-options');
+            var langContainer = document.getElementById('header-language-container');
+            var menuTrigger = document.querySelector('.menu-trigger');
+            var menu = document.querySelector('.header .menu');
+
+            if (langTrigger && langOptions) {
+              langTrigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langOptions.classList.toggle('hidden');
+              });
+            }
+
+            if (menuTrigger && langContainer) {
+              menuTrigger.addEventListener('click', function() {
+                setTimeout(function() {
+                  if (menu && !menu.classList.contains('hidden')) {
+                    langContainer.classList.add('mobile-hidden');
+                  } else {
+                    langContainer.classList.remove('mobile-hidden');
+                  }
+                }, 10);
+              });
+            }
+
+            document.addEventListener('click', function() {
+              if (langOptions) langOptions.classList.add('hidden');
+            });
+          }
+
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initLanguageSelector();
+          } else {
+            document.addEventListener('DOMContentLoaded', initLanguageSelector);
+          }
+        })();
+      </script>
+    
+  </div>
 </header>
 
 
@@ -156,11 +182,6 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem LinkedIn‑Profil vorbei
         2020-07-30 
       </span>
     
-    
-    <span class="post-author">::
-      Ekki
-    </span>
-    
   </div>
 
   
@@ -171,8 +192,8 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem LinkedIn‑Profil vorbei
   
 
   <div class="post-content"><div>
-        <h2 id="hi-ich-bin-ekki">Hi, ich bin Ekki<a href="#hi-ich-bin-ekki" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p><img src="/img/newface_very_small.png" alt="Ekki Face"></p>
+        <h2 id="hi-ich-bin-jan-erik">Hi, ich bin Jan-Erik<a href="#hi-ich-bin-jan-erik" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><img src="/img/newface_very_small.png" alt="Jan-Erik Face"></p>
 <p>Ich mache und spiele gerne Spiele, baue Software und probiere viele andere Dinge aus.<br>
 Aktuell suche ich eine Stelle als Spiele und/oder Softwareentwickler.
 Mehr Infos zu meinem beruflichen Werdegang findest du auf der <a href="https://www.itsnothing.de/de/portfolio/" title="Portfolio">Portfolio</a>‑Seite.<br>
@@ -194,32 +215,18 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem <a href="https://www.lin
     
       <div class="copyright">
         
-        <span> <a href="/impressum">Impressum</a></span>
+        <span>
+          <a href="/de/impressum">Impressum</a>
+          
+            | <a href="/de/about-this-site/">Über diese Seite</a>
+          
+        </span>
       </div>
     </div>
 </footer>
 <script src="https://www.itsnothing.de/assets/main.js"></script>
 <script src="https://www.itsnothing.de/assets/prism.js"></script>
 
-
-  
-    
-<nav class="menu">
-    <ul>
-        
-        
-            
-                <li>
-                    <a href="/de/about-this-site">
-                        
-                        <span>Über diese Seite</span>
-                    </a>
-                </li>
-            
-        
-    </ul>
-</nav>
-  
 
 
 

@@ -12,18 +12,25 @@ publishDir = "docs"
   fullWidthTheme = false
   centerTheme = true
   showLanguageSelector = true
+  readMore = "Read more"
+  readOtherPosts = "Read other posts"
 
 [languages]
   [languages.en]
     languageName = "English"
     weight = 1
     title = "It's Nothing"
-    subtitle = "Ekkis Blog"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
+
+    [languages.en.params]
+      subtitle = "Jan-Erik's Blog"
+      keywords = ""
+      copyright = ""
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      menuMore = "Show more"
+ 
+    [languages.en.params.Twitter]
+      creator = "Jan-Erik"
 
     [languages.en.params.logo]
       logoText = "It's Nothing"
@@ -33,40 +40,50 @@ publishDir = "docs"
       [[languages.en.menu.main]]
         identifier = "portfolio"
         name = "Portfolio"
-        url = "/portfolio"
+        url = "/portfolio/"
         weight = "80"
       [[languages.en.menu.main]]
         identifier = "about-me"
         name = "About Me"
-        url = "/about-me"
+        url = "/about-me/"
         weight = "90"
       [[languages.en.menu.about]]
         identifier = "about-this-site"
         name = "About this site"
-        url = "/about-this-site"
+        url = "/about-this-site/"
         weight = "90"
 
   [languages.de]
     languageName = "Deutsch"
     weight = 2
     title = "It's Nothing"
-    subtitle = "Ekkis Blog"
-    keywords = ""
-    copyright = ""
+
+    [languages.de.params]
+      subtitle = "Jan-Erik's Blog"
+      keywords = ""
+      copyright = ""
+      readMore = "Weiterlesen"
+ 
+    [languages.de.params.Twitter]
+      creator = "Jan-Erik"
+
+    [languages.de.params.logo]
+      logoText = "It's Nothing"
+      logoHomeLink = "/"
 
     [languages.de.menu]
       [[languages.de.menu.main]]
         identifier = "portfolio"
         name = "Portfolio"
-        url = "/de/portfolio"
+        url = "/de/portfolio/"
         weight = "80"
       [[languages.de.menu.main]]
         identifier = "about-me"
         name = "Über mich"
-        url = "/de/about-me"
+        url = "/de/about-me/"
         weight = "90"
       [[languages.de.menu.about]]
         identifier = "about-this-site"
         name = "Über diese Seite"
-        url = "/de/about-this-site"
+        url = "/de/about-this-site/"
         weight = "90"

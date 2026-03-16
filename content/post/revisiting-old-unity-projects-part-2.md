@@ -1,7 +1,7 @@
 +++
 title = "Revisiting old unity projects - Part 2"
 date = "2020-08-29"
-author = "Ekki"
+author = "Jan-Erik"
 cover = "/img/revisiting-old-unity-projects.png"
 description = "Time to take a look at an even older project."
 tags = ['Unity','Game Dev']
@@ -35,3 +35,4 @@ At least that is what worked for me. The forum thread also says to delete the ex
 ## Everything is working again
 I noticed that I might not need to add another part to this series, so to be sure to check out the other jam games. First, I checked out "My Superhero", our first 3D game, from about the same time. As expected, the same issues arose and could be solved with the same solution. "Here Be Fish" from Ludum Dare 38 was the last jam game I did before fully comitting to escape room stuff for a while. It's not that old, basically fresh, from April 2017. And that one did not require any fixes, just worked out of the box. So all our old game jams can run again in Unity. I might go through them to fix the links to our website in the games, we lost the domain at some point and now have a new one. But before that I want to do a small showreel video that shows some gameplay from Mildly Entertaining Games' early works, so people can get an overview without having to play them all. I'll post it here when I'm done.  
 Thanks for reading, until next time.
+

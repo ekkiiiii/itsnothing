@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   
-    <title>Imprint :: It&#39;s Nothing</title>
+    <title>Imprint :: It&#39;s Nothing — Jan-Erik&#39;s Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Imprint Jan-Erik Baehr
 Blombachweg 8a
 40625 Duesseldorf
-E-Mail: admin@itsnothing.de
+E-Mail: ed.gnihtonsti@rheab.kire-naj
 Responsible for content (§ 55 Abs. 2 RStV) Jan-Erik Bähr
 Blombachweg 8a
 40625 Düsseldorf
@@ -41,7 +41,7 @@ Theme made by panr
 
 <meta name="twitter:card" content="summary" />
 
-<meta name="twitter:creator" content="Ekki" />
+<meta name="twitter:creator" content="Jan-Erik" />
 
 
 <meta property="og:locale" content="en" />
@@ -50,7 +50,7 @@ Theme made by panr
 <meta property="og:description" content="Imprint Jan-Erik Baehr
 Blombachweg 8a
 40625 Duesseldorf
-E-Mail: admin@itsnothing.de
+E-Mail: ed.gnihtonsti@rheab.kire-naj
 Responsible for content (§ 55 Abs. 2 RStV) Jan-Erik Bähr
 Blombachweg 8a
 40625 Düsseldorf
@@ -90,7 +90,8 @@ Theme made by panr
   <header class="header">
   <div class="header__inner">
     <div class="header__logo">
-      <a href="/">
+      <a href="/" 
+   class="logo-link custom-logo ">
   <div class="logo">
     It&#39;s Nothing
   </div>
@@ -99,61 +100,86 @@ Theme made by panr
     </div>
     <div class="menu-trigger">menu</div>
   </div>
-  
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
+  <div class="header__sub-row">
+    
+      <nav class="menu">
+  <ul class="menu__inner">
     
       
         
-          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/portfolio/" class="custom-menu-link ">Portfolio</a></li>
         
       
         
-          <li><a href="/about-me">About Me</a></li>
+          <li><a href="/about-me/" class="custom-menu-link ">About Me</a></li>
         
       
       
     
 
-    
-    <div class="spacer"></div>
-    <ul class="language-selector">
-      <ul class="language-selector-current">
-          <li>English ▾</li>
-      </ul>
-      <ul class="language-selector__more hidden">
-        
-          <li><a href="https://www.itsnothing.de/de/impressum/">Deutsch</a></li>
-        
-      </ul>
-    </ul>
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/portfolio">Portfolio</a></li>
-      
-    
-      
-        <li><a href="/about-me">About Me</a></li>
-      
-    
-    
-    <hr />
-        
-          <li>
-            <a href="https://www.itsnothing.de/de/impressum/">Deutsch</a>
-          </li>
-        
-    
   </ul>
 </nav>
 
 
-  
+    
 
+    
+      <div class="header__language-container" id="header-language-container">
+        <ul class="language-selector header-language-selector" id="header-language-selector">
+          <li class="custom-lang-trigger" id="language-selector-trigger">
+            English ▾
+            <ul class="custom-lang-options hidden" id="language-options">
+              
+                <li><a href="https://www.itsnothing.de/impressum/">English</a></li>
+              
+                <li><a href="https://www.itsnothing.de/de/impressum/">Deutsch</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+        (function() {
+          function initLanguageSelector() {
+            var langTrigger = document.getElementById('language-selector-trigger');
+            var langOptions = document.getElementById('language-options');
+            var langContainer = document.getElementById('header-language-container');
+            var menuTrigger = document.querySelector('.menu-trigger');
+            var menu = document.querySelector('.header .menu');
+
+            if (langTrigger && langOptions) {
+              langTrigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langOptions.classList.toggle('hidden');
+              });
+            }
+
+            if (menuTrigger && langContainer) {
+              menuTrigger.addEventListener('click', function() {
+                setTimeout(function() {
+                  if (menu && !menu.classList.contains('hidden')) {
+                    langContainer.classList.add('mobile-hidden');
+                  } else {
+                    langContainer.classList.remove('mobile-hidden');
+                  }
+                }, 10);
+              });
+            }
+
+            document.addEventListener('click', function() {
+              if (langOptions) langOptions.classList.add('hidden');
+            });
+          }
+
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initLanguageSelector();
+          } else {
+            document.addEventListener('DOMContentLoaded', initLanguageSelector);
+          }
+        })();
+      </script>
+    
+  </div>
 </header>
 
 
@@ -167,11 +193,6 @@ Theme made by panr
       <span class="post-date">
         2020-01-01 
       </span>
-    
-    
-    <span class="post-author">::
-      Ekki
-    </span>
     
   </div>
 
@@ -187,7 +208,7 @@ Theme made by panr
 <p>Jan-Erik Baehr<br>
 Blombachweg 8a<br>
 40625 Duesseldorf<br>
-E-Mail: <a href="mailto:admin@itsnothing.de">admin@itsnothing.de</a></p>
+E-Mail: <!-- raw HTML omitted --><a href="mailto:ed.gnihtonsti@rheab.kire-naj">ed.gnihtonsti@rheab.kire-naj</a><!-- raw HTML omitted --></p>
 <h2 id="responsible-for-content--55-abs-2-rstv">Responsible for content (§ 55 Abs. 2 RStV)<a href="#responsible-for-content--55-abs-2-rstv" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Jan-Erik Bähr<br>
 Blombachweg 8a<br>
@@ -212,32 +233,18 @@ Theme made by <a href="https://twitter.com/panr">panr</a></p>
     
       <div class="copyright">
         
-        <span> <a href="/impressum">Impressum</a></span>
+        <span>
+          <a href="/impressum">Impressum</a>
+          
+            | <a href="/about-this-site/">About this site</a>
+          
+        </span>
       </div>
     </div>
 </footer>
 <script src="https://www.itsnothing.de/assets/main.js"></script>
 <script src="https://www.itsnothing.de/assets/prism.js"></script>
 
-
-  
-    
-<nav class="menu">
-    <ul>
-        
-        
-            
-                <li>
-                    <a href="/about-this-site">
-                        
-                        <span>About this site</span>
-                    </a>
-                </li>
-            
-        
-    </ul>
-</nav>
-  
 
 
 

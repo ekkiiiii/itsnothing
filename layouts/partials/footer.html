@@ -6,18 +6,19 @@
       {{else}}
       <div class="copyright">
         {{end}}
-        <span> <a href="/impressum">Impressum</a></span>
+        <span>
+          <a href="{{ "/impressum" | relLangURL }}">Impressum</a>
+          {{ range $.Site.Menus.about }}
+            | <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          {{ end }}
+        </span>
       </div>
     </div>
 </footer>
 <script src="{{ "assets/main.js" | absURL }}"></script>
 <script src="{{ "assets/prism.js" | absURL }}"></script>
 
-{{ with $.Site.Menus.about }}
-  {{ if len . }}
-    {{ partial "aboutmenu.html" $ }}
-  {{ end }}
-{{ end }}
+
 
 <!-- Extended footer section-->
 {{ partial "extended_footer.html" . }}  

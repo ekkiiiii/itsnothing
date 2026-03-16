@@ -1,7 +1,7 @@
 +++
 title = "Creating websites with hugo"
 date = "2020-08-19"
-author = "Ekki"
+author = "Jan-Erik"
 cover = "/img/hugo-ssg.png"
 description = "It's fun, fast and you don't have to worry about updating stuff all the time."
 tags = ['Hugo','Static Site Generator']
@@ -25,3 +25,4 @@ These two things are the core arguments for SSGs as a whole and I am definetly n
 
 ## Open issues
 Formatting using markdown and using git is a big hurdle for non-technical users. I am still thinking about ways to adress this issue. Obviously, a WYSIWYG markdown editor would solve the the first issue, but the way of updating the website still remains a bit complicated. I found a full-fledged solution in [Forestry](https://forestry.io/), but unfortunately it's proprietary, paid and can't be self-hosted. I'll keep a look out for other solutions and write an update once I have a working solutions. I'm also open to suggestions, just contact me on Twitter (@ekkiiiii) or send me an e-mail.
+

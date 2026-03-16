@@ -1,7 +1,7 @@
 ---
 title: "Portfolio"
 date: 2026-03-09
-author: "Ekki"
+author: "Jan-Erik"
 customCss: "/css/stuff-i-built.css"
 ---
 
@@ -96,4 +96,5 @@ Eine Sammlung älterer Game‑Jam‑Experimente und Langzeit‑Projekte wie *The
 * **Sprachen:** C#, TypeScript, JavaScript, C++ (Arduino)  
 * **Frameworks:** Unity, React, Angular, Node.js  
 * **Fokus:** Service‑Patterns, Unit‑Tests, UI/UX‑Implementierung
+
 

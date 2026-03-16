@@ -1,7 +1,7 @@
 +++
 title = "Revisiting old unity projects"
 date = "2020-08-20"
-author = "Ekki"
+author = "Jan-Erik"
 cover = "/img/revisiting-old-unity-projects.png"
 description = "Time to check out some old projects and see what it takes to get them to build."
 tags = ['Unity','Game Dev']
@@ -49,3 +49,4 @@ I got a little ahead of myself and forgot that I needed the keystore file. I alr
 
 ## Oooh Play Console has changed 
 *Obviously* lots of things in the Google Play backend that I don't recall, but that is another story. I was able to upload the app bundle and it is being reviewed, if it succeeds the whole endeavour has been successful (yay!) and Potion Shift will be available on 64-bit devices after August 2021. I have gotten a few pointers about how build processes and deployment for Android changed during this one-day-project. It was worth it, even if the game has no installations at all. This way I could gain the knowledge without having to read or watch videos about it, learning-by-doing at it's best. 
+

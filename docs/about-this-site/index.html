@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>About This Site :: It&#39;s Nothing</title>
+    <title>About This Site :: It&#39;s Nothing — Jan-Erik&#39;s Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
 
 <meta name="twitter:card" content="summary" />
 
-<meta name="twitter:creator" content="Ekki" />
+<meta name="twitter:creator" content="Jan-Erik" />
 
 
 <meta property="og:locale" content="en" />
@@ -80,7 +80,8 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
   <header class="header">
   <div class="header__inner">
     <div class="header__logo">
-      <a href="/">
+      <a href="/" 
+   class="logo-link custom-logo ">
   <div class="logo">
     It&#39;s Nothing
   </div>
@@ -89,61 +90,86 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
     </div>
     <div class="menu-trigger">menu</div>
   </div>
-  
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
+  <div class="header__sub-row">
+    
+      <nav class="menu">
+  <ul class="menu__inner">
     
       
         
-          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/portfolio/" class="custom-menu-link ">Portfolio</a></li>
         
       
         
-          <li><a href="/about-me">About Me</a></li>
+          <li><a href="/about-me/" class="custom-menu-link ">About Me</a></li>
         
       
       
     
 
-    
-    <div class="spacer"></div>
-    <ul class="language-selector">
-      <ul class="language-selector-current">
-          <li>English ▾</li>
-      </ul>
-      <ul class="language-selector__more hidden">
-        
-          <li><a href="https://www.itsnothing.de/de/about-this-site/">Deutsch</a></li>
-        
-      </ul>
-    </ul>
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/portfolio">Portfolio</a></li>
-      
-    
-      
-        <li><a href="/about-me">About Me</a></li>
-      
-    
-    
-    <hr />
-        
-          <li>
-            <a href="https://www.itsnothing.de/de/about-this-site/">Deutsch</a>
-          </li>
-        
-    
   </ul>
 </nav>
 
 
-  
+    
 
+    
+      <div class="header__language-container" id="header-language-container">
+        <ul class="language-selector header-language-selector" id="header-language-selector">
+          <li class="custom-lang-trigger" id="language-selector-trigger">
+            English ▾
+            <ul class="custom-lang-options hidden" id="language-options">
+              
+                <li><a href="https://www.itsnothing.de/about-this-site/">English</a></li>
+              
+                <li><a href="https://www.itsnothing.de/de/about-this-site/">Deutsch</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+        (function() {
+          function initLanguageSelector() {
+            var langTrigger = document.getElementById('language-selector-trigger');
+            var langOptions = document.getElementById('language-options');
+            var langContainer = document.getElementById('header-language-container');
+            var menuTrigger = document.querySelector('.menu-trigger');
+            var menu = document.querySelector('.header .menu');
+
+            if (langTrigger && langOptions) {
+              langTrigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langOptions.classList.toggle('hidden');
+              });
+            }
+
+            if (menuTrigger && langContainer) {
+              menuTrigger.addEventListener('click', function() {
+                setTimeout(function() {
+                  if (menu && !menu.classList.contains('hidden')) {
+                    langContainer.classList.add('mobile-hidden');
+                  } else {
+                    langContainer.classList.remove('mobile-hidden');
+                  }
+                }, 10);
+              });
+            }
+
+            document.addEventListener('click', function() {
+              if (langOptions) langOptions.classList.add('hidden');
+            });
+          }
+
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initLanguageSelector();
+          } else {
+            document.addEventListener('DOMContentLoaded', initLanguageSelector);
+          }
+        })();
+      </script>
+    
+  </div>
 </header>
 
 
@@ -157,11 +183,6 @@ What about those neat graphics? The images are virtuosly made with Microsoft Pai
       <span class="post-date">
         2020-07-30 
       </span>
-    
-    
-    <span class="post-author">::
-      Ekki
-    </span>
     
   </div>
 
@@ -180,7 +201,7 @@ You can retrace all the customizations I made and will make on the <a href="http
 <h2 id="what-about-those-neat-graphics">What about those neat graphics?<a href="#what-about-those-neat-graphics" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>The images are virtuosly made with Microsoft Paint, with the help of a graphics tablet or directly on a touchscreen, so you&rsquo;ll only find hand-made, artisanal blog graphics here.</p>
 <h2 id="more-questions">More questions?<a href="#more-questions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Ask me on Twitter (@ekkiiiii), or write an e-mail to <a href="mailto:ekki@itsnothing.de">ekki@itsnothing.de</a>.</p>
+<p>Ask me on Twitter (@ekkiiiii), or write an e-mail to <!-- raw HTML omitted --><a href="mailto:ed.gnihtonsti@rheab.kire-naj">ed.gnihtonsti@rheab.kire-naj</a><!-- raw HTML omitted -->.</p>
 
       </div></div>
 
@@ -198,32 +219,18 @@ You can retrace all the customizations I made and will make on the <a href="http
     
       <div class="copyright">
         
-        <span> <a href="/impressum">Impressum</a></span>
+        <span>
+          <a href="/impressum">Impressum</a>
+          
+            | <a href="/about-this-site/">About this site</a>
+          
+        </span>
       </div>
     </div>
 </footer>
 <script src="https://www.itsnothing.de/assets/main.js"></script>
 <script src="https://www.itsnothing.de/assets/prism.js"></script>
 
-
-  
-    
-<nav class="menu">
-    <ul>
-        
-        
-            
-                <li>
-                    <a href="/about-this-site">
-                        
-                        <span>About this site</span>
-                    </a>
-                </li>
-            
-        
-    </ul>
-</nav>
-  
 
 
 

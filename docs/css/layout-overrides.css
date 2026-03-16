@@ -1,6 +1,5 @@
-/* Reduce vertical gap between header and page/post titles */
 .header .menu {
-  margin: 4px 0 0;
+  margin: 0;
 }
 
 .post {
@@ -81,4 +80,427 @@
   max-width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Prevent menu-trigger flash on desktop */
+.menu-trigger {
+  display: none !important;
+}
+
+/* Ensure menu behaves correctly on mobile with trigger */
+@media (max-width: 683px) {
+  .menu-trigger {
+    display: flex !important;
+    padding: 4px 10px !important;
+    border: 1px solid var(--accent) !important;
+    border-radius: 4px;
+    background: transparent;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .menu-trigger:hover {
+    background-color: var(--accent) !important;
+    color: var(--background) !important;
+  }
+
+  /* Reduce gap between menu button and menu box */
+  .header .menu {
+    margin: 0 !important;
+    top: 40px !important; /* Move closer to trigger */
+  }
+
+  .header .menu.hidden {
+    display: none;
+  }
+}
+
+/* Header sub-row layout - Shared for Desktop/Mobile */
+.header__sub-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important; 
+  position: relative !important;
+  z-index: 1000;
+}
+
+/* Email Obfuscation Styles */
+.email-link {
+  unicode-bidi: bidi-override !important;
+  direction: rtl !important;
+  display: inline-block !important;
+  color: var(--accent) !important;
+  text-decoration: none !important;
+}
+
+.email-link:hover {
+  text-decoration: underline !important;
+}
+
+/* Desktop: Bring everything into the main titlebar row */
+@media (min-width: 684px) {
+  .header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 !important; 
+    position: relative !important;
+    left: 0 !important; /* Centered without negative offset */
+    width: 960px !important; /* Match content dividers */
+    max-width: 960px !important; 
+    margin: 0 auto !important;
+    height: 48px !important; 
+    box-sizing: border-box !important;
+    z-index: 1000;
+    background: none !important;
+  }
+
+  .header:before {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 32px !important;
+    transform: translateY(-50%) !important;
+    background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px) !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+  }
+
+
+  .header__inner {
+    flex: 0 0 auto !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .header__logo {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    height: 100% !important;
+    padding: 0 !important;
+    background: #222129 !important; /* True site background */
+    margin: 0 22px 0 0 !important; /* 22px = exactly 3 lines showing */
+  }
+
+  .header .logo-link {
+    display: flex !important;
+    align-items: center !important;
+    height: 32px !important;
+    background-color: #222129 !important; /* Force solid background to mask lines */
+    color: var(--accent) !important;
+    text-decoration: none !important;
+    padding: 0 6px !important; 
+    transition: all 0.15s;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* Force the inner logo div to be transparent */
+  .header .logo-link .logo {
+    background: transparent !important;
+    color: inherit !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .header .logo-link.active {
+    background-color: var(--accent) !important;
+    color: #222129 !important;
+  }
+
+  .logo__divider {
+    margin: 0 2px !important;
+    opacity: 0.8;
+  }
+
+  .logo-link:hover {
+    background: var(--accent) !important;
+    color: #222129 !important;
+  }
+
+  .header__inner:after {
+    display: none !important; /* Removed manual bars in favor of full header background */
+  }
+
+  .header__sub-row {
+    flex: 1 !important; 
+    margin: 0 !important;
+    height: 100% !important; 
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: flex-end !important; /* Push everything to the right edge */
+    position: relative !important;
+    overflow: visible !important;
+    z-index: 1 !important;
+  }
+
+  /* Restore language selector visibility on desktop */
+  .header__language-container {
+    display: flex !important;
+    position: relative !important;
+    margin-left: 22px !important; /* Consistent 3-line gap */
+    margin-right: 0 !important;
+    padding: 0 !important;
+    height: 32px !important; 
+    background: #222129 !important;
+    align-items: center !important;
+    z-index: 1010 !important;
+    min-width: unset !important; /* Remove forcing wide */
+    flex: 0 0 auto !important; /* DON'T GROW to fill bar space */
+  }
+}
+
+.header__sub-row .menu {
+  margin: 0 !important;
+  display: flex; /* Remove !important to allow theme .hidden class to toggle */
+  align-items: center !important;
+}
+
+.header .menu ul {
+  display: flex !important;
+  flex-direction: row !important; /* Explicit desktop row */
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  align-items: center !important;
+}
+
+.header .menu ul li {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important; 
+  margin: 0 !important; /* Force zero margin to prevent baseline shifts */
+  padding: 0 !important;
+}
+
+@media (min-width: 684px) {
+  .header .menu ul li:not(:last-child):after {
+    display: none !important;
+  }
+  
+  .header .menu:after {
+    display: none !important;
+  }
+
+  .header .menu {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+  }
+}
+
+/* Sub-row height normalization */
+.header__sub-row {
+  height: 100% !important;
+}
+
+/* Global Link Hover Effects - Subtle and Premium */
+a {
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+}
+
+/* Specific Menu Hover Effects */
+/* Specific Menu Link Styles with high specificity */
+.header .menu ul li a.custom-menu-link {
+  padding: 0 6px !important; 
+  background-color: #222129 !important; 
+  color: var(--accent) !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  margin: 0 11px !important; /* 11px each side = 22px total gap (3 lines) */
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+.header .menu ul li a.custom-menu-link.active {
+  background-color: var(--accent) !important;
+  color: #222129 !important;
+}
+
+.header .menu ul li a.custom-menu-link:hover {
+  background-color: var(--accent) !important;
+  color: #222129 !important;
+}
+
+/* Mobile-Specific Menu Layout & Full-Width Hit Areas */
+@media (max-width: 683px) {
+  .header .menu {
+    padding: 0 !important;
+    margin: 0 !important;
+    top: 40px !important; 
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important; /* Viewport width */
+    max-width: 100vw !important;
+    margin-left: calc(-1 * (100vw - 100%) / 2) !important; /* Break out of container */
+    border-top: 1px solid var(--accent) !important;
+    border-bottom: 1px solid var(--accent) !important;
+    border-left: none !important;
+    border-right: none !important;
+    background: var(--background) !important;
+    position: absolute !important;
+    z-index: 10000 !important;
+  }
+
+  .header .menu:after {
+    display: none !important; /* NO lines inside mobile menu box */
+  }
+
+  /* Force full width for links in mobile menu */
+  .header .menu ul {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header .menu ul li {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .header .menu ul li:after {
+    display: none !important; /* NO lines inside mobile menu box */
+  }
+
+  .header .menu ul li a {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 50px !important; /* Uniform height for mobile items */
+    padding: 0 15px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .header .menu ul {
+    flex-direction: column !important; /* Stack vertically on mobile */
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .header .menu ul li {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header .menu ul li a {
+    padding: 15px 20px !important; /* Generous hit area */
+    display: block !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    text-align: center !important;
+  }
+
+  .header .menu ul li a:hover {
+    background-color: rgba(255, 168, 106, 0.2) !important;
+  }
+}
+
+/* End of menu active logic */
+
+/* Language selector in header */
+.header__language-container {
+  display: flex !important;
+  justify-content: flex-end !important;
+  flex-grow: 1;
+  visibility: visible !important;
+  position: relative;
+  height: 100%;
+}
+
+.header__language-container.mobile-hidden {
+  display: none !important;
+}
+
+@media (max-width: 683px) {
+  .header__sub-row {
+    justify-content: space-between !important;
+  }
+}
+
+.header-language-selector {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex !important;
+  align-items: center !important; 
+  height: 32px !important; /* Fixed height to match menu links */
+}
+
+.header-language-selector .custom-lang-trigger {
+  cursor: pointer !important;
+  color: var(--accent);
+  background: #222129 !important;
+  font-weight: bold;
+  padding: 0 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 32px !important;
+  transition: all 0.15s;
+}
+
+.header-language-selector .custom-lang-trigger:hover {
+  background-color: var(--accent) !important;
+  color: #222129 !important;
+  text-decoration: none !important;
+}
+
+.header-language-selector .custom-lang-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #222129 !important;
+  border: 1px solid var(--accent);
+  padding: 10px;
+  list-style: none;
+  z-index: 10000;
+  min-width: 120px;
+  margin: 0;
+  pointer-events: auto !important;
+}
+
+.header-language-selector .custom-lang-options a {
+  text-decoration: none !important;
+  color: var(--accent) !important;
+  display: block !important;
+  padding: 4px 0 !important;
+}
+
+.header-language-selector .custom-lang-options a:hover {
+  background: var(--accent) !important;
+  color: #222129 !important;
 }

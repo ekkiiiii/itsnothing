@@ -1,7 +1,7 @@
 +++
 title = "(Mini) Post Mortem: Shiba Rush"
 date = "2022-10-27"
-author = "Ekki"
+author = "Jan-Erik"
 description = "We were working on a game with cute dogs. Then we stopped working on that prototype, to start working on another game with cute dogs."
 cover = "/img/shiba-rush-screenshot-august-small.png"
 +++
@@ -28,3 +28,4 @@ But obviously we were also not really happy with a few things about this concept
 - we showed it to some people and nobody got that excited (that would not be so important if the other aspects were not already an issue)
 
 While trying to adress these things we figured it would be easier to just decide which things to keep and which should be completely re-thought from the ground up. With the learnings from that protoype we developed a design that aims to adress the issues and cater more to what the feel are the strengths of the theme. It should also allow us to profit from the technical learnings and give us an opportunity to re-use or at least build upon pre-existing assets. But more about that in a bit when we actually have built something that we can show based on that new concept.
+

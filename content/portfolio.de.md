@@ -53,7 +53,7 @@ Programmierung und Game-Design für kommerzielle Releases und interne Tools.
 * **Fairyfail (Steam):** Gameplay-Systeme und UI-Komponenten.
 * **Editor-Backend:** Entwurf und Implementierung eines Level-Editor-Backends mit Node.js für die Content-Verwaltung.
 
-{{< youtube TKAHszC510Q >}}
+{{< youtube 1cjGxvTlWjE >}}
 
 ---
 

@@ -14,21 +14,21 @@ Having spent over 8 years in small, self-organized teams, I'm used to handling t
 ## Current Projects
 
 ### Modular Management Simulation (Unity / C#)
-A data-driven economic simulation in a pixel-art style. The main challenge here is decoupling the simulation logic from the engine's visualization.
+A economic simulation in pixel-art style, simulating a video game rental store. It has semi-autonomous agents for employees and customers that can "run the store" on their own as well as being manipulated by players.
 
 {{< tech-insight >}}
 **Architecture & Testing**
-I'm using Service Patterns to decouple sub-systems. The logic runs independently and is validated via an automated headless test suite. This allows me to verify complex economic data without having to play through the game manually.
+I'm using Service Patterns to decouple sub-systems. The logic runs independently and is validated via an automated headless test suite, including a "full simulation" which runs like the full game, including pre-defined strategies that simulate user interactions over time. This enables verification of complex economic systems without having to play through the game manually.
 {{< /tech-insight >}}
 
 ![Simulation Preview](/img/sim-preview.gif#center)
 
 ### matchpicks.de (React / TypeScript)
-A full-stack web platform built from the ground up—covering everything from the initial system architecture and state management to deployment.
+A full-stack web platform for picking games for minor and amateur sports leagues. Built from the ground up—covering everything from the initial system architecture and state management to deployment. 
 
 {{< tech-insight >}}
-**Frontend Architecture**
-Implemented a scalable component structure in React. I focus on a strict separation between the UI layer and business logic to ensure the project remains maintainable as it grows.
+**Scraping & Verifying**
+I set up a system to scrape game data and results from various sources. Since data availability and integrity are on-going concerns with minor and amateur sports leagues, I implemented tools to verify integrity over time via automatic scraping and user submitted feedback.
 {{< /tech-insight >}}
 
 [Visit matchpicks.de](https://matchpicks.de)

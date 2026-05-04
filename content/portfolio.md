@@ -24,6 +24,8 @@ I'm using Service Patterns to decouple sub-systems. The logic runs independently
 ![Simulation Preview](/img/sim-preview.gif#center)
 
 ### matchpicks.de (React / TypeScript)
+{{< video webm="/video/matchpicks-tour.webm" label="matchpicks.de Marketing Tour" >}}
+
 A full-stack web platform for picking games for minor and amateur sports leagues. Built from the ground up—covering everything from the initial system architecture and state management to deployment. 
 
 {{< tech-insight >}}

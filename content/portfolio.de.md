@@ -24,6 +24,8 @@ Ich nutze Service-Patterns, um Subsysteme zu entkoppeln. Die Logik läuft unabh�
 ![Simulation Preview](/img/sim-preview.gif#center)
 
 ### matchpicks.de (React / TypeScript)
+{{< video webm="/video/matchpicks-tour.webm" label="matchpicks.de Marketing Tour" >}}
+
 Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und Amateurligen. Von Grund auf eigenständig entwickelt – von der initialen Systemarchitektur über das State-Management bis hin zum Deployment.
 
 {{< tech-insight >}}

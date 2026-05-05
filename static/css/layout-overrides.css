@@ -131,8 +131,8 @@
 
 /* Email Obfuscation Styles */
 .email-link {
-  unicode-bidi: bidi-override !important;
-  direction: rtl !important;
+  unicode-bidi: bidi-override;
+  direction: rtl;
   display: inline-block !important;
   color: var(--accent) !important;
   text-decoration: none !important;

@@ -205,26 +205,36 @@ One thing I did was generating documentation for the yahaha lua scripting backen
 <script>
   
   
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.email-link').forEach(function(el) {
-      const reversed = el.textContent.trim();
-      if (!reversed) return;
-      const normal = reversed.split('').reverse().join('');
-      
-      
-      el.textContent = normal;
-      
-      
-      el.style.direction = 'ltr';
-      el.style.unicodeBidi = 'normal';
-      
-      
-      el.style.cursor = 'pointer';
-      el.addEventListener('click', function() {
-        window.location.href = 'mailto:' + normal;
+  (function() {
+    function initEmails() {
+      document.querySelectorAll('.email-link').forEach(function(el) {
+        if (el.getAttribute('data-email-init')) return;
+        const reversed = el.textContent.trim();
+        if (!reversed) return;
+        const normal = reversed.split('').reverse().join('');
+        
+        
+        el.textContent = normal;
+        
+        
+        el.style.setProperty('direction', 'ltr', 'important');
+        el.style.setProperty('unicode-bidi', 'normal', 'important');
+        
+        
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function() {
+          window.location.href = 'mailto:' + normal;
+        });
+        el.setAttribute('data-email-init', 'true');
       });
-    });
-  });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initEmails);
+    } else {
+      initEmails();
+    }
+  })();
 </script>
   
   

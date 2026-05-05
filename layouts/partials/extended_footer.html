@@ -3,24 +3,34 @@
 <script>
   // Email Obfuscation Helper
   // Automatically un-reverses emails with the .email-link class and makes them clickable
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.email-link').forEach(function(el) {
-      const reversed = el.textContent.trim();
-      if (!reversed) return;
-      const normal = reversed.split('').reverse().join('');
-      
-      // Update display text
-      el.textContent = normal;
-      
-      // Reset CSS-only obfuscation styles
-      el.style.direction = 'ltr';
-      el.style.unicodeBidi = 'normal';
-      
-      // Make it clickable
-      el.style.cursor = 'pointer';
-      el.addEventListener('click', function() {
-        window.location.href = 'mailto:' + normal;
+  (function() {
+    function initEmails() {
+      document.querySelectorAll('.email-link').forEach(function(el) {
+        if (el.getAttribute('data-email-init')) return;
+        const reversed = el.textContent.trim();
+        if (!reversed) return;
+        const normal = reversed.split('').reverse().join('');
+        
+        // Update display text
+        el.textContent = normal;
+        
+        // Force reset CSS-only obfuscation styles using setProperty for !important support
+        el.style.setProperty('direction', 'ltr', 'important');
+        el.style.setProperty('unicode-bidi', 'normal', 'important');
+        
+        // Make it clickable
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function() {
+          window.location.href = 'mailto:' + normal;
+        });
+        el.setAttribute('data-email-init', 'true');
       });
-    });
-  });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initEmails);
+    } else {
+      initEmails();
+    }
+  })();
 </script>

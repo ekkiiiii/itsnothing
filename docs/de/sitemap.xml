@@ -28,6 +28,19 @@
                 href="https://www.itsnothing.de/de/portfolio/"
                 />
   </url><url>
+    <loc>https://www.itsnothing.de/de/datenschutz/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.itsnothing.de/privacy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://www.itsnothing.de/de/datenschutz/"
+                />
+  </url><url>
     <loc>https://www.itsnothing.de/de/about-this-site/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
     <xhtml:link

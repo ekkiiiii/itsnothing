@@ -2,6 +2,7 @@
 title = "Privacy Policy"
 date = "2024-05-05"
 author = "Jan-Erik"
+url = "/privacy/"
 +++
 
 # Privacy Policy

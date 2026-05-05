@@ -37,11 +37,18 @@
     <loc>https://www.itsnothing.de/post/update-25/</loc>
     <lastmod>2025-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.itsnothing.de/datenschutz/</loc>
-    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.itsnothing.de/privacy/</loc>
     <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://www.itsnothing.de/de/datenschutz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.itsnothing.de/privacy/"
+                />
   </url><url>
     <loc>https://www.itsnothing.de/post/shiba-rush-post-mortem/</loc>
     <lastmod>2022-10-27T00:00:00+00:00</lastmod>

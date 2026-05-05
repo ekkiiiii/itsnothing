@@ -207,6 +207,8 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
           
             | <a href="/about-this-site/">About this site</a>
           
+            | <a href="/privacy/">Privacy Policy</a>
+          
         </span>
       </div>
     </div>
@@ -219,6 +221,30 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
 
 <script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
+<script>
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      const reversed = el.textContent.trim();
+      if (!reversed) return;
+      const normal = reversed.split('').reverse().join('');
+      
+      
+      el.textContent = normal;
+      
+      
+      el.style.direction = 'ltr';
+      el.style.unicodeBidi = 'normal';
+      
+      
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function() {
+        window.location.href = 'mailto:' + normal;
+      });
+    });
+  });
+</script>
   
   
 </div>

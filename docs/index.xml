@@ -30,18 +30,25 @@
       <description>&lt;p&gt;Portfolio section received a small update!&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Datenschutzerklärung</title>
+      <link>https://www.itsnothing.de/datenschutz/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.itsnothing.de/datenschutz/</guid>
+      <description>&lt;h1 id=&#34;datenschutzerklärung&#34;&gt;Datenschutzerklärung&lt;/h1&gt;&#xA;&lt;h2 id=&#34;1-datenschutz-auf-einen-blick&#34;&gt;1. Datenschutz auf einen Blick&lt;/h2&gt;&#xA;&lt;h3 id=&#34;allgemeine-hinweise&#34;&gt;Allgemeine Hinweise&lt;/h3&gt;&#xA;&lt;p&gt;Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.&lt;/p&gt;&#xA;&lt;h3 id=&#34;datenerfassung-auf-dieser-website&#34;&gt;Datenerfassung auf dieser Website&lt;/h3&gt;&#xA;&lt;p&gt;Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Wie erfassen wir Ihre Daten?&lt;/strong&gt;&#xA;Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie uns per E-Mail senden.&#xA;Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://www.itsnothing.de/privacy/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.itsnothing.de/privacy/</guid>
+      <description>&lt;h1 id=&#34;privacy-policy&#34;&gt;Privacy Policy&lt;/h1&gt;&#xA;&lt;h2 id=&#34;1-data-protection-at-a-glance&#34;&gt;1. Data Protection at a Glance&lt;/h2&gt;&#xA;&lt;h3 id=&#34;general-notes&#34;&gt;General Notes&lt;/h3&gt;&#xA;&lt;p&gt;The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data are all data with which you can be personally identified.&lt;/p&gt;&#xA;&lt;h3 id=&#34;data-collection-on-this-website&#34;&gt;Data Collection on this Website&lt;/h3&gt;&#xA;&lt;p&gt;Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>(Mini) Post Mortem: Shiba Rush</title>
       <link>https://www.itsnothing.de/post/shiba-rush-post-mortem/</link>
       <pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate>
       <guid>https://www.itsnothing.de/post/shiba-rush-post-mortem/</guid>
       <description>&lt;p&gt;Yo, quick update about what I am currently working on with &lt;a href=&#34;https://mobile.twitter.com/ArtVefroh&#34;&gt;@VeFroh&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;A bit of background on the project first: we had two attempts of building something under the title SHIBA RUSH at Gentleforge earlier this year with a few external people. Long story short, the company had to let everyone go. Two of us wanted to keep in touch by working on a common project, so we started to work on a concept Vero had been working on before. We spent a couple of days in total during the past two months fleshing out the design documentation, with a big focus on finding out what the core vision for this game actually should entail. We discussed a couple of ideas while doing that and came up with a (still rather barebone) game loop that we wanted to try and iterate on. We since moved on to build another prototype from scratch, which created this perfect opportunity for a quick post mortem for the first version.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SHIBA RUSH Datenschutzerklärung</title>
-      <link>https://www.itsnothing.de/shibarush-datenschutz/</link>
-      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.itsnothing.de/shibarush-datenschutz/</guid>
-      <description>&lt;h1&gt;Datenschutzerklärung&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;m14&#34;&gt;Einleitung&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als &#34;Daten“ bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als &#34;Onlineangebot“).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Portfolio updated</title>
@@ -118,7 +125,7 @@
       <link>https://www.itsnothing.de/impressum/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://www.itsnothing.de/impressum/</guid>
-      <description>&lt;h1 id=&#34;imprint&#34;&gt;Imprint&lt;/h1&gt;&#xA;&lt;p&gt;Jan-Erik Baehr&lt;br&gt;&#xA;Blombachweg 8a&lt;br&gt;&#xA;40625 Duesseldorf&lt;br&gt;&#xA;E-Mail: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;mailto:ed.gnihtonsti@rheab.kire-naj&#34;&gt;ed.gnihtonsti@rheab.kire-naj&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;responsible-for-content--55-abs-2-rstv&#34;&gt;Responsible for content (§ 55 Abs. 2 RStV)&lt;/h2&gt;&#xA;&lt;p&gt;Jan-Erik Bähr&lt;br&gt;&#xA;Blombachweg 8a&lt;br&gt;&#xA;40625 Düsseldorf&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-is-this-made&#34;&gt;How is this made?&lt;/h2&gt;&#xA;&lt;p&gt;Made with &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;br&gt;&#xA;Theme made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;imprint&#34;&gt;Imprint&lt;/h1&gt;&#xA;&lt;p&gt;Jan-Erik Baehr&lt;br&gt;&#xA;Hohenzollernallee 13&#xA;40235 Duesseldorf&lt;br&gt;&#xA;E-Mail: &lt;span class=&#34;email-link&#34;&gt;ed.gnihtonsti@nimda&lt;/span&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2 id=&#34;responsible-for-content--55-abs-2-rstv&#34;&gt;Responsible for content (§ 55 Abs. 2 RStV)&lt;/h2&gt;&#xA;&lt;p&gt;Jan-Erik Bähr&lt;br&gt;&#xA;Hohenzollernallee 13&#xA;40235 Duesseldorf&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-is-this-made&#34;&gt;How is this made?&lt;/h2&gt;&#xA;&lt;p&gt;Made with &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;br&gt;&#xA;Theme made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

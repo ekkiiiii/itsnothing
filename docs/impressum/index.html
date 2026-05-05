@@ -7,12 +7,9 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Imprint Jan-Erik Baehr
-Blombachweg 8a
-40625 Duesseldorf
-E-Mail: ed.gnihtonsti@rheab.kire-naj
-Responsible for content (§ 55 Abs. 2 RStV) Jan-Erik Bähr
-Blombachweg 8a
-40625 Düsseldorf
+Hohenzollernallee 13 40235 Duesseldorf
+E-Mail: ed.gnihtonsti@nimda Responsible for content (§ 55 Abs. 2 RStV) Jan-Erik Bähr
+Hohenzollernallee 13 40235 Duesseldorf
 How is this made? Made with Hugo
 Theme made by panr
 " />
@@ -48,12 +45,9 @@ Theme made by panr
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Imprint :: It&#39;s Nothing">
 <meta property="og:description" content="Imprint Jan-Erik Baehr
-Blombachweg 8a
-40625 Duesseldorf
-E-Mail: ed.gnihtonsti@rheab.kire-naj
-Responsible for content (§ 55 Abs. 2 RStV) Jan-Erik Bähr
-Blombachweg 8a
-40625 Düsseldorf
+Hohenzollernallee 13 40235 Duesseldorf
+E-Mail: ed.gnihtonsti@nimda Responsible for content (§ 55 Abs. 2 RStV) Jan-Erik Bähr
+Hohenzollernallee 13 40235 Duesseldorf
 How is this made? Made with Hugo
 Theme made by panr
 " />
@@ -206,13 +200,14 @@ Theme made by panr
   <div class="post-content"><div>
         <h1 id="imprint">Imprint<a href="#imprint" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Jan-Erik Baehr<br>
-Blombachweg 8a<br>
-40625 Duesseldorf<br>
-E-Mail: <!-- raw HTML omitted --><a href="mailto:ed.gnihtonsti@rheab.kire-naj">ed.gnihtonsti@rheab.kire-naj</a><!-- raw HTML omitted --></p>
+Hohenzollernallee 13
+40235 Duesseldorf<br>
+E-Mail: <span class="email-link">ed.gnihtonsti@nimda</span>
+</p>
 <h2 id="responsible-for-content--55-abs-2-rstv">Responsible for content (§ 55 Abs. 2 RStV)<a href="#responsible-for-content--55-abs-2-rstv" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Jan-Erik Bähr<br>
-Blombachweg 8a<br>
-40625 Düsseldorf</p>
+Hohenzollernallee 13
+40235 Duesseldorf</p>
 <h2 id="how-is-this-made">How is this made?<a href="#how-is-this-made" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Made with <a href="http://gohugo.io">Hugo</a><br>
 Theme made by <a href="https://twitter.com/panr">panr</a></p>
@@ -238,6 +233,8 @@ Theme made by <a href="https://twitter.com/panr">panr</a></p>
           
             | <a href="/about-this-site/">About this site</a>
           
+            | <a href="/privacy/">Privacy Policy</a>
+          
         </span>
       </div>
     </div>
@@ -250,6 +247,30 @@ Theme made by <a href="https://twitter.com/panr">panr</a></p>
 
 <script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
+<script>
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      const reversed = el.textContent.trim();
+      if (!reversed) return;
+      const normal = reversed.split('').reverse().join('');
+      
+      
+      el.textContent = normal;
+      
+      
+      el.style.direction = 'ltr';
+      el.style.unicodeBidi = 'normal';
+      
+      
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function() {
+        window.location.href = 'mailto:' + normal;
+      });
+    });
+  });
+</script>
   
   
 </div>

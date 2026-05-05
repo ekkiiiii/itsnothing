@@ -202,6 +202,8 @@ These two things are the core arguments for SSGs as a whole and I am definetly n
           
             | <a href="/about-this-site/">About this site</a>
           
+            | <a href="/privacy/">Privacy Policy</a>
+          
         </span>
       </div>
     </div>
@@ -214,6 +216,30 @@ These two things are the core arguments for SSGs as a whole and I am definetly n
 
 <script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
+<script>
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      const reversed = el.textContent.trim();
+      if (!reversed) return;
+      const normal = reversed.split('').reverse().join('');
+      
+      
+      el.textContent = normal;
+      
+      
+      el.style.direction = 'ltr';
+      el.style.unicodeBidi = 'normal';
+      
+      
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function() {
+        window.location.href = 'mailto:' + normal;
+      });
+    });
+  });
+</script>
   
   
 </div>

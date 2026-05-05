@@ -13,6 +13,6 @@ Alle Anpassungen, die ich vorgenommen habe und in Zukunft noch vornehme, kannst 
 Die Bilder sind liebevoll mit Microsoft Paint erstellt – entweder mit Grafiktablet oder direkt auf einem Touchscreen. Hier findest du also nur handgemachte, „artisanal“ Blog-Grafiken.
 
 ## Noch Fragen?
-Schreib mir gerne eine Mail an <span class="email-link">ed.gnihtonsti@rheab.kire-naj</span>.
+Schreib mir gerne eine Mail an {{< email "ed.gnihtonsti@nimda" >}}.
 
 

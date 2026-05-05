@@ -13,5 +13,5 @@ You can retrace all the customizations I made and will make on the [blog's GitHu
 The images are virtuosly made with Microsoft Paint, with the help of a graphics tablet or directly on a touchscreen, so you'll only find hand-made, artisanal blog graphics here. 
 
 ## More questions? 
-Ask me on Twitter (@ekkiiiii), or write an e-mail to <span class="email-link">ed.gnihtonsti@rheab.kire-naj</span>.
+Ask me on Twitter (@ekkiiiii), or write an e-mail to {{< email "ed.gnihtonsti@nimda" >}}.
 

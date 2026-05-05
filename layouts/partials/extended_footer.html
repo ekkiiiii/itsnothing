@@ -1,2 +1,26 @@
 <script src="{{ "js/post-gallery.js" | absURL }}"></script>
 
+<script>
+  // Email Obfuscation Helper
+  // Automatically un-reverses emails with the .email-link class and makes them clickable
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      const reversed = el.textContent.trim();
+      if (!reversed) return;
+      const normal = reversed.split('').reverse().join('');
+      
+      // Update display text
+      el.textContent = normal;
+      
+      // Reset CSS-only obfuscation styles
+      el.style.direction = 'ltr';
+      el.style.unicodeBidi = 'normal';
+      
+      // Make it clickable
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function() {
+        window.location.href = 'mailto:' + normal;
+      });
+    });
+  });
+</script>

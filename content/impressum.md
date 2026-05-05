@@ -6,14 +6,14 @@ author = "Jan-Erik"
 
 # Imprint
 Jan-Erik Baehr  
-Blombachweg 8a  
-40625 Duesseldorf  
-E-Mail: <span class="email-link">ed.gnihtonsti@rheab.kire-naj</span>
+Hohenzollernallee 13
+40235 Duesseldorf  
+E-Mail: {{< email "ed.gnihtonsti@nimda" >}}
 
 ## Responsible for content (§ 55 Abs. 2 RStV)
 Jan-Erik Bähr  
-Blombachweg 8a  
-40625 Düsseldorf
+Hohenzollernallee 13
+40235 Duesseldorf  
 
 ## How is this made?
 Made with [Hugo](http://gohugo.io)  

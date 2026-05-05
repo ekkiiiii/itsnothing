@@ -201,7 +201,8 @@ Alle Anpassungen, die ich vorgenommen habe und in Zukunft noch vornehme, kannst 
 <h2 id="und-die-grafiken">Und die Grafiken?<a href="#und-die-grafiken" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Die Bilder sind liebevoll mit Microsoft Paint erstellt – entweder mit Grafiktablet oder direkt auf einem Touchscreen. Hier findest du also nur handgemachte, „artisanal“ Blog-Grafiken.</p>
 <h2 id="noch-fragen">Noch Fragen?<a href="#noch-fragen" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Schreib mir gerne eine Mail an <!-- raw HTML omitted --><a href="mailto:ed.gnihtonsti@rheab.kire-naj">ed.gnihtonsti@rheab.kire-naj</a><!-- raw HTML omitted -->.</p>
+<p>Schreib mir gerne eine Mail an <span class="email-link">ed.gnihtonsti@nimda</span>
+.</p>
 
       </div></div>
 
@@ -224,6 +225,8 @@ Alle Anpassungen, die ich vorgenommen habe und in Zukunft noch vornehme, kannst 
           
             | <a href="/de/about-this-site/">Über diese Seite</a>
           
+            | <a href="/de/datenschutz/">Datenschutzerklärung</a>
+          
         </span>
       </div>
     </div>
@@ -236,6 +239,30 @@ Alle Anpassungen, die ich vorgenommen habe und in Zukunft noch vornehme, kannst 
 
 <script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
+<script>
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      const reversed = el.textContent.trim();
+      if (!reversed) return;
+      const normal = reversed.split('').reverse().join('');
+      
+      
+      el.textContent = normal;
+      
+      
+      el.style.direction = 'ltr';
+      el.style.unicodeBidi = 'normal';
+      
+      
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function() {
+        window.location.href = 'mailto:' + normal;
+      });
+    });
+  });
+</script>
   
   
 </div>

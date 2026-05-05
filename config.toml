@@ -5,6 +5,12 @@ theme = "terminal"
 paginate = 3
 publishDir = "docs"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
 [params]
   contentTypeName = "post"
   themeColor = "orange"
@@ -52,6 +58,11 @@ publishDir = "docs"
         name = "About this site"
         url = "/about-this-site/"
         weight = "90"
+      [[languages.en.menu.about]]
+        identifier = "privacy"
+        name = "Privacy Policy"
+        url = "/privacy/"
+        weight = "100"
 
   [languages.de]
     languageName = "Deutsch"
@@ -87,3 +98,8 @@ publishDir = "docs"
         name = "Über diese Seite"
         url = "/de/about-this-site/"
         weight = "90"
+      [[languages.de.menu.about]]
+        identifier = "privacy"
+        name = "Datenschutzerklärung"
+        url = "/de/datenschutz/"
+        weight = "100"

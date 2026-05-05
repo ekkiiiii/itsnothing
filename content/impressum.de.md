@@ -6,14 +6,14 @@ author = "Jan-Erik"
 
 # Impressum
 Jan-Erik Baehr  
-Blombachweg 8a  
-40625 Düsseldorf  
-E-Mail: <span class="email-link">ed.gnihtonsti@rheab.kire-naj</span>
+Hohenzollernallee 13  
+40235 Düsseldorf  
+E-Mail: {{< email "ed.gnihtonsti@nimda" >}}
 
 ## Verantwortlich für den Inhalt (gem. § 55 Abs. 2 RStV):
 Jan-Erik Bähr  
-Blombachweg 8a  
-40625 Düsseldorf
+Hohenzollernallee 13  
+40235 Düsseldorf
 
 ## How is this made?
 Made with [Hugo](http://gohugo.io)  

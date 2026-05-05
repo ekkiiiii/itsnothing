@@ -220,6 +220,8 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem <a href="https://www.lin
           
             | <a href="/de/about-this-site/">Über diese Seite</a>
           
+            | <a href="/de/datenschutz/">Datenschutzerklärung</a>
+          
         </span>
       </div>
     </div>
@@ -232,6 +234,30 @@ Für klassische Lebenslauf-Infos schau gerne auf meinem <a href="https://www.lin
 
 <script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
+<script>
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      const reversed = el.textContent.trim();
+      if (!reversed) return;
+      const normal = reversed.split('').reverse().join('');
+      
+      
+      el.textContent = normal;
+      
+      
+      el.style.direction = 'ltr';
+      el.style.unicodeBidi = 'normal';
+      
+      
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function() {
+        window.location.href = 'mailto:' + normal;
+      });
+    });
+  });
+</script>
   
   
 </div>

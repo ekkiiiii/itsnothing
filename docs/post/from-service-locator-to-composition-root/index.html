@@ -1,210 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  
-    <title>From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI :: It&#39;s Nothing — Jan-Erik&#39;s Blog</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="After working for a while on the Node.js/Express backend for MatchPicks, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?
+<!doctype html><html lang=en><head><title>From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI :: It's Nothing — Jan-Erik's Blog</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="After working for a while on the Node.js/Express backend for MatchPicks, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?
 From earlier experience I knew a Unity/Zenject codebase for dependency injection (DI). While Zenject is powerful, it eventually felt like a massive, hard-to-trace &ldquo;black box&rdquo; where it was difficult to see how dependencies were resolved at runtime. When deciding how to approach this for the Node.js and TypeScript stack, I wanted to avoid bringing in heavy DI container libraries that add complexity and overhead. I also wanted to focus on building the app first without adding a new heavy framework like NestJS to my learning curve. Once I have built this system a few times manually and have more experience with the architectural patterns, I might consider adopting them, but for now, less is more.
-" />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
-<link rel="canonical" href="http://localhost:1313/post/from-service-locator-to-composition-root/" />
-
-
-
-
-<link rel="stylesheet" href="http://localhost:1313/assets/style.css">
-
-
-
-<link rel="stylesheet" href="http://localhost:1313/style.css">
-
-
-
-
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/img/apple-touch-icon-144-precomposed.png">
-
-  <link rel="shortcut icon" href="http://localhost:1313/img/favicon/orange.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-
-<meta name="twitter:creator" content="Jan-Erik Bähr" />
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI :: It&#39;s Nothing">
-<meta property="og:description" content="How I refactored MatchPicks from a monolithic AppRegistry to an explicit, compiler-checked Composition Root using constructor dependency injection, without heavy frameworks." />
-<meta property="og:url" content="http://localhost:1313/post/from-service-locator-to-composition-root/" />
-<meta property="og:site_name" content="From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI" />
-
-  
-    <meta property="og:image" content="http://localhost:1313/img/favicon/orange.png">
-  
-
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-  <meta property="article:section" content="Software Engineering" />
-
-
-  <meta property="article:published_time" content="2026-02-05 10:00:00 &#43;0200 &#43;0200" />
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-<body class="">
-
-
-<div class="container center headings--one-size">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/" 
-   class="logo-link custom-logo ">
-  <div class="logo">
-    It&#39;s Nothing
-  </div>
-</a>
-
-    </div>
-    <div class="menu-trigger">menu</div>
-  </div>
-  <div class="header__sub-row">
-    
-      <nav class="menu">
-  <ul class="menu__inner">
-    
-      
-        
-          <li><a href="/portfolio/" class="custom-menu-link ">Portfolio</a></li>
-        
-      
-        
-          <li><a href="/about-me/" class="custom-menu-link ">About Me</a></li>
-        
-      
-      
-    
-
-  </ul>
-</nav>
-
-
-    
-
-    
-  </div>
-</header>
-
-
-  <div class="content">
-    
-<div class="post">
-  <h1 class="post-title">
-    <a href="http://localhost:1313/post/from-service-locator-to-composition-root/">From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI</a></h1>
-  <div class="post-meta">
-    
-      <span class="post-date">
-        2026-02-05 
-      </span>
-    
-  </div>
-
-  
-  <span class="post-tags">
-    
-    #<a href="http://localhost:1313/tags/architecture/">Architecture</a>&nbsp;
-    
-    #<a href="http://localhost:1313/tags/backend/">Backend</a>&nbsp;
-    
-    #<a href="http://localhost:1313/tags/node.js/">Node.js</a>&nbsp;
-    
-    #<a href="http://localhost:1313/tags/typescript/">TypeScript</a>&nbsp;
-    
-    #<a href="http://localhost:1313/tags/dependency-injection/">Dependency-Injection</a>&nbsp;
-    
-    #<a href="http://localhost:1313/tags/software-design/">Software-Design</a>&nbsp;
-    
-  </span>
-  
-
-  
-  
-
-  
-    <div class="table-of-contents">
-      <h2>
-        
-          Table of Contents
-        
-      </h2>
-      <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#1-the-starting-point-the-monolithic-appregistry">1. The Starting Point: The Monolithic <code>AppRegistry</code></a></li>
-        <li><a href="#2-the-architectural-goal-honest-constructors-and-fail-fast-boots">2. The Architectural Goal: Honest Constructors and Fail-Fast Boots</a></li>
-        <li><a href="#3-the-tactical-bridge-dynamic-merging">3. The Tactical Bridge: Dynamic Merging</a></li>
-        <li><a href="#4-the-final-form-pure-exploded-constructor-di">4. The Final Form: Pure, Exploded Constructor DI</a></li>
-        <li><a href="#5-decoupling-cycles-with-an-event-bus">5. Decoupling Cycles with an Event Bus</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-  
-
-  <div class="post-content"><div>
-        <p>After working for a while on the Node.js/Express backend for <strong>MatchPicks</strong>, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?</p>
-<p>From earlier experience I knew a Unity/Zenject codebase for dependency injection (DI). While Zenject is powerful, it eventually felt like a massive, hard-to-trace &ldquo;black box&rdquo; where it was difficult to see how dependencies were resolved at runtime. When deciding how to approach this for the Node.js and TypeScript stack, I wanted to avoid bringing in heavy DI container libraries that add complexity and overhead. I also wanted to focus on building the app first without adding a new heavy framework like NestJS to my learning curve. Once I have built this system a few times manually and have more experience with the architectural patterns, I might consider adopting them, but for now, less is more.</p>
-<p>This post outlines the move from a quick-and-dirty singleton locator to a cleaner startup structure, and finally to explicit constructor injection in one central place.</p>
-<p>Here is how the architecture evolved, the trade-offs involved at each step, and why making dependencies explicit improved the safety of the server.</p>
-<hr>
-<h3 id="1-the-starting-point-the-monolithic-appregistry">1. The Starting Point: The Monolithic <code>AppRegistry</code><a href="#1-the-starting-point-the-monolithic-appregistry" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>In the early prototyping phase of MatchPicks, speed was the only metric that mattered. To get endpoints running and tables queried, I built a single, unified class called <code>AppRegistry</code>.</p>
-<p>This class acted as a combined <strong>Service Locator and Facade</strong>. It implemented every database repository interface under the sun (<code>IUserStorage</code>, <code>ILeagueRepository</code>, <code>IPickRepository</code>, etc.), instantiated all services inside its constructor, and was passed as a monolithic &ldquo;context object&rdquo; to routes and services alike.</p>
-<p>It looked roughly like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// Legacy: The monolithic locator
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppRegistry</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">IAppRegistry</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">UserRepository</span>();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">matches</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MatchRepository</span>();
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Every service accepted the entire registry!
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">standingsSvc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StandingService</span>(<span style="color:#66d9ef">this</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">picksSvc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PickService</span>(<span style="color:#66d9ef">this</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="why-it-worked-initially">Why it worked initially:<a href="#why-it-worked-initially" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<ul>
-<li>Zero startup crashes: because service lookups were resolved lazily at runtime (for example calling <code>this.registry.users</code> inside a method), the Node.js interpreter never crashed on startup due to circular imports.</li>
-<li>Rapid prototyping: it was incredibly simple to write. Need a new repository inside a service? Just call <code>this.registry.methodName()</code>.</li>
-</ul>
-<h4 id="the-architectural-smell">The Architectural Smell:<a href="#the-architectural-smell" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<p>While fast, the Service Locator is a well-known architectural anti-pattern. Because every service accepted the entire <code>IAppRegistry</code>, the classes were hiding their actual dependency contracts. Looking at the constructor of <code>StandingService</code>, you could not tell what it actually needed to function. It claimed to depend on everything. Even worse, it allowed services to couple tightly in circular loops without warning, hiding structural flaws until they broke at runtime.</p>
-<hr>
-<h3 id="2-the-architectural-goal-honest-constructors-and-fail-fast-boots">2. The Architectural Goal: Honest Constructors and Fail-Fast Boots<a href="#2-the-architectural-goal-honest-constructors-and-fail-fast-boots" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>I always knew that a resilient architecture should not make it easy to write spaghetti code, but in the beginning, I consciously chose speed over strict structure. As the codebase matured, it was time to make the system actively resist poor design.</p>
-<p>If <code>UserService</code> and <code>LeagueService</code> depend directly on each other, that is a design smell indicating tight coupling. I wanted the compiler or boot sequence to <strong>fail immediately on startup</strong> if a circular loop was introduced, acting as an architectural alarm system.</p>
-<p>To achieve this, I moved the backend toward constructor injection and put the wiring in a single startup file, often called a composition root.</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+"><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://www.itsnothing.de/post/from-service-locator-to-composition-root/><link rel=stylesheet href=https://www.itsnothing.de/assets/style.css><link rel=stylesheet href=https://www.itsnothing.de/style.css><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.itsnothing.de/img/favicon/orange.png><meta name=twitter:card content="summary"><meta name=twitter:creator content="Jan-Erik Bähr"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI :: It's Nothing"><meta property="og:description" content="How I refactored MatchPicks from a monolithic AppRegistry to an explicit, compiler-checked Composition Root using constructor dependency injection, without heavy frameworks."><meta property="og:url" content="https://www.itsnothing.de/post/from-service-locator-to-composition-root/"><meta property="og:site_name" content="From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI"><meta property="og:image" content="https://www.itsnothing.de/img/favicon/orange.png"><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:section" content="Software Engineering"><meta property="article:published_time" content="2026-02-05 10:00:00 +0200 +0200"></head><body><div class="container center headings--one-size"><header class=header><div class=header__inner><div class=header__logo><a href=/ class="logo-link custom-logo"><div class=logo>It's Nothing</div></a></div><div class=menu-trigger>menu</div></div><div class=header__sub-row><nav class=menu><ul class=menu__inner><li><a href=/portfolio/ class=custom-menu-link>Portfolio</a></li><li><a href=/about-me/ class=custom-menu-link>About Me</a></li></ul></nav></div></header><div class=content><div class=post><h1 class=post-title><a href=https://www.itsnothing.de/post/from-service-locator-to-composition-root/>From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI</a></h1><div class=post-meta><span class=post-date>2026-02-05</span></div><span class=post-tags>#<a href=https://www.itsnothing.de/tags/architecture/>Architecture</a>&nbsp;
+#<a href=https://www.itsnothing.de/tags/backend/>Backend</a>&nbsp;
+#<a href=https://www.itsnothing.de/tags/node.js/>Node.js</a>&nbsp;
+#<a href=https://www.itsnothing.de/tags/typescript/>TypeScript</a>&nbsp;
+#<a href=https://www.itsnothing.de/tags/dependency-injection/>Dependency-Injection</a>&nbsp;
+#<a href=https://www.itsnothing.de/tags/software-design/>Software-Design</a>&nbsp;</span><div class=table-of-contents><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><ul><li><a href=#1-the-starting-point-the-monolithic-appregistry>1. The Starting Point: The Monolithic <code>AppRegistry</code></a></li><li><a href=#2-the-architectural-goal-honest-constructors-and-fail-fast-boots>2. The Architectural Goal: Honest Constructors and Fail-Fast Boots</a></li><li><a href=#3-the-tactical-bridge-dynamic-merging>3. The Tactical Bridge: Dynamic Merging</a></li><li><a href=#4-the-final-form-pure-exploded-constructor-di>4. The Final Form: Pure, Exploded Constructor DI</a></li><li><a href=#5-decoupling-cycles-with-an-event-bus>5. Decoupling Cycles with an Event Bus</a></li><li><a href=#conclusion>Conclusion</a></li></ul></li></ul></nav></div><div class=post-content><div><p>After working for a while on the Node.js/Express backend for <strong>MatchPicks</strong>, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?</p><p>From earlier experience I knew a Unity/Zenject codebase for dependency injection (DI). While Zenject is powerful, it eventually felt like a massive, hard-to-trace &ldquo;black box&rdquo; where it was difficult to see how dependencies were resolved at runtime. When deciding how to approach this for the Node.js and TypeScript stack, I wanted to avoid bringing in heavy DI container libraries that add complexity and overhead. I also wanted to focus on building the app first without adding a new heavy framework like NestJS to my learning curve. Once I have built this system a few times manually and have more experience with the architectural patterns, I might consider adopting them, but for now, less is more.</p><p>This post outlines the move from a quick-and-dirty singleton locator to a cleaner startup structure, and finally to explicit constructor injection in one central place.</p><p>Here is how the architecture evolved, the trade-offs involved at each step, and why making dependencies explicit improved the safety of the server.</p><hr><h3 id=1-the-starting-point-the-monolithic-appregistry>1. The Starting Point: The Monolithic <code>AppRegistry</code><a href=#1-the-starting-point-the-monolithic-appregistry class=hanchor arialabel=Anchor>&#8983;</a></h3><p>In the early prototyping phase of MatchPicks, speed was the only metric that mattered. To get endpoints running and tables queried, I built a single, unified class called <code>AppRegistry</code>.</p><p>This class acted as a combined <strong>Service Locator and Facade</strong>. It implemented every database repository interface under the sun (<code>IUserStorage</code>, <code>ILeagueRepository</code>, <code>IPickRepository</code>, etc.), instantiated all services inside its constructor, and was passed as a monolithic &ldquo;context object&rdquo; to routes and services alike.</p><p>It looked roughly like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-typescript data-lang=typescript><span style=display:flex><span><span style=color:#75715e>// Legacy: The monolithic locator
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AppRegistry</span> <span style=color:#66d9ef>implements</span> <span style=color:#a6e22e>IAppRegistry</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>constructor</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>users</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>UserRepository</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>matches</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>MatchRepository</span>();
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Every service accepted the entire registry!
+</span></span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>standingsSvc</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>StandingService</span>(<span style=color:#66d9ef>this</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>picksSvc</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>PickService</span>(<span style=color:#66d9ef>this</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=why-it-worked-initially>Why it worked initially:<a href=#why-it-worked-initially class=hanchor arialabel=Anchor>&#8983;</a></h4><ul><li>Zero startup crashes: because service lookups were resolved lazily at runtime (for example calling <code>this.registry.users</code> inside a method), the Node.js interpreter never crashed on startup due to circular imports.</li><li>Rapid prototyping: it was incredibly simple to write. Need a new repository inside a service? Just call <code>this.registry.methodName()</code>.</li></ul><h4 id=the-architectural-smell>The Architectural Smell:<a href=#the-architectural-smell class=hanchor arialabel=Anchor>&#8983;</a></h4><p>While fast, the Service Locator is a well-known architectural anti-pattern. Because every service accepted the entire <code>IAppRegistry</code>, the classes were hiding their actual dependency contracts. Looking at the constructor of <code>StandingService</code>, you could not tell what it actually needed to function. It claimed to depend on everything. Even worse, it allowed services to couple tightly in circular loops without warning, hiding structural flaws until they broke at runtime.</p><hr><h3 id=2-the-architectural-goal-honest-constructors-and-fail-fast-boots>2. The Architectural Goal: Honest Constructors and Fail-Fast Boots<a href=#2-the-architectural-goal-honest-constructors-and-fail-fast-boots class=hanchor arialabel=Anchor>&#8983;</a></h3><p>I always knew that a resilient architecture should not make it easy to write spaghetti code, but in the beginning, I consciously chose speed over strict structure. As the codebase matured, it was time to make the system actively resist poor design.</p><p>If <code>UserService</code> and <code>LeagueService</code> depend directly on each other, that is a design smell indicating tight coupling. I wanted the compiler or boot sequence to <strong>fail immediately on startup</strong> if a circular loop was introduced, acting as an architectural alarm system.</p><p>To achieve this, I moved the backend toward constructor injection and put the wiring in a single startup file, often called a composition root.</p><pre tabindex=0><code class=language-mermaid data-lang=mermaid>flowchart TD
     subgraph CR[&#34;Composition Root (composition-root.ts)&#34;]
         A[&#34;1. Instantiate Repositories&#34;] --&gt; B[&#34;2. Instantiate Leaf Services&#34;]
         B --&gt; C[&#34;3. Instantiate Domain Services via Explicit Constructors&#34;]
@@ -212,226 +23,69 @@ From earlier experience I knew a Unity/Zenject codebase for dependency injection
     end
 
     D --&gt; Express[&#34;Express Routers&#34;]
-</code></pre><p>A <strong>Composition Root</strong> is just one place at application startup where I create repositories and services in the right order, then pass them into each other explicitly.</p>
-<hr>
-<h3 id="3-the-tactical-bridge-dynamic-merging">3. The Tactical Bridge: Dynamic Merging<a href="#3-the-tactical-bridge-dynamic-merging" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>Migrating a 30-service application all at once can get overwhelming pretty fast. If I had switched every service constructor to explicit dependencies in one step, I would have had to rewrite a lot of internal code at once. That is a good way to introduce regressions.</p>
-<p>To bridge this refactor safely, I used a temporary stepping-stone: I limited each service to the dependencies it actually needed and merged those dependencies at startup.</p>
-<p>For my heavy services, I defined localized TypeScript interface unions representing only the specific repositories that service was allowed to access:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// Localized contract: limit access to only these 5 dependencies
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StandingRegistry</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">IStandingRepository</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">IPickRepository</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">ILeagueRepository</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">ISeasonRepository</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">IMatchRepository</span>;
-</span></span></code></pre></div><p>Inside the service constructor, I accepted this scoped interface. In the <code>composition-root.ts</code>, I used a temporary dynamic merging helper (<code>mergeInstances</code>) to combine only those 5 specific repository instances at startup.</p>
-<p>Because the constructor parameter was still named <code>registry</code> internally, none of the service&rsquo;s internal code had to change right away. That let me keep the app compiling while I untangled the circular dependencies one piece at a time.</p>
-<hr>
-<h3 id="4-the-final-form-pure-exploded-constructor-di">4. The Final Form: Pure, Exploded Constructor DI<a href="#4-the-final-form-pure-exploded-constructor-di" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>Once the infrastructure was stable and the dependency graph was decoupled, I finished the refactor by unraveling the constructors and removing the dynamic merge workaround. Every service now asks for exactly the dependencies it uses.</p>
-<p>For example, our <code>StandingService</code> now has an honest, explicit constructor:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// server/services/core/standing-service.ts
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StandingService</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">IStandingService</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">standingRepo</span>: <span style="color:#66d9ef">IStandingRepository</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">pickRepo</span>: <span style="color:#66d9ef">IPickRepository</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">leagueRepo</span>: <span style="color:#66d9ef">ILeagueRepository</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">seasonRepo</span>: <span style="color:#66d9ef">ISeasonRepository</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">matchRepo</span>: <span style="color:#66d9ef">IMatchRepository</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">achievementSvc</span>: <span style="color:#66d9ef">AchievementService</span>
-</span></span><span style="display:flex;"><span>    ) {}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">updateStandingsForUser</span>(<span style="color:#a6e22e">userId</span>: <span style="color:#66d9ef">number</span>, <span style="color:#a6e22e">targetLeagueId?</span>: <span style="color:#66d9ef">number</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">void</span>&gt; {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Honest dependency: explicit repository calls!
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userPicks</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pickRepo</span>.<span style="color:#a6e22e">getUserPicks</span>(<span style="color:#a6e22e">userId</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In <code>server/composition-root.ts</code>, all services are now created in a clear order:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// server/composition-root.ts
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">composeApplication</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">AppContext</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 1. Repositories
-</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">UserRepository</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">matches</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MatchRepository</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">teams</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TeamRepository</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">leagues</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">LeagueRepository</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">standings</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StandingRepository</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">picks</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PickRepository</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">seasons</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SeasonRepository</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 2. Leaf Services
-</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">logService</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">LogService</span>(<span style="color:#a6e22e">logRepo</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">achievementsSvc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AchievementService</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">picks</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">playoffSvc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PlayoffService</span>(<span style="color:#a6e22e">matches</span>, <span style="color:#a6e22e">teams</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 3. Explicit Constructor Injection (No locators, no merge hacks!)
-</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">standingsSvc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StandingService</span>(
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">standings</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">picks</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">leagues</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">seasons</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">matches</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">achievementsSvc</span>
-</span></span><span style="display:flex;"><span>  );
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 4. Wiring Domain Event Listeners (Decoupling services)
-</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">eventBus</span>.<span style="color:#a6e22e">on</span>(<span style="color:#a6e22e">DomainEvent</span>.<span style="color:#a6e22e">MATCH_RESOLVED</span>, (<span style="color:#a6e22e">payload</span>) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">standingsSvc</span>.<span style="color:#a6e22e">handleMatchResolved</span>(<span style="color:#a6e22e">payload</span>).<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">err</span>) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;[CompositionRoot] Error in handleMatchResolved listener:&#34;</span>, <span style="color:#a6e22e">err</span>);
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>  });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">sessionStore</span>, <span style="color:#a6e22e">db</span>, <span style="color:#a6e22e">services</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">standingsSvc</span>, ... }, <span style="color:#a6e22e">repos</span><span style="color:#f92672">:</span> { ... } };
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="5-decoupling-cycles-with-an-event-bus">5. Decoupling Cycles with an Event Bus<a href="#5-decoupling-cycles-with-an-event-bus" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>Moving away from the Service Locator immediately exposed the problem I wanted to catch: several services could not be created because they depended on each other in a loop.</p>
-<p>For instance, <code>MatchService</code> needed to resolve a match and trigger standing recalculations in <code>StandingService</code>. However, <code>StandingService</code> needed to query match statuses from <code>MatchRepository</code> and <code>MatchService</code> to verify outcomes.</p>
-<p>To resolve this without tight coupling, we introduced an asynchronous <strong>Event Bus</strong>. Instead of injecting <code>StandingService</code> directly into the match resolution layer, the match layer simply emits a <code>DomainEvent.MATCH_RESOLVED</code> event.</p>
-<p>The <code>composition-root.ts</code> acts as the event coordinator, subscribing the appropriate service methods to these events:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// Wire events cleanly in the Composition Root
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">eventBus</span>.<span style="color:#a6e22e">on</span>(<span style="color:#a6e22e">DomainEvent</span>.<span style="color:#a6e22e">MATCH_RESOLVED</span>, (<span style="color:#a6e22e">payload</span>) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">standingsSvc</span>.<span style="color:#a6e22e">handleMatchResolved</span>(<span style="color:#a6e22e">payload</span>).<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">err</span>) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;[CompositionRoot] Error in standingsSvc handleMatchResolved listener:&#34;</span>, <span style="color:#a6e22e">err</span>);
-</span></span><span style="display:flex;"><span>  });
-</span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p>This pattern broke the cycle without forcing the services to know about each other directly. The match layer now emits an event, and the standings layer reacts to it later.</p>
-<hr>
-<h3 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>The main result was practical: circular dependencies stopped being hidden inside one monolithic registry, and the dependency graph became visible at startup. That made problems easier to spot, easier to debug, and safer to change.</p>
-<p>This was still a personal project, so the goal was not to ship a framework-heavy architecture for its own sake. The goal was to make the system easier to reason about and keep refactors safe.</p>
-
-      </div></div>
-
-  
-
-  
-  <div class="article-series">
-    <h5 class="article-series__title"><span>MatchPicks Article Series</span></h5>
-    <div class="article-series__body">
-      <ul>
-        
-          <li>
-            <a href="/post/matchpicks-platform-overview/">Part 1: Matchpicks: Sports Picking Platform</a>
-             - project overview and product context
-          </li>
-        
-          <li>
-            <a href="/post/from-service-locator-to-composition-root/">Part 2: From Service Locator to Composition Root</a>
-             - backend architecture and dependency injection refactor
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-
-
-  
-  
-<div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        
-        <span class="button next">
-            <a href="http://localhost:1313/post/matchpicks-platform-overview/">
-                <span class="button__text">Matchpicks: Sports Picking Platform</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
-</div>
-
-  
-
-  
-
-</div>
-
-  </div>
-
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        
-        <span>
-          <a href="/impressum">Impressum</a>
-          
-            | <a href="/about-this-site/">About this site</a>
-          
-            | <a href="/privacy/">Privacy Policy</a>
-          
-        </span>
-      </div>
-    </div>
-</footer>
-<script src="http://localhost:1313/assets/main.js"></script>
-<script src="http://localhost:1313/assets/prism.js"></script>
-<script src="/js/post-gallery.js"></script>
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (!window.mermaid) {
-      return;
-    }
-
-    var styles = getComputedStyle(document.body);
-    var pageBackground = styles.getPropertyValue("--background").trim() || styles.backgroundColor || "transparent";
-    var pageAccent = styles.getPropertyValue("--accent").trim() || "#23b0ff";
-
-    document.querySelectorAll("pre > code.language-mermaid").forEach(function (codeBlock) {
-      var pre = codeBlock.parentElement;
-      var diagram = document.createElement("div");
-
-      diagram.className = "mermaid";
-      diagram.textContent = codeBlock.textContent;
-      pre.replaceWith(diagram);
-    });
-
-    mermaid.initialize({
-      startOnLoad: false,
-      theme: "base",
-      themeVariables: {
-        background: pageBackground,
-        primaryColor: pageBackground,
-        secondaryColor: pageBackground,
-        tertiaryColor: pageBackground,
-        primaryBorderColor: pageAccent,
-        secondaryBorderColor: pageAccent,
-        tertiaryBorderColor: pageAccent,
-        lineColor: pageAccent,
-        textColor: styles.color || "#ffffff",
-        primaryTextColor: styles.color || "#ffffff",
-        secondaryTextColor: styles.color || "#ffffff",
-        tertiaryTextColor: styles.color || "#ffffff",
-        nodeTextColor: styles.color || "#ffffff",
-        titleColor: styles.color || "#ffffff",
-        mainBkg: pageBackground
-      }
-    });
-
-    mermaid.run({ querySelector: ".mermaid" });
-  });
-</script>
-<style>
-  .mermaid,
-  .mermaid svg {
-    background: transparent !important;
-  }
-</style>
-
-  
-
-  
-</div>
-
-</body>
-</html>
+</code></pre><p>A <strong>Composition Root</strong> is just one place at application startup where I create repositories and services in the right order, then pass them into each other explicitly.</p><hr><h3 id=3-the-tactical-bridge-dynamic-merging>3. The Tactical Bridge: Dynamic Merging<a href=#3-the-tactical-bridge-dynamic-merging class=hanchor arialabel=Anchor>&#8983;</a></h3><p>Migrating a 30-service application all at once can get overwhelming pretty fast. If I had switched every service constructor to explicit dependencies in one step, I would have had to rewrite a lot of internal code at once. That is a good way to introduce regressions.</p><p>To bridge this refactor safely, I used a temporary stepping-stone: I limited each service to the dependencies it actually needed and merged those dependencies at startup.</p><p>For my heavy services, I defined localized TypeScript interface unions representing only the specific repositories that service was allowed to access:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-typescript data-lang=typescript><span style=display:flex><span><span style=color:#75715e>// Localized contract: limit access to only these 5 dependencies
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>StandingRegistry</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>IStandingRepository</span> <span style=color:#f92672>&amp;</span> <span style=color:#a6e22e>IPickRepository</span> <span style=color:#f92672>&amp;</span> <span style=color:#a6e22e>ILeagueRepository</span> <span style=color:#f92672>&amp;</span> <span style=color:#a6e22e>ISeasonRepository</span> <span style=color:#f92672>&amp;</span> <span style=color:#a6e22e>IMatchRepository</span>;
+</span></span></code></pre></div><p>Inside the service constructor, I accepted this scoped interface. In the <code>composition-root.ts</code>, I used a temporary dynamic merging helper (<code>mergeInstances</code>) to combine only those 5 specific repository instances at startup.</p><p>Because the constructor parameter was still named <code>registry</code> internally, none of the service&rsquo;s internal code had to change right away. That let me keep the app compiling while I untangled the circular dependencies one piece at a time.</p><hr><h3 id=4-the-final-form-pure-exploded-constructor-di>4. The Final Form: Pure, Exploded Constructor DI<a href=#4-the-final-form-pure-exploded-constructor-di class=hanchor arialabel=Anchor>&#8983;</a></h3><p>Once the infrastructure was stable and the dependency graph was decoupled, I finished the refactor by unraveling the constructors and removing the dynamic merge workaround. Every service now asks for exactly the dependencies it uses.</p><p>For example, our <code>StandingService</code> now has an honest, explicit constructor:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-typescript data-lang=typescript><span style=display:flex><span><span style=color:#75715e>// server/services/core/standing-service.ts
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>StandingService</span> <span style=color:#66d9ef>implements</span> <span style=color:#a6e22e>IStandingService</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>constructor</span>(
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#a6e22e>standingRepo</span>: <span style=color:#66d9ef>IStandingRepository</span>,
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#a6e22e>pickRepo</span>: <span style=color:#66d9ef>IPickRepository</span>,
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#a6e22e>leagueRepo</span>: <span style=color:#66d9ef>ILeagueRepository</span>,
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#a6e22e>seasonRepo</span>: <span style=color:#66d9ef>ISeasonRepository</span>,
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#a6e22e>matchRepo</span>: <span style=color:#66d9ef>IMatchRepository</span>,
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#a6e22e>achievementSvc</span>: <span style=color:#66d9ef>AchievementService</span>
+</span></span><span style=display:flex><span>    ) {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>async</span> <span style=color:#a6e22e>updateStandingsForUser</span>(<span style=color:#a6e22e>userId</span>: <span style=color:#66d9ef>number</span>, <span style=color:#a6e22e>targetLeagueId?</span>: <span style=color:#66d9ef>number</span>)<span style=color:#f92672>:</span> <span style=color:#a6e22e>Promise</span>&lt;<span style=color:#f92672>void</span>&gt; {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Honest dependency: explicit repository calls!
+</span></span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>userPicks</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>pickRepo</span>.<span style=color:#a6e22e>getUserPicks</span>(<span style=color:#a6e22e>userId</span>);
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// ...
+</span></span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>In <code>server/composition-root.ts</code>, all services are now created in a clear order:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-typescript data-lang=typescript><span style=display:flex><span><span style=color:#75715e>// server/composition-root.ts
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>composeApplication</span>()<span style=color:#f92672>:</span> <span style=color:#a6e22e>AppContext</span> {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// 1. Repositories
+</span></span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>users</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>UserRepository</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>matches</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>MatchRepository</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>teams</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>TeamRepository</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>leagues</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>LeagueRepository</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>standings</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>StandingRepository</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>picks</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>PickRepository</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>seasons</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>SeasonRepository</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// 2. Leaf Services
+</span></span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>logService</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>LogService</span>(<span style=color:#a6e22e>logRepo</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>achievementsSvc</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>AchievementService</span>(<span style=color:#a6e22e>users</span>, <span style=color:#a6e22e>picks</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>playoffSvc</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>PlayoffService</span>(<span style=color:#a6e22e>matches</span>, <span style=color:#a6e22e>teams</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// 3. Explicit Constructor Injection (No locators, no merge hacks!)
+</span></span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>standingsSvc</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>StandingService</span>(
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>standings</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>picks</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>leagues</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>seasons</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>matches</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>achievementsSvc</span>
+</span></span><span style=display:flex><span>  );
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// 4. Wiring Domain Event Listeners (Decoupling services)
+</span></span></span><span style=display:flex><span>  <span style=color:#a6e22e>eventBus</span>.<span style=color:#a6e22e>on</span>(<span style=color:#a6e22e>DomainEvent</span>.<span style=color:#a6e22e>MATCH_RESOLVED</span>, (<span style=color:#a6e22e>payload</span>) <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>standingsSvc</span>.<span style=color:#a6e22e>handleMatchResolved</span>(<span style=color:#a6e22e>payload</span>).<span style=color:#66d9ef>catch</span>((<span style=color:#a6e22e>err</span>) <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#e6db74>&#34;[CompositionRoot] Error in handleMatchResolved listener:&#34;</span>, <span style=color:#a6e22e>err</span>);
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>  });
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> { <span style=color:#a6e22e>sessionStore</span>, <span style=color:#a6e22e>db</span>, <span style=color:#a6e22e>services</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>standingsSvc</span>, ... }, <span style=color:#a6e22e>repos</span><span style=color:#f92672>:</span> { ... } };
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=5-decoupling-cycles-with-an-event-bus>5. Decoupling Cycles with an Event Bus<a href=#5-decoupling-cycles-with-an-event-bus class=hanchor arialabel=Anchor>&#8983;</a></h3><p>Moving away from the Service Locator immediately exposed the problem I wanted to catch: several services could not be created because they depended on each other in a loop.</p><p>For instance, <code>MatchService</code> needed to resolve a match and trigger standing recalculations in <code>StandingService</code>. However, <code>StandingService</code> needed to query match statuses from <code>MatchRepository</code> and <code>MatchService</code> to verify outcomes.</p><p>To resolve this without tight coupling, we introduced an asynchronous <strong>Event Bus</strong>. Instead of injecting <code>StandingService</code> directly into the match resolution layer, the match layer simply emits a <code>DomainEvent.MATCH_RESOLVED</code> event.</p><p>The <code>composition-root.ts</code> acts as the event coordinator, subscribing the appropriate service methods to these events:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-typescript data-lang=typescript><span style=display:flex><span><span style=color:#75715e>// Wire events cleanly in the Composition Root
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>eventBus</span>.<span style=color:#a6e22e>on</span>(<span style=color:#a6e22e>DomainEvent</span>.<span style=color:#a6e22e>MATCH_RESOLVED</span>, (<span style=color:#a6e22e>payload</span>) <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>standingsSvc</span>.<span style=color:#a6e22e>handleMatchResolved</span>(<span style=color:#a6e22e>payload</span>).<span style=color:#66d9ef>catch</span>((<span style=color:#a6e22e>err</span>) <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#e6db74>&#34;[CompositionRoot] Error in standingsSvc handleMatchResolved listener:&#34;</span>, <span style=color:#a6e22e>err</span>);
+</span></span><span style=display:flex><span>  });
+</span></span><span style=display:flex><span>});
+</span></span></code></pre></div><p>This pattern broke the cycle without forcing the services to know about each other directly. The match layer now emits an event, and the standings layer reacts to it later.</p><hr><h3 id=conclusion>Conclusion<a href=#conclusion class=hanchor arialabel=Anchor>&#8983;</a></h3><p>The main result was practical: circular dependencies stopped being hidden inside one monolithic registry, and the dependency graph became visible at startup. That made problems easier to spot, easier to debug, and safer to change.</p><p>This was still a personal project, so the goal was not to ship a framework-heavy architecture for its own sake. The goal was to make the system easier to reason about and keep refactors safe.</p></div></div><div class=article-series><h5 class=article-series__title><span>MatchPicks Article Series</span></h5><div class=article-series__body><ul><li><a href=/post/matchpicks-platform-overview/>Part 1: Matchpicks: Sports Picking Platform</a>
+- project overview and product context</li><li><a href=/post/from-service-locator-to-composition-root/>Part 2: From Service Locator to Composition Root</a>
+- backend architecture and dependency injection refactor</li></ul></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button next"><a href=https://www.itsnothing.de/post/matchpicks-platform-overview/><span class=button__text>Matchpicks: Sports Picking Platform</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><div class=copyright><span><a href=/impressum>Impressum</a>
+| <a href=/about-this-site/>About this site</a>
+| <a href=/privacy/>Privacy Policy</a></span></div></div></footer><script src=https://www.itsnothing.de/assets/main.js></script><script src=https://www.itsnothing.de/assets/prism.js></script><script src=/js/post-gallery.js></script><script src=https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){if(!window.mermaid)return;var e=getComputedStyle(document.body),t=e.getPropertyValue("--background").trim()||e.backgroundColor||"transparent",n=e.getPropertyValue("--accent").trim()||"#23b0ff";document.querySelectorAll("pre > code.language-mermaid").forEach(function(e){var n=e.parentElement,t=document.createElement("div");t.className="mermaid",t.textContent=e.textContent,n.replaceWith(t)}),mermaid.initialize({startOnLoad:!1,theme:"base",themeVariables:{background:t,primaryColor:t,secondaryColor:t,tertiaryColor:t,primaryBorderColor:n,secondaryBorderColor:n,tertiaryBorderColor:n,lineColor:n,textColor:e.color||"#ffffff",primaryTextColor:e.color||"#ffffff",secondaryTextColor:e.color||"#ffffff",tertiaryTextColor:e.color||"#ffffff",nodeTextColor:e.color||"#ffffff",titleColor:e.color||"#ffffff",mainBkg:t}}),mermaid.run({querySelector:".mermaid"})})</script><style>.mermaid,.mermaid svg{background:0 0!important}</style></div></body></html>

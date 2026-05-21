@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Software Engineering on It&#39;s Nothing</title>
-    <link>http://localhost:1313/categories/software-engineering/</link>
-    <description>Recent content in Software Engineering on It&#39;s Nothing</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 05 Feb 2026 10:00:00 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/software-engineering/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI</title>
-      <link>http://localhost:1313/post/from-service-locator-to-composition-root/</link>
-      <pubDate>Thu, 05 Feb 2026 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/post/from-service-locator-to-composition-root/</guid>
-      <description>&lt;p&gt;After working for a while on the Node.js/Express backend for &lt;strong&gt;MatchPicks&lt;/strong&gt;, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?&lt;/p&gt;&#xA;&lt;p&gt;From earlier experience I knew a Unity/Zenject codebase for dependency injection (DI). While Zenject is powerful, it eventually felt like a massive, hard-to-trace &amp;ldquo;black box&amp;rdquo; where it was difficult to see how dependencies were resolved at runtime. When deciding how to approach this for the Node.js and TypeScript stack, I wanted to avoid bringing in heavy DI container libraries that add complexity and overhead. I also wanted to focus on building the app first without adding a new heavy framework like NestJS to my learning curve. Once I have built this system a few times manually and have more experience with the architectural patterns, I might consider adopting them, but for now, less is more.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on It's Nothing</title><link>https://www.itsnothing.de/categories/software-engineering/</link><description>Recent content in Software Engineering on It's Nothing</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 05 Feb 2026 10:00:00 +0200</lastBuildDate><atom:link href="https://www.itsnothing.de/categories/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI</title><link>https://www.itsnothing.de/post/from-service-locator-to-composition-root/</link><pubDate>Thu, 05 Feb 2026 10:00:00 +0200</pubDate><guid>https://www.itsnothing.de/post/from-service-locator-to-composition-root/</guid><description>&lt;p&gt;After working for a while on the Node.js/Express backend for &lt;strong&gt;MatchPicks&lt;/strong&gt;, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?&lt;/p&gt;
+&lt;p&gt;From earlier experience I knew a Unity/Zenject codebase for dependency injection (DI). While Zenject is powerful, it eventually felt like a massive, hard-to-trace &amp;ldquo;black box&amp;rdquo; where it was difficult to see how dependencies were resolved at runtime. When deciding how to approach this for the Node.js and TypeScript stack, I wanted to avoid bringing in heavy DI container libraries that add complexity and overhead. I also wanted to focus on building the app first without adding a new heavy framework like NestJS to my learning curve. Once I have built this system a few times manually and have more experience with the architectural patterns, I might consider adopting them, but for now, less is more.&lt;/p&gt;</description></item></channel></rss>

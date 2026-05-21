@@ -1,36 +1,53 @@
-<script src="{{ "js/post-gallery.js" | absURL }}"></script>
-
+{{ if .Params.mermaid }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
-  // Email Obfuscation Helper
-  // Automatically un-reverses emails with the .email-link class and makes them clickable
-  (function() {
-    function initEmails() {
-      document.querySelectorAll('.email-link').forEach(function(el) {
-        if (el.getAttribute('data-email-init')) return;
-        const reversed = el.textContent.trim();
-        if (!reversed) return;
-        const normal = reversed.split('').reverse().join('');
-        
-        // Update display text
-        el.textContent = normal;
-        
-        // Force reset CSS-only obfuscation styles using setProperty for !important support
-        el.style.setProperty('direction', 'ltr', 'important');
-        el.style.setProperty('unicode-bidi', 'normal', 'important');
-        
-        // Make it clickable
-        el.style.cursor = 'pointer';
-        el.addEventListener('click', function() {
-          window.location.href = 'mailto:' + normal;
-        });
-        el.setAttribute('data-email-init', 'true');
-      });
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.mermaid) {
+      return;
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initEmails);
-    } else {
-      initEmails();
-    }
-  })();
+    var styles = getComputedStyle(document.body);
+    var pageBackground = styles.getPropertyValue("--background").trim() || styles.backgroundColor || "transparent";
+    var pageAccent = styles.getPropertyValue("--accent").trim() || "#23b0ff";
+
+    document.querySelectorAll("pre > code.language-mermaid").forEach(function (codeBlock) {
+      var pre = codeBlock.parentElement;
+      var diagram = document.createElement("div");
+
+      diagram.className = "mermaid";
+      diagram.textContent = codeBlock.textContent;
+      pre.replaceWith(diagram);
+    });
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "base",
+      themeVariables: {
+        background: pageBackground,
+        primaryColor: pageBackground,
+        secondaryColor: pageBackground,
+        tertiaryColor: pageBackground,
+        primaryBorderColor: pageAccent,
+        secondaryBorderColor: pageAccent,
+        tertiaryBorderColor: pageAccent,
+        lineColor: pageAccent,
+        textColor: styles.color || "#ffffff",
+        primaryTextColor: styles.color || "#ffffff",
+        secondaryTextColor: styles.color || "#ffffff",
+        tertiaryTextColor: styles.color || "#ffffff",
+        nodeTextColor: styles.color || "#ffffff",
+        titleColor: styles.color || "#ffffff",
+        mainBkg: pageBackground
+      }
+    });
+
+    mermaid.run({ querySelector: ".mermaid" });
+  });
 </script>
+<style>
+  .mermaid,
+  .mermaid svg {
+    background: transparent !important;
+  }
+</style>
+{{ end }}

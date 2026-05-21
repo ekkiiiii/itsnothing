@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
     <title>Matchpicks: Sports Picking Platform :: It&#39;s Nothing — Jan-Erik&#39;s Blog</title>
   
@@ -8,29 +8,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Over the last months I&rsquo;ve been working on Matchpicks, a web platform for creating and joining picking leagues around sports games.
 The core idea is simple: instead of being tied to a single big league or a single sport, Matchpicks is built to support many small, custom leagues – perfect for niche sports and tight‑knit communities.
-Some key points:
-Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; picks: Users can create their own leagues, invite friends, and submit picks for upcoming matches. Multiple sports: The system is designed to handle different leagues and competition formats, so it can be reused for a variety of sports. Origin story: The first real‑world use case was European (semi‑professional and amateur) American Football, where there are lots of smaller leagues but very few tools to run structured prediction games around them. There’s still plenty to refine (both in terms of UX and feature depth), but the current version already supports the main loop: create a league, join as a player, and submit your weekly picks.
+What it is Matchpicks focuses on a simple loop:
+Create a league. Invite players. Submit picks before the matches start. Score the results and keep the standings moving. That sounds straightforward, but the interesting part is that the platform is meant to work for a lot of small leagues rather than one large, fixed competition. That means the system has to stay flexible around sports, seasons, and league-specific rules.
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.itsnothing.de/post/matchpicks-platform-overview/" />
+<link rel="canonical" href="http://localhost:1313/post/matchpicks-platform-overview/" />
 
 
 
 
-<link rel="stylesheet" href="https://www.itsnothing.de/assets/style.css">
+<link rel="stylesheet" href="http://localhost:1313/assets/style.css">
 
 
 
-<link rel="stylesheet" href="https://www.itsnothing.de/style.css">
+<link rel="stylesheet" href="http://localhost:1313/style.css">
 
 
+<link rel="stylesheet" href="/css/post-matchpicks.css" />
 
 
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.itsnothing.de/img/apple-touch-icon-144-precomposed.png">
-
-  <link rel="shortcut icon" href="https://www.itsnothing.de/img/favicon/orange.png">
+  <link rel="shortcut icon" href="http://localhost:1313/img/favicon/orange.png">
 
 
 
@@ -43,10 +43,10 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Matchpicks: Sports Picking Platform :: It&#39;s Nothing">
 <meta property="og:description" content="A React-based web platform for creating and joining picking leagues across different sports." />
-<meta property="og:url" content="https://www.itsnothing.de/post/matchpicks-platform-overview/" />
+<meta property="og:url" content="http://localhost:1313/post/matchpicks-platform-overview/" />
 <meta property="og:site_name" content="Matchpicks: Sports Picking Platform" />
 
-  <meta property="og:image" content="https://www.itsnothing.de/img/matchpicks-dashboard.png">
+  <meta property="og:image" content="http://localhost:1313/img/matchpicks-picks-page.png">
 
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -116,7 +116,7 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://www.itsnothing.de/post/matchpicks-platform-overview/">Matchpicks: Sports Picking Platform</a></h1>
+    <a href="http://localhost:1313/post/matchpicks-platform-overview/">Matchpicks: Sports Picking Platform</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -129,27 +129,7 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
 
   
   
-    <div class="post-gallery" data-gallery>
-      <div class="post-gallery__track">
-        
-          <figure class="post-gallery__item post-gallery__item--active" data-gallery-index="0">
-            <img src="https://www.itsnothing.de/img/matchpicks-dashboard.png" alt="Matchpicks: Sports Picking Platform">
-          </figure>
-        
-          <figure class="post-gallery__item" data-gallery-index="1">
-            <img src="https://www.itsnothing.de/img/matchpicks-analytics.png" alt="Matchpicks: Sports Picking Platform">
-          </figure>
-        
-      </div>
-      
-      <button class="post-gallery__nav post-gallery__nav--prev" type="button" data-gallery-prev aria-label="Previous image">
-        ‹
-      </button>
-      <button class="post-gallery__nav post-gallery__nav--next" type="button" data-gallery-next aria-label="Next image">
-        ›
-      </button>
-      
-    </div>
+    <img src="/img/matchpicks-picks-page.png" class="post-cover" alt="Matchpicks: Sports Picking Platform" />
   
 
   
@@ -157,16 +137,106 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
   <div class="post-content"><div>
         <p>Over the last months I&rsquo;ve been working on <strong>Matchpicks</strong>, a web platform for creating and joining picking leagues around sports games.</p>
 <p>The core idea is simple: instead of being tied to a single big league or a single sport, Matchpicks is built to <strong>support many small, custom leagues</strong> – perfect for niche sports and tight‑knit communities.</p>
-<p>Some key points:</p>
-<ul>
-<li><strong>Tech stack</strong>: React on the frontend, backed by a modern web stack.</li>
-<li><strong>Leagues &amp; picks</strong>: Users can create their own leagues, invite friends, and submit picks for upcoming matches.</li>
-<li><strong>Multiple sports</strong>: The system is designed to handle different leagues and competition formats, so it can be reused for a variety of sports.</li>
-<li><strong>Origin story</strong>: The first real‑world use case was European (semi‑professional and amateur) American Football, where there are lots of smaller leagues but very few tools to run structured prediction games around them.</li>
-</ul>
-<p>There’s still plenty to refine (both in terms of UX and feature depth), but the current version already supports the main loop: create a league, join as a player, and submit your weekly picks.</p>
+<h2 id="what-it-is">What it is<a href="#what-it-is" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Matchpicks focuses on a simple loop:</p>
+<ol>
+<li>Create a league.</li>
+<li>Invite players.</li>
+<li>Submit picks before the matches start.</li>
+<li>Score the results and keep the standings moving.</li>
+</ol>
+<p>That sounds straightforward, but the interesting part is that the platform is meant to work for a lot of small leagues rather than one large, fixed competition. That means the system has to stay flexible around sports, seasons, and league-specific rules.</p>
+<h2 id="a-few-practical-details">A few practical details<a href="#a-few-practical-details" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>Tech stack:</strong> React and TypeScript on the frontend, with a Node.js/Express backend.</p>
+<p><strong>Leagues &amp; picks:</strong> Users can create their own leagues, invite friends, and submit picks for upcoming matches.</p>
+<p><strong>Multiple sports:</strong> The system is designed to handle different leagues and competition formats, so it can be reused for a variety of sports.</p>
+<p><strong>Origin story:</strong> The first real-world use case was European semi-professional and amateur American Football, where there are lots of smaller leagues but very few tools to run structured prediction games around them.</p>
+<h2 id="current-screens">Current screens<a href="#current-screens" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The screenshots below show the current state of the main flows I use most often.</p>
+
+  <figure class="center" >
+    <img src="/img/matchpicks-dashboard-overview.png"   />
+    
+      <figcaption class="center" >Dashboard overview: the main landing page for players, with active leagues and the number of picks still missing.</figcaption>
+    
+  </figure>
+
+
+<h3 id="league-detail-view">League detail view<a href="#league-detail-view" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>This is the league workspace where players move between picks, standings, my picks, and settings.</p>
+
+  <figure class="center" >
+    <img src="/img/matchpicks-picks-page.png"   />
+    
+      <figcaption class="center" >Picks page: the main league workspace where players move between picks, standings, my picks, and settings.</figcaption>
+    
+  </figure>
+
+
+<h3 id="league-command-center">League command center<a href="#league-command-center" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>This is the operational view for keeping leagues moving.</p>
+
+  <figure class="center" >
+    <img src="/img/matchpicks-league-command-center.png"   />
+    
+      <figcaption class="center" >League command center: an admin-oriented overview for checking progress and moving each league forward week by week.</figcaption>
+    
+  </figure>
+
+
+<h3 id="integrity-dashboard">Integrity dashboard<a href="#integrity-dashboard" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>This is where I review conflicting data and decide what to accept, flag, or dismiss.</p>
+
+  <figure class="center" >
+    <img src="/img/matchpicks-integrity-dashboard.png"   />
+    
+      <figcaption class="center" >Integrity dashboard: a conflict review screen for comparing data sources and resolving mismatches.</figcaption>
+    
+  </figure>
+
+
+<h3 id="sports-data-management">Sports data management<a href="#sports-data-management" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>This is the section for managing leagues, seasons, schedules, results, and sync activity.</p>
+
+  <figure class="center" >
+    <img src="/img/matchpicks-sports-data-management.png"   />
+    
+      <figcaption class="center" >Sports data management: the back-office area for leagues, seasons, schedules, results, scrapers, and activity logs.</figcaption>
+    
+  </figure>
+
+
+<h2 id="what-i-wanted-from-it">What I wanted from it<a href="#what-i-wanted-from-it" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The initial goal was to prototype the core functionality and get a better feel for a modern web stack after spending most of my time in Unity/C# for a while.</p>
+<p>As the project evolved, it also became a place to think through architecture in this context bit by bit and try out different solutions without starting from scratch every time.</p>
+<p>That is why the platform was built around a straightforward data model, a frontend that can grow with the feature set, and enough structure in the backend to support additional sports and league types later.</p>
+<p>There is still plenty to refine, both in UX and in feature depth, but the current version already supports the main loop: create a league, join as a player, and submit weekly picks.</p>
 
       </div></div>
+
+  
+
+  
+  <div class="article-series">
+    <h5 class="article-series__title"><span>MatchPicks Article Series</span></h5>
+    <div class="article-series__body">
+      <ul>
+        
+          <li>
+            <a href="/post/matchpicks-platform-overview/">Part 1: Matchpicks: Sports Picking Platform</a>
+             - project overview and product context
+          </li>
+        
+          <li>
+            <a href="/post/from-service-locator-to-composition-root/">Part 2: From Service Locator to Composition Root</a>
+             - backend architecture and dependency injection refactor
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
 
   
   
@@ -177,9 +247,16 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
     </div>
     <div class="pagination__buttons">
         
+        <span class="button previous">
+            <a href="http://localhost:1313/post/from-service-locator-to-composition-root/">
+                <span class="button__icon">←</span>
+                <span class="button__text">From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI</span>
+            </a>
+        </span>
+        
         
         <span class="button next">
-            <a href="https://www.itsnothing.de/post/update-25/">
+            <a href="http://localhost:1313/post/update-25/">
                 <span class="button__text">Portfolio update</span>
                 <span class="button__icon">→</span>
             </a>
@@ -213,49 +290,16 @@ Tech stack: React on the frontend, backed by a modern web stack. Leagues &amp; p
       </div>
     </div>
 </footer>
-<script src="https://www.itsnothing.de/assets/main.js"></script>
-<script src="https://www.itsnothing.de/assets/prism.js"></script>
+<script src="http://localhost:1313/assets/main.js"></script>
+<script src="http://localhost:1313/assets/prism.js"></script>
+<script src="/js/post-gallery.js"></script>
 
 
 
 
-<script src="https://www.itsnothing.de/js/post-gallery.js"></script>
 
-<script>
   
-  
-  (function() {
-    function initEmails() {
-      document.querySelectorAll('.email-link').forEach(function(el) {
-        if (el.getAttribute('data-email-init')) return;
-        const reversed = el.textContent.trim();
-        if (!reversed) return;
-        const normal = reversed.split('').reverse().join('');
-        
-        
-        el.textContent = normal;
-        
-        
-        el.style.setProperty('direction', 'ltr', 'important');
-        el.style.setProperty('unicode-bidi', 'normal', 'important');
-        
-        
-        el.style.cursor = 'pointer';
-        el.addEventListener('click', function() {
-          window.location.href = 'mailto:' + normal;
-        });
-        el.setAttribute('data-email-init', 'true');
-      });
-    }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initEmails);
-    } else {
-      initEmails();
-    }
-  })();
-</script>
-  
   
 </div>
 

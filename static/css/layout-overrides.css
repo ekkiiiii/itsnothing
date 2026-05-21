@@ -10,21 +10,23 @@
 /* Post image gallery */
 .post-gallery {
   position: relative;
+  clear: both;
   margin: 20px 0 30px;
 }
 
 .post-gallery__track {
+  display: grid;
   width: 100%;
-  position: relative;
+  min-height: clamp(280px, 48vw, 520px);
+  justify-items: center;
 }
 
 .post-gallery__item {
   display: none;
   margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
+  grid-area: 1 / 1;
+  text-align: center;
 }
 
 .post-gallery__item--active {
@@ -35,6 +37,9 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post-gallery__nav {
@@ -66,9 +71,28 @@
 .post-cover {
   max-width: 70%;
   max-height: 400px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   border: 4px solid var(--accent) !important;
+}
+
+/* Center figures rendered inside post content */
+.post .post-content figure.left,
+.post .post-content figure.center,
+.post .post-content figure.right {
+  display: block;
+  float: none;
+  margin: 30px auto;
+  width: min(100%, 760px);
+}
+
+.post .post-content figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Limit size of inline post images */
@@ -77,7 +101,7 @@
   max-height: 400px !important;
   height: auto !important;
   width: auto;
-  max-width: 60%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

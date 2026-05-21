@@ -13,8 +13,21 @@ Having spent over 8 years in small, self-organized teams, I'm used to handling t
 
 ## Current Projects
 
+### matchpicks.de (React / TypeScript)
+
+A full-stack web platform for picking games for minor and amateur sports leagues. Built from the ground up, covering everything from the initial system architecture and state management to deployment.
+
+[Visit matchpicks.de](https://matchpicks.de)
+
+{{< screenshot-gallery title="MatchPicks Screenshot Gallery" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard overview: the main landing page for players, with active leagues and the number of picks still missing." src2="/img/matchpicks-picks-page.png" caption2="Picks page: the main league workspace where players move between picks, standings, my picks, and settings." src3="/img/matchpicks-league-command-center.png" caption3="League command center: an admin-oriented overview for checking progress and moving each league forward week by week." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity dashboard: a conflict review screen for comparing data sources and resolving mismatches." src5="/img/matchpicks-sports-data-management.png" caption5="Sports data management: the back-office area for leagues, seasons, schedules, results, scrapers, and activity logs." >}}
+
+{{< article-series title="MatchPicks Article Series" >}}
+- [Part 1: Matchpicks: Sports Picking Platform](/post/matchpicks-platform-overview/) - project overview and product context
+- [Part 2: From Service Locator to Composition Root](/post/from-service-locator-to-composition-root/) - backend architecture and dependency injection refactor
+{{< /article-series >}}
+
 ### Modular Management Simulation (Unity / C#)
-A economic simulation in pixel-art style, simulating a video game rental store. It has semi-autonomous agents for employees and customers that can "run the store" on their own as well as being manipulated by players.
+An economic simulation in pixel-art style, simulating a video game rental store. It has semi-autonomous agents for employees and customers that can "run the store" on their own as well as being manipulated by players.
 
 {{< tech-insight >}}
 **Architecture & Testing**
@@ -22,18 +35,6 @@ I'm using Service Patterns to decouple sub-systems. The logic runs independently
 {{< /tech-insight >}}
 
 ![Simulation Preview](/img/sim-preview.gif#center)
-
-### matchpicks.de (React / TypeScript)
-{{< video webm="/video/matchpicks-tour.webm" label="matchpicks.de Marketing Tour" >}}
-
-A full-stack web platform for picking games for minor and amateur sports leagues. Built from the ground up—covering everything from the initial system architecture and state management to deployment. 
-
-{{< tech-insight >}}
-**Scraping & Verifying**
-I set up a system to scrape game data and results from various sources. Since data availability and integrity are on-going concerns with minor and amateur sports leagues, I implemented tools to verify integrity over time via automatic scraping and user submitted feedback.
-{{< /tech-insight >}}
-
-[Visit matchpicks.de](https://matchpicks.de)
 
 ---
 
@@ -44,8 +45,8 @@ I set up a system to scrape game data and results from various sources. Since da
 Developing industrial monitoring applications and XR systems (VR/AR) in a consulting environment.
 
 {{< tech-insight >}}
-**UI Performance & UX**
-Built modular interfaces using Unity UI Toolkit and UGUI. Key focus was on performance optimization for standalone VR headsets (draw call reduction, UI batching) and creating intuitive interaction patterns for complex data.
+**Architecture & Refactor**
+Helped redesign a complex VR scene-editing platform from the ground up. That work pushed me toward writing more pure C#/.NET and toward an architecture that stayed as independent from MonoBehaviour as possible, with the goal of improving SOLID compliance and keeping the code easier to test and reason about.
 {{< /tech-insight >}}
 
 ### Indie Games & Web Tools (Gentleforge)
@@ -53,7 +54,7 @@ Built modular interfaces using Unity UI Toolkit and UGUI. Key focus was on perfo
 Programming and game design for commercial releases and internal tools.
 
 * **Fairyfail (Steam):** Gameplay systems and UI components.
-* **Editor Backend:** Designed and built a level-editor backend using Node.js for content management.
+* **Editor Backend:** Designed and built a level editor backend using Node.js for content management.
 
 {{< youtube 1cjGxvTlWjE >}}
 ---
@@ -89,11 +90,4 @@ Developed for Manasoup Game Jam (2 days). Focused on a tight scope and mobile co
 A collection of earlier game jam experiments and long-term projects like *The Side Effects of Life in Space* can be found at [mildlyentertaining.games](https://mildlyentertaining.games).
 
 ![Mildly Entertaining Games Collage](/img/mildlyentertaininggames_collage_bg_color.png#center)
-
----
-
-### Tech Stack Summary
-* **Languages:** C#, TypeScript, JavaScript, C++ (Arduino)
-* **Frameworks:** Unity, React, Angular, Node.js
-* **Focus:** Service Patterns, Unit Testing, UI/UX Implementation
 

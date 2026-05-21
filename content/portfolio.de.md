@@ -13,6 +13,19 @@ Da ich die letzten 8+ Jahre überwiegend in kleinen, selbstorganisierten Teams g
 
 ## Aktuelle Projekte
 
+### matchpicks.de (React / TypeScript)
+
+Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und Amateurligen. Von Grund auf eigenständig entwickelt, von der initialen Systemarchitektur über das State-Management bis hin zum Deployment.
+
+[Besuche matchpicks.de](https://matchpicks.de)
+
+{{< screenshot-gallery title="MatchPicks-Screenshot-Galerie" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard-Übersicht: die zentrale Startseite für Spieler mit aktiven Ligen und offenen Picks." src2="/img/matchpicks-picks-page.png" caption2="Picks-Seite: der Hauptbereich für Spieler mit Picks, Tabellen, eigenen Tipps und Einstellungen." src3="/img/matchpicks-league-command-center.png" caption3="League Command Center: eine Admin-Ansicht für den Überblick über den Fortschritt jeder Liga pro Woche." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity Dashboard: eine Konfliktansicht zum Vergleichen von Datenquellen und Auflösen von Abweichungen." src5="/img/matchpicks-sports-data-management.png" caption5="Sports Data Management: der Verwaltungsbereich für Ligen, Saisons, Spielpläne, Ergebnisse, Scraper und Aktivitätslog." >}}
+
+{{< article-series title="MatchPicks-Artikelserie" >}}
+- [Teil 1: Matchpicks: Sports Picking Platform](/post/matchpicks-platform-overview/) - Projektüberblick und Produktkontext
+- [Teil 2: From Service Locator to Composition Root](/post/from-service-locator-to-composition-root/) - Backend-Architektur und DI-Refactor
+{{< /article-series >}}
+
 ### Modulare Management-Simulation (Unity / C#)
 Eine Wirtschaftssimulation im Pixel-Art-Stil, die einen Videospiel-Verleih simuliert. Sie verfügt über semi-autonome Agenten für Mitarbeiter und Kunden, die den Laden eigenständig führen können, aber auch vom Spieler manipuliert werden können.
 
@@ -23,18 +36,6 @@ Ich nutze Service-Patterns, um Subsysteme zu entkoppeln. Die Logik läuft unabh�
 
 ![Simulation Preview](/img/sim-preview.gif#center)
 
-### matchpicks.de (React / TypeScript)
-{{< video webm="/video/matchpicks-tour.webm" label="matchpicks.de Marketing Tour" >}}
-
-Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und Amateurligen. Von Grund auf eigenständig entwickelt – von der initialen Systemarchitektur über das State-Management bis hin zum Deployment.
-
-{{< tech-insight >}}
-**Scraping & Verifizierung**
-Ich habe ein System zum Scraping von Spieldaten und Ergebnissen aus verschiedenen Quellen aufgebaut. Da die Datenverfügbarkeit und -integrität bei Amateur-Ligen eine ständige Herausforderung darstellt, habe ich Tools implementiert, um die Datenqualität über automatisierte Abgleiche und Nutzer-Feedback kontinuierlich zu verifizieren.
-{{< /tech-insight >}}
-
-[Besuche matchpicks.de](https://matchpicks.de)
-
 ---
 
 ## Beruflicher Weg
@@ -44,8 +45,8 @@ Ich habe ein System zum Scraping von Spieldaten und Ergebnissen aus verschiedene
 Entwicklung von industriellen Monitoring-Anwendungen und XR-Systemen (VR/AR) im Consulting-Umfeld.
 
 {{< tech-insight >}}
-**UI-Performance & UX**
-Aufbau modularer Interfaces mit Unity UI Toolkit und UGUI. Fokus auf Performance-Optimierung für Standalone-VR-Headsets (Draw-Call-Reduktion, UI-Batching) und intuitive Interaktionsmuster für komplexe Daten.
+**Architektur & Refactor**
+Mitwirkung am grundlegenden Redesign einer komplexen VR-Szene-Editing-Plattform. Dabei bin ich stärker in reines C#/.NET eingestiegen und habe auf eine Architektur hingearbeitet, die möglichst unabhängig von MonoBehaviour bleibt, um SOLID besser einzuhalten und den Code einfacher testbar und nachvollziehbar zu machen.
 {{< /tech-insight >}}
 
 ### Indie-Games & Web-Tools (Gentleforge)
@@ -53,7 +54,7 @@ Aufbau modularer Interfaces mit Unity UI Toolkit und UGUI. Fokus auf Performance
 Programmierung und Game-Design für kommerzielle Releases und interne Tools.
 
 * **Fairyfail (Steam):** Gameplay-Systeme und UI-Komponenten.
-* **Editor-Backend:** Entwurf und Implementierung eines Level-Editor-Backends mit Node.js für die Content-Verwaltung.
+* **Editor-Backend:** Entwurf und Implementierung eines Level Editor Backends mit Node.js für die Content-Verwaltung.
 
 {{< youtube 1cjGxvTlWjE >}}
 
@@ -90,10 +91,3 @@ Entwickelt für den Manasoup Game Jam (2 Tage). Fokus auf einen schlanken Scope 
 Eine Sammlung älterer Game-Jam-Experimente und Langzeit-Projekte wie *The Side Effects of Life in Space* findest du auf [mildlyentertaining.games](https://mildlyentertaining.games).
 
 ![Mildly Entertaining Games Collage](/img/mildlyentertaininggames_collage_bg_color.png#center)
-
----
-
-### Tech-Stack (Zusammenfassung)
-* **Sprachen:** C#, TypeScript, JavaScript, C++ (Arduino)
-* **Frameworks:** Unity, React, Angular, Node.js
-* **Fokus:** Service-Patterns, Unit-Testing, UI/UX-Implementierung

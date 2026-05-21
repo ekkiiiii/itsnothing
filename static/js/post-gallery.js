@@ -10,8 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var current = 0;
     var prevBtn = gallery.querySelector('[data-gallery-prev]');
     var nextBtn = gallery.querySelector('[data-gallery-next]');
+    var isPortfolio = gallery.classList.contains('post-gallery--portfolio');
+    var transitionMs = 260;
 
     function recalcHeight() {
+      if (isPortfolio) return;
       if (!track) return;
       var max = 0;
       items.forEach(function (item) {
@@ -25,28 +28,69 @@ document.addEventListener('DOMContentLoaded', function () {
         if (h > max) max = h;
       });
       if (max > 0) {
-        track.style.minHeight = Math.round(max) + 'px';
+        if (isPortfolio) {
+          gallery.style.setProperty('--gallery-media-height', Math.round(max) + 'px');
+        } else {
+          track.style.minHeight = Math.round(max) + 'px';
+        }
       }
     }
 
-    function update(activeIndex) {
-      items.forEach(function (item, idx) {
-        if (idx === activeIndex) {
-          item.classList.add('post-gallery__item--active');
-        } else {
-          item.classList.remove('post-gallery__item--active');
-        }
+    function clearMotionClasses(item) {
+      item.classList.remove(
+        'post-gallery__item--enter-next',
+        'post-gallery__item--enter-prev',
+        'post-gallery__item--exit-next',
+        'post-gallery__item--exit-prev'
+      );
+    }
+
+    function update(nextIndex, animate) {
+      var previousIndex = current;
+      var direction = nextIndex > previousIndex ? 'next' : 'prev';
+      var previousItem = items[previousIndex];
+      var nextItem = items[nextIndex];
+
+      items.forEach(function (item) {
+        clearMotionClasses(item);
+        item.classList.remove('post-gallery__item--active');
       });
 
-      if (prevBtn) prevBtn.style.display = activeIndex === 0 ? 'none' : '';
-      if (nextBtn) nextBtn.style.display = activeIndex === items.length - 1 ? 'none' : '';
+      if (!animate || previousIndex === nextIndex) {
+        if (nextItem) {
+          nextItem.classList.add('post-gallery__item--active');
+        }
+      } else {
+        if (previousItem) {
+          previousItem.classList.add('post-gallery__item--active', 'post-gallery__item--exit-' + direction);
+        }
+        if (nextItem) {
+          nextItem.classList.add('post-gallery__item--active', 'post-gallery__item--enter-' + direction);
+          window.requestAnimationFrame(function () {
+            nextItem.classList.remove('post-gallery__item--enter-' + direction);
+          });
+        }
+
+        if (previousItem && previousItem !== nextItem) {
+          window.setTimeout(function () {
+            clearMotionClasses(previousItem);
+            if (previousIndex !== current) {
+              previousItem.classList.remove('post-gallery__item--active');
+            }
+          }, transitionMs);
+        }
+      }
+
+      current = nextIndex;
+
+      if (prevBtn) prevBtn.style.display = nextIndex === 0 ? 'none' : '';
+      if (nextBtn) nextBtn.style.display = nextIndex === items.length - 1 ? 'none' : '';
     }
 
     if (prevBtn) {
       prevBtn.addEventListener('click', function () {
         if (current > 0) {
-          current -= 1;
-          update(current);
+          update(current - 1, true);
         }
       });
     }
@@ -54,8 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (nextBtn) {
       nextBtn.addEventListener('click', function () {
         if (current < items.length - 1) {
-          current += 1;
-          update(current);
+          update(current + 1, true);
         }
       });
     }
@@ -87,10 +130,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('resize', function () {
-      recalcHeight();
+      if (!isPortfolio) {
+        recalcHeight();
+      }
     });
 
-    update(current);
+    update(current, false);
   });
 });
 

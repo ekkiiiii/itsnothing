@@ -1,0 +1,31 @@
+{{ $title := .Get "title" }}
+{{ $slides := slice }}
+
+{{ range seq 1 10 }}
+  {{ $src := $.Get (printf "src%d" .) }}
+  {{ if $src }}
+    {{ $caption := $.Get (printf "caption%d" .) }}
+    {{ $alt := or ($.Get (printf "alt%d" .)) $caption }}
+    {{ $slides = $slides | append (dict "src" $src "caption" $caption "alt" $alt) }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $slides) 0 }}
+<div class="post-gallery post-gallery--portfolio" data-gallery>
+  {{ with $title }}<div class="post-gallery__title">{{ . }}</div>{{ end }}
+  <div class="post-gallery__track">
+    {{ range $index, $slide := $slides }}
+      <figure class="post-gallery__item{{ if eq $index 0 }} post-gallery__item--active{{ end }}" data-gallery-index="{{ $index }}">
+        <div class="post-gallery__media">
+          <img src="{{ $slide.src | relURL }}" alt="{{ $slide.alt | default $title | default "Screenshot" }}">
+        </div>
+        {{ with $slide.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{ end }}
+  </div>
+  {{ if gt (len $slides) 1 }}
+    <button class="post-gallery__nav post-gallery__nav--prev" type="button" data-gallery-prev aria-label="Previous image"><span class="post-gallery__nav-icon" aria-hidden="true">‹</span></button>
+    <button class="post-gallery__nav post-gallery__nav--next" type="button" data-gallery-next aria-label="Next image"><span class="post-gallery__nav-icon" aria-hidden="true">›</span></button>
+  {{ end }}
+</div>
+{{ end }}

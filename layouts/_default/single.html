@@ -10,7 +10,7 @@
     {{ end }}
   </div>
 
-  {{ if .Params.tags }}
+  {{ if and (not .Params.articleSeries) .Params.tags }}
   <span class="post-tags">
     {{ range .Params.tags }}
     #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;

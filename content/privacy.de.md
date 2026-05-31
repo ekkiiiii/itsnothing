@@ -2,8 +2,8 @@
 title = "Datenschutzerklärung"
 date = "2024-05-05"
 author = "Jan-Erik"
-url = "/de/datenschutz/"
-aliases = ["/de/datenschutz/"]
+slug = "datenschutz"
+translationKey = "privacy"
 +++
 
 # Datenschutzerklärung

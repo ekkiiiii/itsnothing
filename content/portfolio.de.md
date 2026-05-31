@@ -19,11 +19,9 @@ Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und A
 
 [Besuche matchpicks.de](https://matchpicks.de)
 
-{{< screenshot-gallery title="MatchPicks-Screenshot-Galerie" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard-Übersicht: die zentrale Startseite für Spieler mit aktiven Ligen und offenen Picks." src2="/img/matchpicks-picks-page.png" caption2="Picks-Seite: der Hauptbereich für Spieler mit Picks, Tabellen, eigenen Tipps und Einstellungen." src3="/img/matchpicks-league-command-center.png" caption3="League Command Center: eine Admin-Ansicht für den Überblick über den Fortschritt jeder Liga pro Woche." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity Dashboard: eine Konfliktansicht zum Vergleichen von Datenquellen und Auflösen von Abweichungen." src5="/img/matchpicks-sports-data-management.png" caption5="Sports Data Management: der Verwaltungsbereich für Ligen, Saisons, Spielpläne, Ergebnisse, Scraper und Aktivitätslog." >}}
+{{< screenshot-gallery title="Matchpicks-Screenshot-Galerie" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard-Übersicht: die zentrale Startseite für Spieler mit aktiven Ligen und offenen Picks." src2="/img/matchpicks-picks-page.png" caption2="Picks-Seite: der Hauptbereich für Spieler mit Picks, Tabellen, eigenen Tipps und Einstellungen." src3="/img/matchpicks-league-command-center.png" caption3="League Command Center: eine Admin-Ansicht für den Überblick über den Fortschritt jeder Liga pro Woche." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity Dashboard: eine Konfliktansicht zum Vergleichen von Datenquellen und Auflösen von Abweichungen." src5="/img/matchpicks-sports-data-management.png" caption5="Sports Data Management: der Verwaltungsbereich für Ligen, Saisons, Spielpläne, Ergebnisse, Scraper und Aktivitätslog." >}}
 
-{{< article-series title="MatchPicks-Artikelserie" >}}
-- [Teil 1: Matchpicks: Sports Picking Platform](/post/matchpicks-platform-overview/) - Projektüberblick und Produktkontext
-- [Teil 2: From Service Locator to Composition Root](/post/from-service-locator-to-composition-root/) - Backend-Architektur und DI-Refactor
+{{< article-series series="matchpicks" >}}
 {{< /article-series >}}
 
 ### Modulare Management-Simulation (Unity / C#)

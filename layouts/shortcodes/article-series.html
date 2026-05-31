@@ -1,7 +1,26 @@
-{{ $title := .Get "title" | default "Article Series" }}
-<div class="article-series">
-  <div class="article-series__title">{{ $title }}</div>
-  <div class="article-series__body">
-    {{ .Inner | markdownify }}
+{{ $seriesKey := .Get "series" }}
+{{ if $seriesKey }}
+  {{ $series := index (index site.Data "article-series") $seriesKey }}
+  {{ if $series }}
+  <div class="article-series">
+    <div class="article-series__title">{{ $series.title | default "Article Series" }}</div>
+    <div class="article-series__body">
+      <ul>
+        {{ range $series.items }}
+          <li>
+            <a href="{{ .url | relURL }}">{{ .title }}</a>{{ with .description }} - {{ . }}{{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
-</div>
+  {{ end }}
+{{ else }}
+  {{ $title := .Get "title" | default "Article Series" }}
+  <div class="article-series">
+    <div class="article-series__title">{{ $title }}</div>
+    <div class="article-series__body">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+{{ end }}

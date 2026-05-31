@@ -1,27 +1,17 @@
 +++
 title = "From Service Locator to Composition Root: A Pragmatic Journey to Explicit DI"
-description = "How I refactored MatchPicks from a monolithic AppRegistry to an explicit, compiler-checked Composition Root using constructor dependency injection, without heavy frameworks."
+description = "How I refactored Matchpicks from a monolithic AppRegistry to an explicit, compiler-checked Composition Root using constructor dependency injection, without heavy frameworks."
 date = 2026-02-05T10:00:00+02:00
 draft = false
-author = "Jan-Erik Bähr"
+author = "Jan-Erik"
 toc = true
 mermaid = true
 
 [articleSeries]
-title = "MatchPicks Article Series"
-
-[[articleSeries.items]]
-title = "Part 1: Matchpicks: Sports Picking Platform"
-url = "/post/matchpicks-platform-overview/"
-description = "project overview and product context"
-
-[[articleSeries.items]]
-title = "Part 2: From Service Locator to Composition Root"
-url = "/post/from-service-locator-to-composition-root/"
-description = "backend architecture and dependency injection refactor"
+series = "matchpicks"
 +++
 
-After working for a while on the Node.js/Express backend for **MatchPicks**, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?
+After working for a while on the Node.js/Express backend for **Matchpicks**, I ran into a classic architectural challenge: as the application expanded to over 30 services and repositories, how could I wire them together without creating a tangled web of imports, hiding dependencies, or getting stuck in circular dependency loops?
 
 From earlier experience I knew a Unity/Zenject codebase for dependency injection (DI). While Zenject is powerful, it eventually felt like a massive, hard-to-trace "black box" where it was difficult to see how dependencies were resolved at runtime. When deciding how to approach this for the Node.js and TypeScript stack, I wanted to avoid bringing in heavy DI container libraries that add complexity and overhead. I also wanted to focus on building the app first without adding a new heavy framework like NestJS to my learning curve. Once I have built this system a few times manually and have more experience with the architectural patterns, I might consider adopting them, but for now, less is more.
 
@@ -33,7 +23,7 @@ Here is how the architecture evolved, the trade-offs involved at each step, and 
 
 ### 1. The Starting Point: The Monolithic `AppRegistry`
 
-In the early prototyping phase of MatchPicks, speed was the only metric that mattered. To get endpoints running and tables queried, I built a single, unified class called `AppRegistry`.
+In the early prototyping phase of Matchpicks, speed was the only metric that mattered. To get endpoints running and tables queried, I built a single, unified class called `AppRegistry`.
 
 This class acted as a combined **Service Locator and Facade**. It implemented every database repository interface under the sun (`IUserStorage`, `ILeagueRepository`, `IPickRepository`, etc.), instantiated all services inside its constructor, and was passed as a monolithic "context object" to routes and services alike.
 
@@ -201,3 +191,5 @@ This pattern broke the cycle without forcing the services to know about each oth
 The main result was practical: circular dependencies stopped being hidden inside one monolithic registry, and the dependency graph became visible at startup. That made problems easier to spot, easier to debug, and safer to change.
 
 This was still a personal project, so the goal was not to ship a framework-heavy architecture for its own sake. The goal was to make the system easier to reason about and keep refactors safe.
+
+**Next in this series:** [Post-Commit Events: An In-Memory Outbox for a Synchronous Event Bus](/post/post-commit-events-in-memory-outbox/) — what happened when async listeners met a synchronous emitter inside a database transaction, and the small in-memory outbox that fixed it.

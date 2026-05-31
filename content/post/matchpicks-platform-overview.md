@@ -7,17 +7,7 @@ cover = "/img/matchpicks-picks-page.png"
 customCss = "/css/post-matchpicks.css"
 
 [articleSeries]
-title = "MatchPicks Article Series"
-
-[[articleSeries.items]]
-title = "Part 1: Matchpicks: Sports Picking Platform"
-url = "/post/matchpicks-platform-overview/"
-description = "project overview and product context"
-
-[[articleSeries.items]]
-title = "Part 2: From Service Locator to Composition Root"
-url = "/post/from-service-locator-to-composition-root/"
-description = "backend architecture and dependency injection refactor"
+series = "matchpicks"
 +++
 
 Over the last months I've been working on **Matchpicks**, a web platform for creating and joining picking leagues around sports games.

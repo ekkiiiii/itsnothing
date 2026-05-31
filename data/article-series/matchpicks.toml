@@ -1,0 +1,16 @@
+title = "Matchpicks Article Series"
+
+[[items]]
+title = "Part 1: Matchpicks: Sports Picking Platform"
+url = "/post/matchpicks-platform-overview/"
+description = "project overview and product context"
+
+[[items]]
+title = "Part 2: From Service Locator to Composition Root"
+url = "/post/from-service-locator-to-composition-root/"
+description = "backend architecture and dependency injection refactor"
+
+[[items]]
+title = "Part 3: Post-Commit Events: An In-Memory Outbox for a Synchronous Event Bus"
+url = "/post/post-commit-events-in-memory-outbox/"
+description = "transaction boundaries, async event handlers, and an in-memory outbox"

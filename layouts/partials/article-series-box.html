@@ -1,5 +1,7 @@
-{{ $series := .Params.articleSeries }}
-{{ if $series }}
+{{ $seriesKey := .Params.articleSeries.series }}
+{{ if $seriesKey }}
+  {{ $series := index (index site.Data "article-series") $seriesKey }}
+  {{ if $series }}
   {{ $title := $series.title | default "Article Series" }}
   <div class="article-series">
     <h5 class="article-series__title"><span>{{ $title }}</span></h5>
@@ -14,4 +16,5 @@
       </ul>
     </div>
   </div>
+  {{ end }}
 {{ end }}

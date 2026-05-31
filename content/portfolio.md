@@ -19,11 +19,9 @@ A full-stack web platform for picking games for minor and amateur sports leagues
 
 [Visit matchpicks.de](https://matchpicks.de)
 
-{{< screenshot-gallery title="MatchPicks Screenshot Gallery" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard overview: the main landing page for players, with active leagues and the number of picks still missing." src2="/img/matchpicks-picks-page.png" caption2="Picks page: the main league workspace where players move between picks, standings, my picks, and settings." src3="/img/matchpicks-league-command-center.png" caption3="League command center: an admin-oriented overview for checking progress and moving each league forward week by week." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity dashboard: a conflict review screen for comparing data sources and resolving mismatches." src5="/img/matchpicks-sports-data-management.png" caption5="Sports data management: the back-office area for leagues, seasons, schedules, results, scrapers, and activity logs." >}}
+{{< screenshot-gallery title="Matchpicks Screenshot Gallery" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard overview: the main landing page for players, with active leagues and the number of picks still missing." src2="/img/matchpicks-picks-page.png" caption2="Picks page: the main league workspace where players move between picks, standings, my picks, and settings." src3="/img/matchpicks-league-command-center.png" caption3="League command center: an admin-oriented overview for checking progress and moving each league forward week by week." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity dashboard: a conflict review screen for comparing data sources and resolving mismatches." src5="/img/matchpicks-sports-data-management.png" caption5="Sports data management: the back-office area for leagues, seasons, schedules, results, scrapers, and activity logs." >}}
 
-{{< article-series title="MatchPicks Article Series" >}}
-- [Part 1: Matchpicks: Sports Picking Platform](/post/matchpicks-platform-overview/) - project overview and product context
-- [Part 2: From Service Locator to Composition Root](/post/from-service-locator-to-composition-root/) - backend architecture and dependency injection refactor
+{{< article-series series="matchpicks" >}}
 {{< /article-series >}}
 
 ### Modular Management Simulation (Unity / C#)

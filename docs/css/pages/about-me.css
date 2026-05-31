@@ -1,0 +1,8 @@
+/* Scope: .post--about-me only */
+
+.post--about-me .post-content img {
+  max-width: 30%;
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}

@@ -8,9 +8,9 @@
     <div class="article-series__body">
       <ul>
         {{ range $series.items }}
-          <li>
-            <a href="{{ .url | relURL }}">{{ .title }}</a>
-            {{ with .description }} - {{ . }}{{ end }}
+          <li class="article-series__item">
+            <a class="article-series__link" href="{{ .url | relURL }}">{{ .title }}</a>
+            {{ with .description }}<span class="article-series__description">{{ . }}</span>{{ end }}
           </li>
         {{ end }}
       </ul>

@@ -2,7 +2,6 @@
 title: "Portfolio"
 date: 2026-03-09
 author: "Jan-Erik"
-customCss: "/css/stuff-i-built.css"
 ---
 
 I like to build things. What I enjoy most is the practical side of development: writing code, building prototypes, and taking an idea into the real world to see what works (and what doesn't). 
@@ -24,15 +23,13 @@ A full-stack web platform for picking games for minor and amateur sports leagues
 {{< article-series series="matchpicks" >}}
 {{< /article-series >}}
 
-### Modular Management Simulation (Unity / C#)
-An economic simulation in pixel-art style, simulating a video game rental store. It has semi-autonomous agents for employees and customers that can "run the store" on their own as well as being manipulated by players.
+### Video Store Manager (Unity / C#)
+Personal Unity project: a small management simulation about running a VHS rental shop, built as a playground for architecture and automated testing rather than a shipped product.
 
 {{< tech-insight >}}
-**Architecture & Testing**
-I'm using Service Patterns to decouple sub-systems. The logic runs independently and is validated via an automated headless test suite, including a "full simulation" which runs like the full game, including pre-defined strategies that simulate user interactions over time. This enables verification of complex economic systems without having to play through the game manually.
+**Technical overview**
+The codebase separates simulation logic from presentation so economy, staffing, inventory, and customer behaviour can evolve without growing a tangle of scene references. Game rules live in plain C# with narrow service boundaries; Unity handles rendering, input, and the pixel-art front end. The same core runs in the editor and in headless integration tests that advance full sessions programmatically, which makes it easier to catch regressions in balancing and flow before playing through builds by hand.
 {{< /tech-insight >}}
-
-![Simulation Preview](/img/sim-preview.gif#center)
 
 ---
 

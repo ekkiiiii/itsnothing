@@ -1,0 +1,43 @@
+/* Scope: .post--portfolio only */
+
+.post--portfolio img[src$='#center'] {
+  display: block;
+  margin: 0.7rem auto;
+}
+
+.post--portfolio img[src$='#floatleft'] {
+  float: left;
+  margin: 0.7rem;
+}
+
+.post--portfolio img[src$='#floatright'] {
+  float: right;
+  margin: 0.7rem;
+}
+
+.post--portfolio h2,
+.post--portfolio .post-content h2 {
+  font-size: xx-large;
+  text-align: left;
+  text-decoration-line: underline;
+}
+
+.post--portfolio h4,
+.post--portfolio .post-content h4 {
+  font-size: medium;
+  text-align: left;
+}
+
+.post--portfolio details {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.post--portfolio summary {
+  cursor: pointer;
+  color: #1d76e2;
+  font-weight: bold;
+}

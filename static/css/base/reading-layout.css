@@ -1,0 +1,58 @@
+/* Left-aligned prose inside the theme's centered content column */
+
+.container.center .post,
+.container.center .index-content,
+.post,
+.index-content {
+  text-align: left;
+}
+
+.post .post-title,
+.post .post-title a,
+.post .post-meta,
+.post .post-tags,
+.post .table-of-contents,
+.post .post-content,
+.post .post-content > div,
+.index-content {
+  text-align: left;
+}
+
+.post .post-content {
+  margin-top: 24px;
+}
+
+.post .post-content p,
+.post .post-content li,
+.post .post-content ul,
+.post .post-content ol,
+.post .post-content blockquote,
+.index-content p,
+.index-content li {
+  text-align: left;
+}
+
+.post .post-content h1,
+.post .post-content h2,
+.post .post-content h3,
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6,
+.index-content h1,
+.index-content h2,
+.index-content h3,
+.index-content h4,
+.index-content h5,
+.index-content h6 {
+  text-align: left;
+}
+
+.post .post-content figure figcaption {
+  text-align: left;
+}
+
+.post.on-list .post-content,
+.post.on-list .post-title,
+.post.on-list .post-title a {
+  text-align: left;
+}

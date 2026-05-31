@@ -2,7 +2,6 @@
 title = "About Me"
 date = "2020-07-30"
 author = "Jan-Erik"
-customCss = "/css/aboutme.css"
 +++
 
 ## Hi, I'm Jan-Erik

@@ -1,0 +1,23 @@
+/* Scope: .post--matchpicks-platform-overview only */
+
+.post--matchpicks-platform-overview .post-content ol {
+  counter-reset: matchpicks-step;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+.post--matchpicks-platform-overview .post-content ol li {
+  counter-increment: matchpicks-step;
+  position: static;
+  text-align: left;
+  padding-left: 0;
+}
+
+.post--matchpicks-platform-overview .post-content ol li::before {
+  content: counter(matchpicks-step) ". ";
+  position: static !important;
+  display: inline;
+  margin-right: 0.25em;
+}

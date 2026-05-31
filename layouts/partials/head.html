@@ -20,9 +20,15 @@
   <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
-<!-- Custom CSS per page-->
+<!-- Page-specific CSS: static/css/pages/{slug}.css -->
+{{ with .File }}
+  {{ $pageCss := printf "/css/pages/%s.css" .ContentBaseName }}
+  {{ if fileExists (printf "static%s" $pageCss) }}
+    <link rel="stylesheet" href="{{ $pageCss | relURL }}">
+  {{ end }}
+{{ end }}
+<!-- Optional override (legacy); prefer pages/{slug}.css -->
 {{ with .Params.customcss }}<link rel="stylesheet" href="{{ . }}" />{{ end }}
-{{ if .Params.articleSeries }}<link rel="stylesheet" href="{{ "css/article-series-post.css" | relURL }}" />{{ end }}
 
 <!-- Icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">

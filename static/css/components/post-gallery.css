@@ -1,0 +1,66 @@
+/* Shared post image gallery (blog posts with Params.images) */
+
+.post-gallery {
+  position: relative;
+  clear: both;
+  margin: 20px 0 30px;
+}
+
+.post-gallery__track {
+  display: grid;
+  width: 100%;
+  min-height: clamp(280px, 48vw, 520px);
+  justify-items: center;
+}
+
+.post-gallery__item {
+  display: none;
+  margin: 0;
+  width: 100%;
+  grid-area: 1 / 1;
+  text-align: center;
+}
+
+.post-gallery__item--active {
+  display: block;
+}
+
+.post-gallery__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-gallery__item figcaption {
+  margin-top: 12px;
+  padding: 10px 14px;
+  text-align: center;
+  background: var(--background, #222129);
+  color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.post-gallery__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.post-gallery__nav--prev {
+  left: 10px;
+}
+
+.post-gallery__nav--next {
+  right: 10px;
+}

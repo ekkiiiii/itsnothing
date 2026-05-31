@@ -2,7 +2,6 @@
 title: "Portfolio"
 date: 2026-03-09
 author: "Jan-Erik"
-customCss: "/css/stuff-i-built.css"
 ---
 
 Ich baue gerne Dinge. Am meisten Spaß macht mir dabei der praktische Teil der Entwicklung: Code schreiben, Prototypen bauen und eine Idee in die Realität umsetzen, um zu sehen, was funktioniert (und was nicht). 
@@ -24,15 +23,13 @@ Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und A
 {{< article-series series="matchpicks" >}}
 {{< /article-series >}}
 
-### Modulare Management-Simulation (Unity / C#)
-Eine Wirtschaftssimulation im Pixel-Art-Stil, die einen Videospiel-Verleih simuliert. Sie verfügt über semi-autonome Agenten für Mitarbeiter und Kunden, die den Laden eigenständig führen können, aber auch vom Spieler manipuliert werden können.
+### Video Store Manager (Unity / C#)
+Persönliches Unity-Projekt: eine kleine Management-Simulation rund um einen VHS-Videoverleih – vor allem ein Spielplatz für Architektur und automatisierte Tests, kein kommerzielles Release.
 
 {{< tech-insight >}}
-**Architektur & Tests**
-Ich nutze Service-Patterns, um Subsysteme zu entkoppeln. Die Logik läuft unabhängig und wird über eine automatisierte Headless-Testsuite validiert. Diese beinhaltet eine „Vollsimulation“, die wie das eigentliche Spiel abläuft – inklusive vordefinierter Strategien, die Nutzerinteraktionen über Zeit simulieren. Dies ermöglicht die Verifizierung komplexer ökonomischer Systeme, ohne das Spiel manuell durchspielen zu müssen.
+**Technischer Überblick**
+Die Codebasis trennt Simulationslogik von der Darstellung, damit Wirtschaft, Personal, Inventar und Kundenverhalten wachsen können, ohne ein Netz aus Szenenreferenzen. Spielregeln liegen in reinem C# mit schmalen Service-Grenzen; Unity übernimmt Rendering, Input und die Pixel-Art-Oberfläche. Derselbe Kern läuft im Editor und in Headless-Integrationstests, die komplette Sessions programmatisch voranschreiben – so lassen sich Fehler in Balancing und Abläufen eher finden, bevor man Builds von Hand durchspielt.
 {{< /tech-insight >}}
-
-![Simulation Preview](/img/sim-preview.gif#center)
 
 ---
 

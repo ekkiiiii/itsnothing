@@ -4,7 +4,6 @@ date = "2026-02-01"
 author = "Jan-Erik"
 description = "A React-based web platform for creating and joining picking leagues across different sports."
 cover = "/img/matchpicks-picks-page.png"
-customCss = "/css/post-matchpicks.css"
 
 [articleSeries]
 series = "matchpicks"

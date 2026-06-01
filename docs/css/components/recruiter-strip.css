@@ -1,0 +1,106 @@
+.recruiter-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0.5rem 0 0;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  text-align: left;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.recruiter-strip__heading {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1;
+}
+
+.recruiter-strip__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recruiter-strip__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  line-height: 0;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.recruiter-strip__icon:hover,
+.recruiter-strip__icon:focus-visible {
+  background: rgba(255, 168, 106, 0.18);
+  border-color: rgba(255, 168, 106, 0.45);
+  color: #fff;
+}
+
+.recruiter-strip__icon--linkedin:hover,
+.recruiter-strip__icon--linkedin:focus-visible {
+  background: rgba(10, 102, 194, 0.35);
+  border-color: rgba(10, 102, 194, 0.65);
+  color: #fff;
+}
+
+.post-content + .recruiter-strip,
+.article-series + .recruiter-strip {
+  margin-top: 12px;
+}
+
+/* Portfolio & about-me: fixed corner chip */
+.recruiter-strip--floating {
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right, 0px));
+  bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  z-index: 200;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px 6px;
+  border-radius: 10px;
+  border-color: rgba(255, 168, 106, 0.28);
+  background: rgba(28, 27, 34, 0.92);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  margin: 0;
+}
+
+.recruiter-strip--floating .recruiter-strip__heading {
+  font-size: 0.65rem;
+}
+
+.recruiter-strip--floating .recruiter-strip__icon {
+  width: 34px;
+  height: 34px;
+}
+
+@media (max-width: 684px) {
+  .recruiter-strip--floating {
+    right: max(8px, env(safe-area-inset-right, 0px));
+    bottom: max(8px, env(safe-area-inset-bottom, 0px));
+    padding: 6px;
+  }
+
+  .recruiter-strip--floating .recruiter-strip__icon {
+    width: 32px;
+    height: 32px;
+  }
+}

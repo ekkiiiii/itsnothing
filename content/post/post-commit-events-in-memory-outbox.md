@@ -11,7 +11,7 @@ mermaid = true
 series = "matchpicks"
 +++
 
-In my [last post](https://www.itsnothing.de/post/from-service-locator-to-composition-root/), I described how I cleaned up the Matchpicks backend by moving to explicit dependency injection and a composition root. As part of that refactor, I also introduced a local event bus so services could react to changes without depending on each other directly.
+In my [last post](/post/from-service-locator-to-composition-root/), I described how I cleaned up the Matchpicks backend by moving to explicit dependency injection and a composition root. As part of that refactor, I also introduced a local event bus so services could react to changes without depending on each other directly.
 
 That sounded clean. It also hid a subtle bug.
 

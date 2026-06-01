@@ -16,7 +16,7 @@ Da ich die letzten 8+ Jahre überwiegend in kleinen, selbstorganisierten Teams g
 
 Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und Amateurligen. Von Grund auf eigenständig entwickelt, von der initialen Systemarchitektur über das State-Management bis hin zum Deployment.
 
-[Besuche matchpicks.de](https://matchpicks.de)
+[Besuche matchpicks.de](https://matchpicks.de) · [Demo ausprobieren](https://matchpicks.de/demo/launch)
 
 {{< screenshot-gallery title="Matchpicks-Screenshot-Galerie" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard-Übersicht: die zentrale Startseite für Spieler mit aktiven Ligen und offenen Picks." src2="/img/matchpicks-picks-page.png" caption2="Picks-Seite: der Hauptbereich für Spieler mit Picks, Tabellen, eigenen Tipps und Einstellungen." src3="/img/matchpicks-league-command-center.png" caption3="League Command Center: eine Admin-Ansicht für den Überblick über den Fortschritt jeder Liga pro Woche." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity Dashboard: eine Konfliktansicht zum Vergleichen von Datenquellen und Auflösen von Abweichungen." src5="/img/matchpicks-sports-data-management.png" caption5="Sports Data Management: der Verwaltungsbereich für Ligen, Saisons, Spielpläne, Ergebnisse, Scraper und Aktivitätslog." >}}
 
@@ -24,11 +24,11 @@ Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und A
 {{< /article-series >}}
 
 ### Video Store Manager (Unity / C#)
-Persönliches Unity-Projekt: eine kleine Management-Simulation rund um einen VHS-Videoverleih – vor allem ein Spielplatz für Architektur und automatisierte Tests, kein kommerzielles Release.
+Persönliches Unity-Projekt: eine kleine Management-Simulation rund um einen VHS-Videoverleih, vor allem ein Spielplatz für Architektur und automatisierte Tests, kein kommerzielles Release.
 
 {{< tech-insight >}}
 **Technischer Überblick**
-Die Codebasis trennt Simulationslogik von der Darstellung, damit Wirtschaft, Personal, Inventar und Kundenverhalten wachsen können, ohne ein Netz aus Szenenreferenzen. Spielregeln liegen in reinem C# mit schmalen Service-Grenzen; Unity übernimmt Rendering, Input und die Pixel-Art-Oberfläche. Derselbe Kern läuft im Editor und in Headless-Integrationstests, die komplette Sessions programmatisch voranschreiben – so lassen sich Fehler in Balancing und Abläufen eher finden, bevor man Builds von Hand durchspielt.
+Die Codebasis trennt Simulationslogik von der Darstellung, damit Wirtschaft, Personal, Inventar und Kundenverhalten wachsen können, ohne ein Netz aus Szenenreferenzen. Spielregeln liegen in reinem C# mit schmalen Service-Grenzen; Unity übernimmt Rendering, Input und die Pixel-Art-Oberfläche. Derselbe Kern läuft im Editor und in Headless-Integrationstests, die komplette Sessions programmatisch voranschreiben, sodass sich Fehler in Balancing und Abläufen eher finden, bevor man Builds von Hand durchspielt.
 {{< /tech-insight >}}
 
 ---
@@ -72,7 +72,7 @@ Programmierung der Software für mikrocontrollerbasierte Rätsel-Komponenten (Ar
 
 ### Shiba Rush (Side Project)
 {{< youtube GOiULWwWgfg >}}
-Persönliches Projekt mit Fokus auf Code und Design. [Den Post-Mortem findest du hier.](http://www.itsnothing.de/post/shiba-rush-post-mortem/)
+Persönliches Projekt mit Fokus auf Code und Design. [Den Post-Mortem findest du hier.](/post/shiba-rush-post-mortem/)
 
 ### Deeper Learning (Ludum Dare 2021)
 ![Deeper Learning Gif](/img/deeperlearning.gif#center)

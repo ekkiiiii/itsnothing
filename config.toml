@@ -28,6 +28,17 @@ publishDir = "docs"
       readMore = "Read more"
       readOtherPosts = "Read other posts"
       menuMore = "Show more"
+
+    [languages.en.params.contact]
+      heading = "Contact"
+      linkedin = "https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/"
+      linkedinLabel = "LinkedIn"
+      emailEncoded = "ed.gnihtonsti@nimda"
+      emailLabel = "Email"
+
+    [languages.en.params.matchpicks]
+      demoLaunchUrl = "https://matchpicks.de/demo/launch"
+      demoLabel = "Try the Matchpicks demo"
  
     [languages.en.params.Twitter]
       creator = "Jan-Erik"
@@ -68,6 +79,17 @@ publishDir = "docs"
       keywords = ""
       copyright = ""
       readMore = "Weiterlesen"
+
+    [languages.de.params.contact]
+      heading = "Kontakt"
+      linkedin = "https://www.linkedin.com/in/jan-erik-b%C3%A4hr-aa73a5b9/"
+      linkedinLabel = "LinkedIn"
+      emailEncoded = "ed.gnihtonsti@nimda"
+      emailLabel = "E-Mail"
+
+    [languages.de.params.matchpicks]
+      demoLaunchUrl = "https://matchpicks.de/demo/launch"
+      demoLabel = "Matchpicks-Demo ausprobieren"
  
     [languages.de.params.Twitter]
       creator = "Jan-Erik"

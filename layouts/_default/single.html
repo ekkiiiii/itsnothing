@@ -10,6 +10,10 @@
     {{ end }}
   </div>
 
+  {{ if eq .Params.articleSeries.series "matchpicks" }}
+  {{ partial "matchpicks-demo-cta.html" . }}
+  {{ end }}
+
   {{ if and (not .Params.articleSeries) .Params.tags }}
   <span class="post-tags">
     {{ range .Params.tags }}
@@ -64,7 +68,14 @@
     {{- end -}}
   </div>
 
+  {{ if or (eq .File.ContentBaseName "portfolio") (eq .File.ContentBaseName "about-me") }}
+  {{ partial "recruiter-strip.html" . }}
+  {{ end }}
+
   {{ partial "article-series-box.html" . }}
+  {{ if eq .Params.articleSeries.series "matchpicks" }}
+  {{ partial "recruiter-strip.html" . }}
+  {{ end }}
 
   {{ if eq .Type $.Site.Params.contentTypeName }}
   {{ partial "posts_pagination.html" . }}

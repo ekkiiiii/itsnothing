@@ -36,8 +36,8 @@ export class AppRegistry implements IAppRegistry {
     this.users = new UserRepository();
     this.matches = new MatchRepository();
     // Every service accepted the entire registry!
-    this.standingsSvc = new StandingService(this);
-    this.picksSvc = new PickService(this);
+    this.standingsService = new StandingService(this);
+    this.picksService = new PickService(this);
   }
 }
 ```
@@ -55,7 +55,7 @@ While fast, the Service Locator is a well-known architectural anti-pattern. Beca
 
 ### 2. The Architectural Goal: Honest Constructors and Fail-Fast Boots
 
-I always knew that a resilient architecture should not make it easy to write spaghetti code, but in the beginning, I consciously chose speed over strict structure. As the codebase matured, it was time to make the system actively resist poor design.
+While I knew that a well-designed architecture should prevent accidental coupling, I chose speed over strict structure early on. As the codebase matured, it was time to make the system actively resist poor design.
 
 If `UserService` and `LeagueService` depend directly on each other, that is a design smell indicating tight coupling. I wanted the compiler or boot sequence to **fail immediately on startup** if a circular loop was introduced, acting as an architectural alarm system.
 
@@ -110,7 +110,7 @@ export class StandingService implements IStandingService {
         private leagueRepo: ILeagueRepository,
         private seasonRepo: ISeasonRepository,
         private matchRepo: IMatchRepository,
-        private achievementSvc: AchievementService
+        private achievementService: AchievementService
     ) {}
 
     async updateStandingsForUser(userId: number, targetLeagueId?: number): Promise<void> {
@@ -137,27 +137,27 @@ export function composeApplication(): AppContext {
 
   // 2. Leaf Services
   const logService = new LogService(logRepo);
-  const achievementsSvc = new AchievementService(users, picks);
-  const playoffSvc = new PlayoffService(matches, teams);
+  const achievementsService = new AchievementService(users, picks);
+  const playoffService = new PlayoffService(matches, teams);
 
   // 3. Explicit Constructor Injection (No locators, no merge hacks!)
-  const standingsSvc = new StandingService(
+  const standingsService = new StandingService(
     standings,
     picks,
     leagues,
     seasons,
     matches,
-    achievementsSvc
+    achievementsService
   );
 
   // 4. Wiring Domain Event Listeners (Decoupling services)
   eventBus.on(DomainEvent.MATCH_RESOLVED, (payload) => {
-    standingsSvc.handleMatchResolved(payload).catch((err) => {
+    standingsService.handleMatchResolved(payload).catch((err) => {
       console.error("[CompositionRoot] Error in handleMatchResolved listener:", err);
     });
   });
 
-  return { sessionStore, db, services: { standingsSvc, ... }, repos: { ... } };
+  return { sessionStore, db, services: { standingsService, ... }, repos: { ... } };
 }
 ```
 
@@ -176,8 +176,8 @@ The `composition-root.ts` acts as the event coordinator, subscribing the appropr
 ```typescript
 // Wire events cleanly in the Composition Root
 eventBus.on(DomainEvent.MATCH_RESOLVED, (payload) => {
-  standingsSvc.handleMatchResolved(payload).catch((err) => {
-    console.error("[CompositionRoot] Error in standingsSvc handleMatchResolved listener:", err);
+  standingsService.handleMatchResolved(payload).catch((err) => {
+    console.error("[CompositionRoot] Error in standingsService handleMatchResolved listener:", err);
   });
 });
 ```
@@ -191,5 +191,3 @@ This pattern broke the cycle without forcing the services to know about each oth
 The main result was practical: circular dependencies stopped being hidden inside one monolithic registry, and the dependency graph became visible at startup. That made problems easier to spot, easier to debug, and safer to change.
 
 This was still a personal project, so the goal was not to ship a framework-heavy architecture for its own sake. The goal was to make the system easier to reason about and keep refactors safe.
-
-**Next in this series:** [Post-Commit Events: An In-Memory Outbox for a Synchronous Event Bus](/post/post-commit-events-in-memory-outbox/) — what happened when async listeners met a synchronous emitter inside a database transaction, and the small in-memory outbox that fixed it.

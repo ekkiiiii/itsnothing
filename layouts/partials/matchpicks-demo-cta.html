@@ -1,0 +1,6 @@
+{{ $m := .Site.Params.matchpicks }}
+{{ if $m.demoLaunchUrl }}
+<div class="matchpicks-demo-cta">
+  <a class="matchpicks-demo-cta__btn" href="{{ $m.demoLaunchUrl }}" rel="noopener noreferrer">{{ $m.demoLabel | default "Try the Matchpicks demo" }}</a>
+</div>
+{{ end }}

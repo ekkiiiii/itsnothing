@@ -37,7 +37,7 @@ publishDir = "docs"
       emailLabel = "Email"
 
     [languages.en.params.matchpicks]
-      demoLaunchUrl = "https://matchpicks.de/demo/launch?token=__DEMO_LAUNCH_TOKEN__"
+      demoLaunchUrl = "https://matchpicks.de/demo/launch?token=3b457c609d15e5fd4716e78d0cbeaa6b822ff6ccbd7fa6a01d13d0b115942f12"
       demoLabel = "Try the Matchpicks demo"
  
     [languages.en.params.Twitter]
@@ -88,7 +88,7 @@ publishDir = "docs"
       emailLabel = "E-Mail"
 
     [languages.de.params.matchpicks]
-      demoLaunchUrl = "https://matchpicks.de/demo/launch?token=__DEMO_LAUNCH_TOKEN__"
+      demoLaunchUrl = "https://matchpicks.de/demo/launch?token=3b457c609d15e5fd4716e78d0cbeaa6b822ff6ccbd7fa6a01d13d0b115942f12"
       demoLabel = "Matchpicks-Demo ausprobieren"
  
     [languages.de.params.Twitter]

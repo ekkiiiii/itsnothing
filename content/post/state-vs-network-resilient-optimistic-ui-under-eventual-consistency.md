@@ -1,7 +1,7 @@
 +++
 title = "State vs. Network: Resilient Optimistic UI Under Eventual Consistency"
 description = "How Matchpicks keeps picks feeling instant while the backend commits asynchronously—and how React Query cancellation, snapshots, and cache invalidation keep client state aligned with PostgreSQL."
-date = 2026-05-31T10:00:00+02:00
+date = 2026-03-05T10:00:00+02:00
 draft = false
 author = "Jan-Erik"
 toc = true

@@ -16,7 +16,9 @@ Da ich die letzten 8+ Jahre überwiegend in kleinen, selbstorganisierten Teams g
 
 Eine Fullstack-Webplattform für die Spieltags-Auswahl in kleineren Sport- und Amateurligen. Von Grund auf eigenständig entwickelt, von der initialen Systemarchitektur über das State-Management bis hin zum Deployment.
 
-[Besuche matchpicks.de](https://matchpicks.de) · [Demo ausprobieren](https://matchpicks.de/demo/launch)
+[Besuche matchpicks.de](https://matchpicks.de)
+
+{{< matchpicks-demo >}}
 
 {{< screenshot-gallery title="Matchpicks-Screenshot-Galerie" src1="/img/matchpicks-dashboard-overview.png" caption1="Dashboard-Übersicht: die zentrale Startseite für Spieler mit aktiven Ligen und offenen Picks." src2="/img/matchpicks-picks-page.png" caption2="Picks-Seite: der Hauptbereich für Spieler mit Picks, Tabellen, eigenen Tipps und Einstellungen." src3="/img/matchpicks-league-command-center.png" caption3="League Command Center: eine Admin-Ansicht für den Überblick über den Fortschritt jeder Liga pro Woche." src4="/img/matchpicks-integrity-dashboard.png" caption4="Integrity Dashboard: eine Konfliktansicht zum Vergleichen von Datenquellen und Auflösen von Abweichungen." src5="/img/matchpicks-sports-data-management.png" caption5="Sports Data Management: der Verwaltungsbereich für Ligen, Saisons, Spielpläne, Ergebnisse, Scraper und Aktivitätslog." >}}
 
